@@ -21,7 +21,7 @@
       "@/*": ["./*"],
       "@apis/*": ["./apis/*"],
       "@components/*": ["./components/*"],
-      "@commons/*": ["./commons/*"],
+      "@common/*": ["./common/*"],
       "@pages/*": ["./pages/*"],
       "@styles/*": ["./styles/*"],
       "@utils/*": ["./utils/*"],
