@@ -1,4 +1,4 @@
-import colors from "@styles/themes/colors";
+import colors from "./colors";
 
 const lightColors = {
   "background-1": colors.white,
