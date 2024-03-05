@@ -1,5 +1,5 @@
-import "../styles/globals.css";
+import Home from "@/(routes)/home/page";
 
 export default function Page() {
-  return <main></main>;
+  return <Home />;
 }
