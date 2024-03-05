@@ -1,9 +1,12 @@
-import type { Config } from "tailwindcss";
+/** @type {import('tailwindcss').Config} */
+import themes from "./app/styles/themes";
 
-const config: Config = {
+module.exports = {
+  mode: "jit",
   content: [
-    "./(routes)/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/(routes)/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/layouts/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -59,74 +62,19 @@ const config: Config = {
       80: "20rem",
       96: "24rem",
     },
+    screens: {
+      xs: "320px",
+      sm: "360px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px",
+    },
     extend: {
-      screens: {
-        xs: "320px",
-        sm: "360px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1440px",
-      },
-      colors: {
-        primary: {
-          100: "#DEE9FF",
-          200: "#C4D8FE",
-          300: "#A9C2F3",
-          400: "#8FA9DB",
-          500: "#7490C6",
-          600: "#5D77A8",
-          700: "#526790",
-          800: "#425478",
-          900: "#384868",
-          1000: "#333F57",
-          1100: "#2A354A",
-          1200: "#1F2634",
-          1300: "#11151D",
-        },
-        secondary: {
-          100: "#EFFFF6",
-          200: "#E7FFF1",
-          300: "#D7FFE8",
-          400: "#CCFFE2",
-          500: "#BAFFD8",
-          600: "#ACFFD0",
-          700: "#6FFCC2",
-          800: "#3DEDB0",
-          900: "#1DD49E",
-          1000: "#1FC5A7",
-          1100: "#21AEA1",
-          1200: "#249695",
-          1300: "#1A656A",
-        },
-        semantic: {
-          success: "#00BDA7",
-          warning: "#F0CF59",
-          danger: "#D14242",
-          info: "#5A80E1",
-        },
-        black: "#000000",
-        white: "#ffffff",
-        gray: {
-          100: "#F8F8F8",
-          200: "#F3F3F3",
-          300: "#E4E4E4",
-          400: "#CECECE",
-          500: "#B0B0B0",
-          600: "#929292",
-          700: "#707070",
-          800: "#525252",
-          900: "#404040",
-          1000: "#303030",
-          1100: "#2A2A2A",
-          1200: "#202020",
-          1300: "#101010",
-        },
-      },
+      colors: themes.colors.light,
       fontFamily: {
-        pretendard: ["Pretendard Variable", "sans-serif"],
+        pretendard: ["Pretendard", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
-export default config;
