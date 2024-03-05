@@ -28,9 +28,10 @@
       "@utils/*": ["./app/utils/*"],
       "@hooks/*": ["./app/hooks/*"],
       "@assets/*": ["./app/assets/*"],
-      "@state/*": ["./app/state/*"]
+      "@state/*": ["./app/state/*"],
+      "@layouts/*": ["./app/layouts/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "./types/svgr.d.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
