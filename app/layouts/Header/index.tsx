@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
         {/** 블로그 로고 */}
         <Link href={"/"}>
           <span className={"flex flex-row items-center gap-2"}>
-            <Icon type={IconName.SILVERBI_SYMBOL} color="content-inverse-1" />
+            <Icon type={IconName.SILVERBI_SYMBOL} color="content-inverse-1" size={IconSizes.SM} />
             <Text>SILVERBI</Text>
           </span>
         </Link>

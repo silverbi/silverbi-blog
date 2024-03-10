@@ -1,8 +1,11 @@
 import { IconTypes, IconName } from "@components/atoms/Icon/types";
+import { Sizes } from "@components/atoms/IconButton/types";
 
 import SilverbiSymbolIcon from "@assets/silverbi-symbol.svg";
 import MenuBarIcon from "@assets/menu-bar.svg";
-import { Sizes } from "@components/atoms/IconButton/types";
+import InstagramLogoIcon from "@assets/instagram-logo.svg";
+import LinkedinLogoIcon from "@assets/linkedin-logo.svg";
+import GithubLogoIcon from "@assets/github-logo.svg";
 
 export const changeTypeToIconComponent = (type: IconTypes) => {
   switch (type) {
@@ -10,6 +13,12 @@ export const changeTypeToIconComponent = (type: IconTypes) => {
       return SilverbiSymbolIcon;
     case IconName.MENU_BAR:
       return MenuBarIcon;
+    case IconName.INSTAGRAM_LOGO:
+      return InstagramLogoIcon;
+    case IconName.LINKEDIN_LOGO:
+      return LinkedinLogoIcon;
+    case IconName.GITHUB_LOGO:
+      return GithubLogoIcon;
     default:
       return "icon";
   }
