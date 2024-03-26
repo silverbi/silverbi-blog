@@ -9,3 +9,12 @@
   -moz-osx-font-smoothing: grayscale;
   font-smooth: never;
 }
+
+::-moz-selection {
+    background: #5B3CB6;
+    color: white;
+}
+::selection {
+    background: #5B3CB6;
+    color: white;
+}
