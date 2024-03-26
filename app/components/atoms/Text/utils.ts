@@ -42,40 +42,40 @@ export const changeTypographyToClassName = (type?: ObjectValues<typeof Typograph
 
 export const changeColorToClassName = (color?: ObjectValues<typeof Colors>) => {
   switch (color) {
-    case Colors.TEXT_1:
-      return "text-1";
-    case Colors.TEXT_2:
-      return "text-2";
-    case Colors.TEXT_3:
-      return "text-3";
-    case Colors.TEXT_PRIMARY:
-      return "text-primary";
-    case Colors.TEXT_PRIMARY_DARK:
-      return "text-primary-dark";
-    case Colors.TEXT_PRIMARY_LIGHT:
-      return "text-primary-light";
-    case Colors.TEXT_SECONDARY:
-      return "text-secondary";
-    case Colors.TEXT_SECONDARY_DARK:
-      return "text-secondary-dark";
-    case Colors.TEXT_SECONDARY_LIGHT:
-      return "text-secondary-light";
-    case Colors.TEXT_INVERSE_1:
-      return "text-inverse-1";
-    case Colors.TEXT_INVERSE_2:
-      return "text-inverse-2";
-    case Colors.TEXT_INVERSE_3:
-      return "text-inverse-3";
-    case Colors.TEXT_DISABLED:
-      return "text-disabled";
+    case Colors.CONTENT_1:
+      return "text-content-1";
+    case Colors.CONTENT_2:
+      return "text-content-2";
+    case Colors.CONTENT_3:
+      return "text-content-3";
+    case Colors.CONTENT_PRIMARY:
+      return "text-content-primary";
+    case Colors.CONTENT_PRIMARY_DARK:
+      return "text-content-primary-dark";
+    case Colors.CONTENT_PRIMARY_LIGHT:
+      return "text-content-primary-light";
+    case Colors.CONTENT_SECONDARY:
+      return "text-content-secondary";
+    case Colors.CONTENT_SECONDARY_DARK:
+      return "text-content-secondary-dark";
+    case Colors.CONTENT_SECONDARY_LIGHT:
+      return "text-content-secondary-light";
+    case Colors.CONTENT_INVERSE_1:
+      return "text-content-inverse-1";
+    case Colors.CONTENT_INVERSE_2:
+      return "text-content-inverse-2";
+    case Colors.CONTENT_INVERSE_3:
+      return "text-content-inverse-3";
+    case Colors.CONTENT_DISABLED:
+      return "text-content-disabled";
     case Colors.LINK_PRIMARY:
-      return "link-primary";
+      return "link-content-primary";
     case Colors.LINK_ACTIVE:
-      return "link-active";
+      return "link-content-active";
     case Colors.LINK_DISABLED:
-      return "link-disabled";
+      return "link-content-disabled";
     default:
-      return "text-1";
+      return "text-content-1";
   }
 };
 

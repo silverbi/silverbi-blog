@@ -69,8 +69,8 @@ module.exports = {
       lg: "1024px",
       xl: "1440px",
     },
+    colors: themes.colors.light,
     extend: {
-      colors: themes.colors.light,
       fontFamily: {
         pretendard: ["Pretendard", "sans-serif"],
       },

@@ -4,6 +4,7 @@ export const IconName = {
   INSTAGRAM_LOGO: "INSTAGRAM_LOGO",
   GITHUB_LOGO: "GITHUB_LOGO",
   LINKEDIN_LOGO: "LINKEDIN_LOGO",
+  CONCENTRIC_CIRCLES: "CONCENTRIC_CIRCLES",
 } as const;
 export type IconTypes = (typeof IconName)[keyof typeof IconName];
 

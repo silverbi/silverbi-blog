@@ -1,5 +1,5 @@
 export const colors = {
-  primary: {
+  PRIMARY: {
     100: "#EAE2FF",
     200: "#DCD0FF",
     300: "#CBBAFF",
@@ -14,7 +14,7 @@ export const colors = {
     1200: "#15034D",
     1300: "#0D0035",
   },
-  secondary: {
+  SECONDARY: {
     100: "#FFFCF1",
     200: "#FFF9E3",
     300: "#FFF6D6",
