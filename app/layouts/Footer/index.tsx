@@ -3,7 +3,7 @@ import Link from "next/link";
 import Icon from "@components/atoms/Icon";
 import { IconName, IconSizes } from "@components/atoms/Icon/types";
 import Text from "@components/atoms/Text";
-import { Typography } from "@components/atoms/Text/types";
+import { Colors, Typography } from "@components/atoms/Text/types";
 import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@common/constants";
 
 export const Footer: React.FC = () => {
@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
           {/** 블로그 로고 */}
           <Link href={"/"}>
             <span className={"flex flex-row items-center gap-2"}>
-              <Icon type={IconName.SILVERBI_SYMBOL} color="content-inverse-1" size={IconSizes.SM} />
+              <Icon type={IconName.SILVERBI_SYMBOL} color={Colors.CONTENT_1} size={IconSizes.SM} />
               <Text>SILVERBI</Text>
             </span>
           </Link>

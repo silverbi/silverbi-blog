@@ -12,7 +12,7 @@ export const Container: React.FC<ContainerProps> = ({ children, className }) => 
       <div
         className={[
           ...(Array.isArray(className) ? className : [className]),
-          "flex w-full max-w-[1280px] flex-col items-center justify-center",
+          "flex w-full max-w-[980px] flex-col items-center justify-center",
           "silverbi-container",
         ].join(" ")}
       >

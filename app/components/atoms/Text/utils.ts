@@ -36,7 +36,7 @@ export const changeTypographyToClassName = (type?: ObjectValues<typeof Typograph
     case Typography.BUTTON_2:
       return "text-base leading-snug";
     default:
-      return "text-base leading-relaxed";
+      return "text-lg leading-relaxed";
   }
 };
 

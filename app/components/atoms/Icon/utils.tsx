@@ -1,5 +1,7 @@
 import { IconTypes, IconName } from "@components/atoms/Icon/types";
 import { Sizes } from "@components/atoms/IconButton/types";
+import { ObjectValues } from "@utils/typeHelpers/objectValues";
+import { Colors } from "@components/atoms/Text/types";
 
 import SilverbiSymbolIcon from "@assets/icons/silverbi-symbol.svg";
 import MenuBarIcon from "@assets/icons/menu-bar.svg";
@@ -7,8 +9,7 @@ import InstagramLogoIcon from "@assets/icons/instagram-logo.svg";
 import LinkedinLogoIcon from "@assets/icons/linkedin-logo.svg";
 import GithubLogoIcon from "@assets/icons/github-logo.svg";
 import ConcentricCircles from "@assets/icons/concentric-circles.svg";
-import { ObjectValues } from "@utils/typeHelpers/objectValues";
-import { Colors } from "@components/atoms/Text/types";
+import Map from "@assets/icons/map.svg";
 
 export const changeTypeToIconComponent = (type: IconTypes) => {
   switch (type) {
@@ -24,6 +25,8 @@ export const changeTypeToIconComponent = (type: IconTypes) => {
       return GithubLogoIcon;
     case IconName.CONCENTRIC_CIRCLES:
       return ConcentricCircles;
+    case IconName.MAP:
+      return Map;
     default:
       return "icon";
   }
