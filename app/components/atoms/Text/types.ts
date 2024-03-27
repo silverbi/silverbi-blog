@@ -7,7 +7,6 @@ export const Typography = {
   TITLE_3: "TITLE_3",
   SUBTITLE_1: "SUBTITLE_1",
   SUBTITLE_2: "SUBTITLE_2",
-  SUBTITLE_3: "SUBTITLE_3",
   BODY_1: "BODY_1",
   BODY_2: "BODY_2",
   BODY_3: "BODY_3",

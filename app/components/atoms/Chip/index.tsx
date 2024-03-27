@@ -37,7 +37,7 @@ export const Chip: React.FC<ChipProps> = ({
       )}
       <Text
         type={size === "LG" ? Typography.SUBTITLE_2 : size === "MD" ? Typography.BODY_2 : Typography.CAPTION_1}
-        color={Colors.CONTENT_INVERSE_1}
+        color={type === "PRIMARY" ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}
       >
         {children}
       </Text>

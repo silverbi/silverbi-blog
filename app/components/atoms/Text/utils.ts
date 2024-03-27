@@ -19,18 +19,16 @@ export const changeTypographyToClassName = (type?: ObjectValues<typeof Typograph
       return "text-3xl leading-normal";
     case Typography.SUBTITLE_2:
       return "text-2xl leading-normal";
-    case Typography.SUBTITLE_3:
-      return "text-xl leading-normal";
     case Typography.BODY_1:
-      return "text-lg leading-relaxed";
+      return "text-xl leading-relaxed";
     case Typography.BODY_2:
-      return "text-sm leading-relaxed";
+      return "text-lg leading-relaxed";
     case Typography.BODY_3:
-      return "text-xs leading-relaxed";
+      return "text-md leading-relaxed";
     case Typography.CAPTION_1:
-      return "text-2xs leading-tight";
+      return "text-xs leading-tight";
     case Typography.CAPTION_2:
-      return "text-2xs leading-tight";
+      return "text-[0.5rem] leading-tight";
     case Typography.BUTTON_1:
       return "text-lg leading-snug";
     case Typography.BUTTON_2:
