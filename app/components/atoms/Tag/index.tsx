@@ -15,12 +15,14 @@ export const Tag: React.FC<TagProps> = ({ className, type = "PRIMARY", size = "M
       className={[
         ...(Array.isArray(className) ? className : [className]),
         "silverbi-tag",
-        "w-fit cursor-default rounded-lg",
+        "flex h-fit cursor-default items-center justify-center",
         changeTypeToClassName(type),
         changeSizeToClassName(size),
       ].join(" ")}
     >
-      <Text type={changeSizeToTypography(size)}>{children}</Text>
+      <Text type={changeSizeToTypography(size)} className={"leading-none"}>
+        {children}
+      </Text>
     </div>
   );
 };

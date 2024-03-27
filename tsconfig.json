@@ -29,7 +29,8 @@
       "@hooks/*": ["./app/hooks/*"],
       "@assets/*": ["./app/assets/*"],
       "@state/*": ["./app/state/*"],
-      "@layouts/*": ["./app/layouts/*"]
+      "@layouts/*": ["./app/layouts/*"],
+      "types/*": ["./types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "./types/svgr.d.ts", "**/*.tsx", ".next/types/**/*.ts"],
