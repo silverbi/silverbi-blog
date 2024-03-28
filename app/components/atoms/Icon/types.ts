@@ -6,6 +6,9 @@ export const IconName = {
   LINKEDIN_LOGO: "LINKEDIN_LOGO",
   CONCENTRIC_CIRCLES: "CONCENTRIC_CIRCLES",
   MAP: "MAP",
+  CALENDAR: "CALENDAR",
+  CLOCK: "CLOCK",
+  HEART: "HEART",
 } as const;
 export type IconTypes = (typeof IconName)[keyof typeof IconName];
 

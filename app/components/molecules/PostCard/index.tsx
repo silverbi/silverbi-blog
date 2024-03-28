@@ -3,6 +3,8 @@ import { PostTypes } from "types/postTypes";
 import Text from "@components/atoms/Text";
 import { Typography } from "@components/atoms/Text/types";
 import Tag from "@components/atoms/Tag";
+import Icon from "@components/atoms/Icon";
+import { IconName, IconSizes } from "@components/atoms/Icon/types";
 
 export interface PostCardProps {
   post: PostTypes;
@@ -29,7 +31,22 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
         <Text type={Typography.SUBTITLE_2} bold>
           {title}
         </Text>
-        <Text type={Typography.BODY_3}>{title}</Text>
+        <div className={"flex items-center gap-4"}>
+          <div className={"flex items-center gap-1"}>
+            <Icon type={IconName.CALENDAR} size={IconSizes.XS} />
+            <Text type={Typography.CAPTION_1}>{date}</Text>
+          </div>
+          <Text type={Typography.CAPTION_1}>|</Text>
+          <div className={"flex items-center gap-1"}>
+            <Icon type={IconName.CLOCK} size={IconSizes.XS} />
+            <Text type={Typography.CAPTION_1}>{minRead} min read</Text>
+          </div>
+          <Text type={Typography.CAPTION_1}>|</Text>
+          <div className={"flex items-center gap-1"}>
+            <Icon type={IconName.HEART} size={IconSizes.XS} />
+            <Text type={Typography.CAPTION_1}>{like}</Text>
+          </div>
+        </div>
 
         <Text className={"line-clamp-3"} type={Typography.BODY_3}>
           {summary}

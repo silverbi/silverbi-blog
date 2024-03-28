@@ -10,6 +10,9 @@ import LinkedinLogoIcon from "@assets/icons/linkedin-logo.svg";
 import GithubLogoIcon from "@assets/icons/github-logo.svg";
 import ConcentricCircles from "@assets/icons/concentric-circles.svg";
 import Map from "@assets/icons/map.svg";
+import Heart from "@assets/icons/icon-heart.svg";
+import Calendar from "@assets/icons/icon-calendar.svg";
+import Clock from "@assets/icons/icon-clock.svg";
 
 export const changeTypeToIconComponent = (type: IconTypes) => {
   switch (type) {
@@ -27,6 +30,12 @@ export const changeTypeToIconComponent = (type: IconTypes) => {
       return ConcentricCircles;
     case IconName.MAP:
       return Map;
+    case IconName.HEART:
+      return Heart;
+    case IconName.CLOCK:
+      return Clock;
+    case IconName.CALENDAR:
+      return Calendar;
     default:
       return "icon";
   }
