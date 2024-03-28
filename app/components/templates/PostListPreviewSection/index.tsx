@@ -36,12 +36,12 @@ const tempPostItem = [
   },
 ];
 
-export interface PostListSectionProps {
+export interface PostListPreviewSectionProps {
   title: string;
   handleClickMore: () => void;
 }
 
-export const PostListSection: React.FC<PostListSectionProps> = ({ title, handleClickMore }) => {
+export const PostListPreviewSection: React.FC<PostListPreviewSectionProps> = ({ title, handleClickMore }) => {
   return (
     <div className={"flex w-full flex-col gap-24 py-20"}>
       <div className={"flex flex-row items-center justify-between"}>
@@ -59,4 +59,4 @@ export const PostListSection: React.FC<PostListSectionProps> = ({ title, handleC
   );
 };
 
-export default PostListSection;
+export default PostListPreviewSection;

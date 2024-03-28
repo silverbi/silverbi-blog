@@ -7,8 +7,9 @@ import Text from "@components/atoms/Text";
 import { Typography } from "@components/atoms/Text/types";
 import { Container } from "@components/atoms/Container";
 import IntroduceSection from "@components/templates/IntroduceSection";
-import PostListSection from "@components/templates/PostListSection";
+import PostListPreviewSection from "app/components/templates/PostListPreviewSection";
 import { useRouter } from "next/navigation";
+import ProjectListPreviewSection from "app/components/templates/ProjectListPreviewSection";
 
 const Home: React.FC = () => {
   const router = useRouter();
@@ -28,7 +29,8 @@ const Home: React.FC = () => {
         </div>
 
         <IntroduceSection />
-        <PostListSection title={"Tech"} handleClickMore={handleClickMore} />
+        <PostListPreviewSection title={"Tech"} handleClickMore={handleClickMore} />
+        <ProjectListPreviewSection title={"Projects"} handleClickMore={handleClickMore} />
       </Container>
     </RootLayout>
   );
