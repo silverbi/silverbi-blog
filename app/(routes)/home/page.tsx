@@ -22,15 +22,18 @@ const Home: React.FC = () => {
     <RootLayout>
       <Container className="gap-48">
         <div className="mt-28 flex flex-col items-center justify-center gap-28">
-          <Text bold type={Typography.TITLE_1}>
+          <Text bold type={Typography.HEAD_2}>
             SILVERBI BLOG
           </Text>
           <Image src={require("@assets/images/landing-main-image.png")} alt={"실버비 블로그 메인 랜딩 이미지"} />
         </div>
 
         <IntroduceSection />
-        <PostListPreviewSection title={"Tech"} handleClickMore={handleClickMore} />
-        <ProjectListPreviewSection title={"Projects"} handleClickMore={handleClickMore} />
+
+        <div className={"mb-48 flex flex-col items-center gap-24"}>
+          <PostListPreviewSection title={"Tech"} handleClickMore={handleClickMore} />
+          <ProjectListPreviewSection title={"Projects"} handleClickMore={handleClickMore} />
+        </div>
       </Container>
     </RootLayout>
   );

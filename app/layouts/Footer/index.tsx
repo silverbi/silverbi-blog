@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col items-end justify-center">
             <Text bold>Silverbi Blog</Text>
             <Text type={Typography.BODY_2} light>
-              {`어제보다 더 나은 '나'가 되기 위해 기록들을 쌓아 나갑니다.`}
+              {`어제보다 한 걸음 더 나아가기 위해 기록합니다.`}
             </Text>
           </div>
         </div>

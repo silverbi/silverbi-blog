@@ -36,7 +36,7 @@ export const Chip: React.FC<ChipProps> = ({
         <Icon type={icon} size={size === "LG" ? "SM" : "XS"} color={Colors.CONTENT_INVERSE_1} />
       )}
       <Text
-        type={size === "LG" ? Typography.SUBTITLE_2 : size === "MD" ? Typography.BODY_2 : Typography.CAPTION_1}
+        type={size === "LG" ? Typography.SUBTITLE_2 : size === "MD" ? Typography.BODY_2 : Typography.BODY_3}
         color={type === "PRIMARY" ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}
       >
         {children}

@@ -4,7 +4,7 @@ import "@styles/globals.css";
 
 export const metadata = {
   title: "SILVERBI Tech Blog",
-  description: "어제보다 더 나은 내가 되기 위해 기록 합니다.",
+  description: "어제보다 한 걸음 더 나아가기 위해 기록합니다.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

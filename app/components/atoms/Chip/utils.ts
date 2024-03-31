@@ -18,7 +18,7 @@ export const changeSizeToClassName = (size: "LG" | "MD" | "SM") => {
     case "MD":
       return "py-2.5 px-5";
     case "SM":
-      return "py-2 px-4";
+      return "py-1.5 px-4";
     default:
       return "py-2.5 px-5";
   }

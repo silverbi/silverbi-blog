@@ -4,29 +4,29 @@ import { ObjectValues } from "@utils/typeHelpers/objectValues";
 export const changeTypographyToClassName = (type?: ObjectValues<typeof Typography>) => {
   switch (type) {
     case Typography.HEAD_1:
-      return "text-9xl leading-normal";
-    case Typography.HEAD_2:
-      return "text-8xl leading-normal";
-    case Typography.HEAD_3:
       return "text-7xl leading-normal";
-    case Typography.TITLE_1:
+    case Typography.HEAD_2:
       return "text-6xl leading-normal";
-    case Typography.TITLE_2:
+    case Typography.HEAD_3:
       return "text-5xl leading-normal";
-    case Typography.TITLE_3:
+    case Typography.TITLE_1:
       return "text-4xl leading-normal";
-    case Typography.SUBTITLE_1:
+    case Typography.TITLE_2:
       return "text-3xl leading-normal";
-    case Typography.SUBTITLE_2:
+    case Typography.TITLE_3:
       return "text-2xl leading-normal";
+    case Typography.SUBTITLE_1:
+      return "text-xl leading-normal";
+    case Typography.SUBTITLE_2:
+      return "text-lg leading-normal";
     case Typography.BODY_1:
-      return "text-xl leading-relaxed";
+      return "text-base leading-relaxed";
     case Typography.BODY_2:
-      return "text-lg leading-relaxed";
+      return "text-sm leading-relaxed";
     case Typography.BODY_3:
-      return "text-md leading-relaxed";
+      return "text-xs leading-relaxed";
     case Typography.CAPTION_1:
-      return "text-xs leading-tight";
+      return "text-[0.65rem] leading-tight";
     case Typography.CAPTION_2:
       return "text-[0.5rem] leading-tight";
     case Typography.BUTTON_1:
@@ -34,7 +34,7 @@ export const changeTypographyToClassName = (type?: ObjectValues<typeof Typograph
     case Typography.BUTTON_2:
       return "text-base leading-snug";
     default:
-      return "text-lg leading-relaxed";
+      return "text-base leading-relaxed";
   }
 };
 

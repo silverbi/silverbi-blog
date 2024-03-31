@@ -9,7 +9,7 @@ export interface TitleProps {
 export const Title: React.FC<TitleProps> = ({ children }) => {
   return (
     <div className={"border-l-[6px] border-l-border-1 px-3"}>
-      <Text bold type={Typography.SUBTITLE_1} className={"leading-none"}>
+      <Text bold type={Typography.TITLE_3} className={"leading-none"}>
         {children}
       </Text>
     </div>

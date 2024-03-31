@@ -23,32 +23,32 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
       <div className={"flex h-full w-2/3 flex-col gap-3"}>
         <div className={"flex flex-row gap-2"}>
           {tags.map((tag, index) => (
-            <Tag size={"XS"} key={index} type={"SECONDARY"}>
+            <Tag size={"SM"} key={index} type={"SECONDARY"}>
               {tag}
             </Tag>
           ))}
         </div>
-        <Text type={Typography.SUBTITLE_2} bold>
+        <Text type={Typography.SUBTITLE_1} bold>
           {title}
         </Text>
         <div className={"flex items-center gap-4"}>
           <div className={"flex items-center gap-1"}>
             <Icon type={IconName.CALENDAR} size={IconSizes.XS} />
-            <Text type={Typography.CAPTION_1}>{date}</Text>
+            <Text type={Typography.BODY_3}>{date}</Text>
           </div>
-          <Text type={Typography.CAPTION_1}>|</Text>
+          <Text type={Typography.BODY_3}>|</Text>
           <div className={"flex items-center gap-1"}>
             <Icon type={IconName.CLOCK} size={IconSizes.XS} />
-            <Text type={Typography.CAPTION_1}>{minRead} min read</Text>
+            <Text type={Typography.BODY_3}>{minRead} min read</Text>
           </div>
-          <Text type={Typography.CAPTION_1}>|</Text>
+          <Text type={Typography.BODY_3}>|</Text>
           <div className={"flex items-center gap-1"}>
             <Icon type={IconName.HEART} size={IconSizes.XS} />
-            <Text type={Typography.CAPTION_1}>{like}</Text>
+            <Text type={Typography.BODY_3}>{like}</Text>
           </div>
         </div>
 
-        <Text className={"line-clamp-3"} type={Typography.BODY_3}>
+        <Text className={"line-clamp-3"} type={Typography.BODY_2}>
           {summary}
         </Text>
       </div>

@@ -16,13 +16,13 @@ export const IntroduceSection: React.FC<IntroduceSection> = ({}) => {
     <div className="flex w-full flex-col gap-6">
       <Chip icon={IconName.CONCENTRIC_CIRCLES}>Available for work</Chip>
 
-      <Text type={Typography.TITLE_3} bold>
+      <Text type={Typography.TITLE_1} bold>
         Welcome to my world ✨
       </Text>
 
       <div className={"flex flex-row items-center gap-3"}>
         <Icon type={IconName.MAP} size={"MD"} />
-        <Text>South Korea, Seoul</Text>
+        <Text type={Typography.SUBTITLE_1}>South Korea, Seoul</Text>
       </div>
 
       <div className="flex w-full flex-row items-center justify-between gap-16 py-12">
@@ -33,12 +33,14 @@ export const IntroduceSection: React.FC<IntroduceSection> = ({}) => {
           alt={"실버비 프로필 이미지"}
         />
         <div className={"flex w-full flex-col gap-7"}>
-          <Text type={Typography.SUBTITLE_1} bold>
-            현은비 Hyun Eunbi
-          </Text>
-          <Text type={Typography.TITLE_1} bold>
-            Software Engineer
-          </Text>
+          <div className={"flex flex-col"}>
+            <Text type={Typography.TITLE_3} bold>
+              현은비 Hyun Eunbi
+            </Text>
+            <Text type={Typography.HEAD_3} bold>
+              Software Engineer
+            </Text>
+          </div>
 
           <div className={"flex flex-row gap-1.5"}>
             <Tag>HTML</Tag>

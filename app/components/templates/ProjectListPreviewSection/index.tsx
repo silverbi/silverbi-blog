@@ -5,37 +5,37 @@ import ProjectList from "app/components/organisms/ProjectList";
 
 const tempProjectsItem = [
   {
+    id: 1,
     title: "Design is the Mix of emotions",
     start_date: "2024.02.01",
     end_date: "present",
     label: "Side Project",
-    summary:
-      "Did you come here for something in particular or just general g in particular or just general Riker-bashing? And blowing into Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into",
-    tags: ["CSS", "React", "CRA", "tailwind"],
+    subtitle: "서브 타이틀 입니다.",
     thumbnail: "",
     role: "Frontend Engineer",
+    tags: ["react", "css"],
   },
   {
+    id: 2,
     title: "Design is the Mix of emotions",
     start_date: "2024.02.01",
     end_date: "2024.04.24",
     label: "Side Project",
-    summary:
-      "Did you come here for something in particular or just general g in particular or just general Riker-bashing? And blowing into Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into",
-    tags: ["CSS", "React", "CRA", "tailwind"],
+    subtitle: "서브 타이틀 입니다.",
     thumbnail: "",
     role: "Frontend Engineer",
+    tags: ["react", "css"],
   },
   {
+    id: 3,
     title: "Design is the Mix of emotions",
     start_date: "2024.02.01",
     end_date: "present",
     label: "Side Project",
-    summary:
-      "Did you come here for something in particular or just general g in particular or just general Riker-bashing? And blowing into Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into",
-    tags: ["CSS", "React", "CRA", "tailwind"],
+    subtitle: "서브 타이틀 입니다.",
     thumbnail: "",
     role: "Frontend Engineer",
+    tags: ["CSS", "React", "CRA", "tailwind"],
   },
 ];
 
