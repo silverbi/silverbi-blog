@@ -6,11 +6,11 @@ import Tag from "@components/atoms/Tag";
 import { useRouter } from "next/navigation";
 
 export interface ProjectCardProps {
-  product: ProductTypes;
+  project: ProductTypes;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ product }) => {
-  const { id, role, label, tags, title, start_date, end_date, subtitle, thumbnail } = product;
+export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const { id, role, label, tags, title, start_date, end_date, subtitle, thumbnail } = project;
   const router = useRouter();
 
   const handleClickCard = () => {

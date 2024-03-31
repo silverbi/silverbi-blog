@@ -57,7 +57,7 @@ export const ProjectListPreviewSection: React.FC<ProjectListPreviewSectionProps>
         </button>
       </div>
 
-      <ProjectList products={tempProjectsItem} />
+      <ProjectList projects={tempProjectsItem} />
     </div>
   );
 };

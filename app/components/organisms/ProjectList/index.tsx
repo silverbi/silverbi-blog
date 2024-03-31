@@ -3,14 +3,14 @@ import { ProductTypes } from "types/productTypes";
 import ProjectCard from "app/components/molecules/ProjectCard";
 
 export interface ProjectListProps {
-  products: ProductTypes[];
+  projects: ProductTypes[];
 }
 
-export const ProjectList: React.FC<ProjectListProps> = ({ products }) => {
+export const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
   return (
     <div className={"flex w-full flex-row gap-6"}>
-      {products.map((product, index) => (
-        <ProjectCard key={index} product={product} />
+      {projects.map((project, index) => (
+        <ProjectCard key={index} project={project} />
       ))}
     </div>
   );
