@@ -25,7 +25,11 @@ const Home: React.FC = () => {
           <Text bold type={Typography.HEAD_2}>
             SILVERBI BLOG
           </Text>
-          <Image src={require("@assets/images/landing-main-image.png")} alt={"실버비 블로그 메인 랜딩 이미지"} />
+          <Image
+            priority
+            src={require("@assets/images/landing-main-image.png")}
+            alt={"실버비 블로그 메인 랜딩 이미지"}
+          />
         </div>
 
         <IntroduceSection />

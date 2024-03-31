@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <div className="fixed flex h-16 w-full items-center justify-center border-b bg-background-1">
+    <div className="fixed flex h-16 w-full items-center justify-center overflow-hidden border-b bg-background-1">
       <div className="flex h-fit w-full max-w-[1280px] flex-row items-center justify-between bg-background-1">
         {/** 블로그 로고 */}
         <Link href={"/"}>
@@ -26,7 +26,7 @@ export const Header: React.FC = () => {
         {/** 메뉴 */}
         <span className={"flex flex-row items-center gap-6"}>
           {HEADER_MENU.map((label, index) => (
-            <Link key={index} href={`/${label === "home" ? "" : label}`}>
+            <Link scroll={false} key={index} href={`/${label === "home" ? "" : label}`}>
               <Text bold={pathname === "/" ? label === "home" : pathname.includes(label)} className={"capitalize"}>
                 {label}
               </Text>

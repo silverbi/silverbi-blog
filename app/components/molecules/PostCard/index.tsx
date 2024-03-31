@@ -5,15 +5,23 @@ import { Typography } from "@components/atoms/Text/types";
 import Tag from "@components/atoms/Tag";
 import Icon from "@components/atoms/Icon";
 import { IconName, IconSizes } from "@components/atoms/Icon/types";
+import { useRouter } from "next/navigation";
 
 export interface PostCardProps {
   post: PostTypes;
 }
 
 export const PostCard: React.FC<PostCardProps> = ({ post }) => {
-  const { title, tags, summary, date, thumbnail, like, minRead } = post;
+  const router = useRouter();
+  const { id, title, tags, summary, date, thumbnail, like, minRead } = post;
+
+  const handleClickPostCard = () => {
+    router.push(`/tech/${id}`);
+  };
+
   return (
     <div
+      onClick={handleClickPostCard}
       className={
         "flex h-full max-h-[240px] w-full cursor-pointer flex-row items-center gap-8 rounded-lg border border-layer-1 p-4 hover:border hover:border-border-3"
       }
