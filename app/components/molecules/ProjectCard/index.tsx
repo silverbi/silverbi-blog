@@ -32,7 +32,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ product }) => {
       <div className={"flex flex-col items-start gap-2 px-4 py-6"}>
         <div className={"flex gap-1"}>
           {tags.map((tag, index) => (
-            <Tag size={"SM"} key={index}>
+            <Tag size={"SM"} type={"SECONDARY"} key={index}>
               {tag}
             </Tag>
           ))}

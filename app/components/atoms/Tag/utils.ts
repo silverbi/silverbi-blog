@@ -3,7 +3,7 @@ import { Typography } from "@components/atoms/Text/types";
 export const changeTypeToClassName = (type: "PRIMARY" | "SECONDARY" | "HIGHLIGHT") => {
   switch (type) {
     case "PRIMARY":
-      return "border border-content-1 bg-layer-1";
+      return "border border-content-1 bg-layer-inverse-1";
     case "SECONDARY":
       return "border border-content-1 bg-layer-1";
     case "HIGHLIGHT":

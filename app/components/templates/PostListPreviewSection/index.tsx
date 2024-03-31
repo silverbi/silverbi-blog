@@ -5,6 +5,7 @@ import PostList from "@components/organisms/PostList";
 
 const tempPostItem = [
   {
+    id: 1,
     title: "Design is the Mix of emotions",
     date: "2024.02.01",
     minRead: 1,
@@ -15,6 +16,7 @@ const tempPostItem = [
     thumbnail: "",
   },
   {
+    id: 2,
     title: "Design is the Mix of emotions",
     date: "2024.02.01",
     minRead: 1,
@@ -25,6 +27,7 @@ const tempPostItem = [
     thumbnail: "",
   },
   {
+    id: 3,
     title: "Design is the Mix of emotions",
     date: "2024.02.01",
     minRead: 1,

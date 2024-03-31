@@ -1,4 +1,5 @@
 export interface PostTypes {
+  id: number;
   title: string;
   date: string;
   minRead: number;
