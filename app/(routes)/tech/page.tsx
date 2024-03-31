@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { Container } from "@components/atoms/Container";
 import RootLayout from "@layouts/RootLayout";
 import Image from "next/image";

@@ -9,7 +9,7 @@ export const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className={"pt-16"}>{children}</main>
       <Footer />
     </>
   );
