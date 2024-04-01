@@ -20,9 +20,13 @@
     "next.js"
   ],
   "dependencies": {
+    "@types/react-syntax-highlighter": "^15.5.11",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "remark-gfm": "^4.0.0",
     "zustand": "^4.5.1"
   },
   "devDependencies": {
