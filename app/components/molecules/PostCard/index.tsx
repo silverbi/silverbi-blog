@@ -13,7 +13,7 @@ export interface PostCardProps {
 
 export const PostCard: React.FC<PostCardProps> = ({ post }) => {
   const router = useRouter();
-  const { id, title, tags, summary, date, thumbnail, like, minRead } = post;
+  const { id, title, tags, short_description, date, thumbnail, like, minRead } = post;
 
   const handleClickPostCard = () => {
     router.push(`/tech/${id}`);
@@ -57,7 +57,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
         </div>
 
         <Text className={"line-clamp-3"} type={Typography.BODY_2}>
-          {summary}
+          {short_description}
         </Text>
       </div>
     </div>

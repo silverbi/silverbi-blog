@@ -10,7 +10,7 @@ const tempPostItem = [
     date: "2024.02.01",
     minRead: 1,
     like: 0,
-    summary:
+    short_description:
       "Did you come here for something in particular or just general g in particular or just general Riker-bashing? And blowing into Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into",
     tags: ["CSS", "React", "CRA", "tailwind"],
     thumbnail: "",
@@ -21,7 +21,7 @@ const tempPostItem = [
     date: "2024.02.01",
     minRead: 1,
     like: 0,
-    summary:
+    short_description:
       "Did you come here for something in particular or just general Riker-bashing? g in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into",
     tags: ["CSS", "React", "CRA", "tailwind"],
     thumbnail: "",
@@ -32,7 +32,7 @@ const tempPostItem = [
     date: "2024.02.01",
     minRead: 1,
     like: 0,
-    summary:
+    short_description:
       "Did you come here for something in particular or just general Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into",
     tags: ["CSS", "React", "CRA", "tailwind"],
     thumbnail: "",

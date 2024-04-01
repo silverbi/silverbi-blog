@@ -4,7 +4,23 @@ export interface PostTypes {
   date: string;
   minRead: number;
   like: number;
-  summary: string;
+  short_description: string;
   tags: Array<string>;
   thumbnail: string;
+}
+
+export interface PostDetailTypes {
+  id: number;
+  title: string;
+  subtitle: string;
+  short_description: string;
+  body: string;
+  tags: Array<string>;
+  date: string;
+  minRead: number;
+  like: number;
+  thumbnail: string;
+  comments: any;
+  series: any;
+  linked_posts: any;
 }

@@ -20,7 +20,7 @@ export const changeSizeToClassName = (size: "XL" | "LG" | "MD" | "SM" | "XS") =>
     case "LG":
       return "px-4 py-1.5 rounded-lg";
     case "MD":
-      return "px-3.5 py-1.5 rounded-lg";
+      return "px-3 py-1 rounded-lg";
     case "SM":
       return "px-2.5 py-1 rounded-lg";
     case "XS":

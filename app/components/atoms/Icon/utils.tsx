@@ -46,9 +46,9 @@ export const changeTypeToSizeComponent = (type: keyof typeof Sizes) => {
     case Sizes.XS:
       return "w-4 h-4";
     case Sizes.SM:
-      return "w-6 h-6";
+      return "w-5 h-5";
     case Sizes.MD:
-      return "w-8 h-8";
+      return "w-7 h-7";
     case Sizes.LG:
       return "w-10 h-10";
     case Sizes.XL:

@@ -4,6 +4,8 @@ import Text from "@components/atoms/Text";
 import { Typography } from "@components/atoms/Text/types";
 import Tag from "@components/atoms/Tag";
 import { useRouter } from "next/navigation";
+import Icon from "@components/atoms/Icon";
+import { IconName, IconSizes } from "@components/atoms/Icon/types";
 
 export interface ProjectCardProps {
   project: ProductTypes;
@@ -44,9 +46,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <Text type={Typography.BODY_2}>{subtitle}</Text>
         </div>
         <div className={"flex gap-2"}>
-          <Text type={Typography.BODY_3}>
-            {start_date} - {end_date}
-          </Text>
+          <div className={"flex items-center gap-1"}>
+            <Icon type={IconName.CALENDAR} size={IconSizes.XS} />
+            <Text type={Typography.BODY_3}>
+              {start_date} - {end_date}
+            </Text>
+          </div>
           <Text type={Typography.BODY_3}>|</Text>
           <Text type={Typography.BODY_3}>{role}</Text>
         </div>
