@@ -44,7 +44,7 @@ const Markdown: React.FC<MarkdownProps> = ({ children }) => {
             ) : (
               <code
                 {...rest}
-                className={`${className} bg-layer-highlight-light mx-0.5 w-fit rounded-[4px] px-1 py-0.5 text-content-primary-dark`}
+                className={`${className} mx-0.5 w-fit rounded-[4px] bg-layer-highlight-light px-1 py-0.5 text-content-primary-dark`}
               >
                 {children}
               </code>
