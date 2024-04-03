@@ -13,6 +13,8 @@ import Map from "@assets/icons/map.svg";
 import Heart from "@assets/icons/icon-heart.svg";
 import Calendar from "@assets/icons/icon-calendar.svg";
 import Clock from "@assets/icons/icon-clock.svg";
+import CopyClipboardIcon from "@assets/icons/icon-copy-clipboard.svg";
+import CheckCircleIcon from "@assets/icons/icon-check-circle.svg";
 
 export const changeTypeToIconComponent = (type: IconTypes) => {
   switch (type) {
@@ -36,6 +38,10 @@ export const changeTypeToIconComponent = (type: IconTypes) => {
       return Clock;
     case IconName.CALENDAR:
       return Calendar;
+    case IconName.COPY_CLIPBOARD:
+      return CopyClipboardIcon;
+    case IconName.CHECK_CIRCLE:
+      return CheckCircleIcon;
     default:
       return "icon";
   }
@@ -92,6 +98,8 @@ export const changeColorToClassName = (color?: ObjectValues<typeof Colors>) => {
       return "link-content-active";
     case Colors.LINK_DISABLED:
       return "link-content-disabled";
+    case Colors.SEMANTIC_SUCCESS:
+      return "text-semantic-success";
     default:
       return "text-content-1";
   }

@@ -35,7 +35,7 @@ const lightColors = {
   "border-2": colors.gray[900],
   "border-3": colors.gray[600],
   "border-disabled": colors.gray[700],
-  "border-primary": colors.PRIMARY[800],
+  "border-primary": colors.PRIMARY[600],
   "border-secondary": colors.SECONDARY[800],
   "border-inverse-1": colors.gray[100],
   "border-inverse-2": colors.gray[300],

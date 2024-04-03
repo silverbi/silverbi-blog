@@ -36,6 +36,7 @@ export const Colors = {
   LINK_PRIMARY: "LINK_PRIMARY",
   LINK_ACTIVE: "LINK_ACTIVE",
   LINK_DISABLED: "LINK_DISABLED",
+  SEMANTIC_SUCCESS: "SEMANTIC_SUCCESS",
 } as const;
 
 export const Weight = {

@@ -30,12 +30,12 @@ export const colors = {
     1300: "#FF6E05",
   },
   semantic: {
-    success: "#00BDA7",
+    success: "#27c265",
     warning: "#F0CF59",
     error: "#D14242",
     info: "#5A80E1",
   },
-  link: "#3A4CE9",
+  link: "#FF6E05",
   black: "#000000",
   white: "#ffffff",
   gray: {

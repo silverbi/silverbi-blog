@@ -5,7 +5,7 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Pretendard", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", 나눔고딕, "Nanum Gothic", "Noto Sans KR", "Noto Sans CJK KR", arial, 돋움, Dotum, Tahoma, Geneva, sans-serif;
 }
 
 ::-moz-selection {
@@ -19,6 +19,72 @@
 
 pre {
   width: 100%;
-  max-width: 100%;
 }
 
+h1 {
+  font-size: 2em;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25em;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.875em;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 0.85em;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+span {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+code {
+  font-weight: 500;
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  font-weight: bold;
+}
+
+del {
+  font-weight: 400;
+}
+
+.react-syntax-highlighter-line-number {
+  margin-right: 16px;
+  color: darkgray;
+}

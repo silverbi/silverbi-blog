@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <div className="fixed flex h-16 w-full items-center justify-center overflow-hidden border-b bg-background-1">
+    <div className="fixed z-50 flex h-16 w-full items-center justify-center overflow-hidden border-b bg-background-1">
       <div className="flex h-fit w-full max-w-[1280px] flex-row items-center justify-between bg-background-1">
         {/** 블로그 로고 */}
         <Link scroll={false} href={"/"}>
