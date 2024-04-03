@@ -1,7 +1,7 @@
 import { IconTypes, IconName } from "@components/atoms/Icon/types";
 import { Sizes } from "@components/atoms/IconButton/types";
 import { ObjectValues } from "@utils/typeHelpers/objectValues";
-import { Colors } from "@components/atoms/Text/types";
+import { Colors } from "@styles/themes/types";
 
 import SilverbiSymbolIcon from "@assets/icons/silverbi-symbol.svg";
 import MenuBarIcon from "@assets/icons/menu-bar.svg";

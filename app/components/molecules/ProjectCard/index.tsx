@@ -1,7 +1,7 @@
 import React from "react";
 import { ProductTypes } from "types/productTypes";
 import Text from "@components/atoms/Text";
-import { Typography } from "@components/atoms/Text/types";
+import { Typography } from "@styles/themes/types";
 import Tag from "@components/atoms/Tag";
 import { useRouter } from "next/navigation";
 import Icon from "@components/atoms/Icon";

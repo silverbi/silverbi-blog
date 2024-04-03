@@ -5,7 +5,7 @@ import {
   changeWeightToClassName,
 } from "@components/atoms/Text/utils";
 import { ObjectValues } from "@utils/typeHelpers/objectValues";
-import { Colors, Typography } from "@components/atoms/Text/types";
+import { Colors, Typography } from "@styles/themes/types";
 
 export interface TextProps {
   className?: string | string[];

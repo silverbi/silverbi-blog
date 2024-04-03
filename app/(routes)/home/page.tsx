@@ -4,7 +4,7 @@ import React from "react";
 import RootLayout from "@layouts/RootLayout";
 import Image from "next/image";
 import Text from "@components/atoms/Text";
-import { Typography } from "@components/atoms/Text/types";
+import { Typography } from "@styles/themes/types";
 import { Container } from "@components/atoms/Container";
 import IntroduceSection from "@components/templates/IntroduceSection";
 import PostListPreviewSection from "app/components/templates/PostListPreviewSection";

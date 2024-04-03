@@ -1,7 +1,7 @@
 import React from "react";
 import { changeSizeToClassName, changeTypeToStyles } from "@components/atoms/Chip/utils";
 import Text from "@components/atoms/Text";
-import { Colors, Typography } from "@components/atoms/Text/types";
+import { Colors, Typography } from "@styles/themes/types";
 import { IconName, IconTypes } from "@components/atoms/Icon/types";
 import Icon from "@components/atoms/Icon";
 

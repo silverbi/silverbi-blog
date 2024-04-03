@@ -1,7 +1,7 @@
 import React from "react";
 import { changeSizeToClassName, changeSizeToTypography, changeTypeToClassName } from "./utils";
 import Text from "@components/atoms/Text";
-import { Colors } from "@components/atoms/Text/types";
+import { Colors } from "@styles/themes/types";
 
 export interface TagProps {
   type?: "PRIMARY" | "SECONDARY" | "HIGHLIGHT";

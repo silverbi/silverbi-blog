@@ -1,4 +1,4 @@
-import { Typography, Colors, Weight } from "./types";
+import { Typography, Colors, Weight } from "@styles/themes/types";
 import { ObjectValues } from "@utils/typeHelpers/objectValues";
 
 export const changeTypographyToClassName = (type?: ObjectValues<typeof Typography>) => {

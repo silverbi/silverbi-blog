@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nord } from "react-syntax-highlighter/dist/esm/styles/prism";
+import dracula from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
 import remarkGfm from "remark-gfm";
 
 interface MarkdownProps {
@@ -13,20 +13,24 @@ const Markdown: React.FC<MarkdownProps> = ({ children }) => {
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       components={{
-        code({ className, children }) {
+        code(props) {
+          const { children, className, node, ...rest } = props;
           const match = /language-(\w+)/.exec(className || "");
           return match ? (
-            // 코드 (```)
-            <SyntaxHighlighter style={nord} language={match[1]} PreTag="div">
-              {String(children)
-                .replace(/\n$/, "")
-                .replace(/\n&nbsp;\n/g, "")
-                .replace(/\n&nbsp\n/g, "")}
-            </SyntaxHighlighter>
+            <SyntaxHighlighter
+              className={"!rounded-[12px] !p-6"}
+              PreTag="div"
+              children={String(children).replace(/\n$/, "")}
+              language={match[1]}
+              style={dracula}
+            />
           ) : (
-            <SyntaxHighlighter style={nord} background="blue" language="textile" PreTag="div">
-              {String(children).replace(/\n$/, "")}
-            </SyntaxHighlighter>
+            <code
+              {...rest}
+              className={`${className} bg-layer-highlight-light mx-0.5 w-fit rounded-[4px] px-1 py-0.5 text-content-primary-dark`}
+            >
+              {children}
+            </code>
           );
         },
         blockquote({ children, ...props }) {
@@ -41,13 +45,7 @@ const Markdown: React.FC<MarkdownProps> = ({ children }) => {
           );
         },
         img({ ...props }) {
-          return (
-            <img
-              style={{ maxWidth: "40vw" }}
-              src={props.src?.replace("../../../../public/", "/")}
-              alt="MarkdownRenderer__Image"
-            />
-          );
+          return <img src={props.src?.replace("../../../../public/", "/")} alt="MarkdownRenderer__Image" />;
         },
         em({ children, ...props }) {
           return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { PostTypes } from "types/postTypes";
 import Text from "@components/atoms/Text";
-import { Typography } from "@components/atoms/Text/types";
+import { Typography } from "@styles/themes/types";
 import Tag from "@components/atoms/Tag";
 import Icon from "@components/atoms/Icon";
 import { IconName, IconSizes } from "@components/atoms/Icon/types";

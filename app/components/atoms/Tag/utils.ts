@@ -1,4 +1,4 @@
-import { Typography } from "@components/atoms/Text/types";
+import { Typography } from "@styles/themes/types";
 
 export const changeTypeToClassName = (type: "PRIMARY" | "SECONDARY" | "HIGHLIGHT") => {
   switch (type) {

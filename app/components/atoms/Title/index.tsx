@@ -1,6 +1,6 @@
 import Text from "@components/atoms/Text";
 import React from "react";
-import { Typography } from "@components/atoms/Text/types";
+import { Typography } from "@styles/themes/types";
 
 export interface TitleProps {
   children: React.ReactNode;

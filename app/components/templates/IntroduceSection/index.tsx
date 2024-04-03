@@ -2,7 +2,7 @@ import React from "react";
 import Chip from "@components/atoms/Chip";
 import { IconName, IconSizes } from "@components/atoms/Icon/types";
 import Text from "@components/atoms/Text";
-import { Typography } from "@components/atoms/Text/types";
+import { Typography } from "@styles/themes/types";
 import Icon from "@components/atoms/Icon";
 import Image from "next/image";
 import Tag from "@components/atoms/Tag";

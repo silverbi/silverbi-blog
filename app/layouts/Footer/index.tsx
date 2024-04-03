@@ -3,7 +3,7 @@ import Link from "next/link";
 import Icon from "@components/atoms/Icon";
 import { IconName, IconSizes } from "@components/atoms/Icon/types";
 import Text from "@components/atoms/Text";
-import { Colors, Typography } from "@components/atoms/Text/types";
+import { Colors, Typography } from "@styles/themes/types";
 import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@common/constants";
 
 export const Footer: React.FC = () => {
