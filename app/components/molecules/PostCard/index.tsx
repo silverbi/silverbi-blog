@@ -51,7 +51,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
           </div>
           <Text type={Typography.BODY_3}>|</Text>
           <div className={"flex items-center gap-1"}>
-            <Icon type={IconName.HEART} size={IconSizes.XS} />
+            <Icon type={IconName.HEART_OUTLINE} size={IconSizes.XS} />
             <Text type={Typography.BODY_3}>{like}</Text>
           </div>
         </div>

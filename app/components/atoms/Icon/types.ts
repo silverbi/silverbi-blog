@@ -8,9 +8,13 @@ export const IconName = {
   MAP: "MAP",
   CALENDAR: "CALENDAR",
   CLOCK: "CLOCK",
-  HEART: "HEART",
+  HEART_OUTLINE: "HEART_OUTLINE",
+  HEART_FILL: "HEART_FILL",
   COPY_CLIPBOARD: "COPY_CLIPBOARD",
   CHECK_CIRCLE: "CHECK_CIRCLE",
+  SHARE: "SHARE",
+  LIKE_OUTLINE: "LIKE_OUTLINE",
+  LIKE_FILL: "LIKE_FILL",
 } as const;
 export type IconTypes = (typeof IconName)[keyof typeof IconName];
 

@@ -1,6 +1,6 @@
+"use client";
+
 import React, { FocusEvent, MouseEvent, useState } from "react";
-import { Sizes } from "@components/atoms/IconButton/types";
-import { changeTypeToSizeComponent } from "@components/atoms/IconButton/utils";
 
 export interface IconButtonProps {
   className?: string | Array<string>;

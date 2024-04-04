@@ -1,6 +1,7 @@
 import React from "react";
 import {
   changeColorToClassName,
+  changeFillToClassName,
   changeTypeToIconComponent,
   changeTypeToSizeComponent,
 } from "@components/atoms/Icon/utils";
@@ -13,6 +14,7 @@ export interface IconProps {
   color?: ObjectValues<typeof Colors>;
   width?: number;
   height?: number;
+  fill?: ObjectValues<typeof Colors>;
   size?: SizesTypes;
   className?: string;
 }
@@ -24,6 +26,7 @@ export const Icon: React.FC<IconProps> = ({
   height = 20,
   size = IconSizes.MD,
   className,
+  fill,
 }) => {
   const SVGIcon = changeTypeToIconComponent(type);
 
@@ -32,6 +35,7 @@ export const Icon: React.FC<IconProps> = ({
       className={[
         ...(Array.isArray(className) ? className : [className]),
         changeColorToClassName(color),
+        changeFillToClassName(fill),
         changeTypeToSizeComponent(size),
         "silverbi-svg-icon",
       ].join(" ")}

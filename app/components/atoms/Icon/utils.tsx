@@ -10,11 +10,15 @@ import LinkedinLogoIcon from "@assets/icons/linkedin-logo.svg";
 import GithubLogoIcon from "@assets/icons/github-logo.svg";
 import ConcentricCircles from "@assets/icons/concentric-circles.svg";
 import Map from "@assets/icons/map.svg";
-import Heart from "@assets/icons/icon-heart.svg";
+import HeartOutline from "@assets/icons/icon-heart-outline.svg";
 import Calendar from "@assets/icons/icon-calendar.svg";
 import Clock from "@assets/icons/icon-clock.svg";
 import CopyClipboardIcon from "@assets/icons/icon-copy-clipboard.svg";
 import CheckCircleIcon from "@assets/icons/icon-check-circle.svg";
+import ShareIcon from "@assets/icons/icon-share.svg";
+import LikeFillIcon from "@assets/icons/icon-like-fill.svg";
+import LikeOutlineIcon from "@assets/icons/icon-like-outline.svg";
+import HeartFill from "@assets/icons/icon-heart-fill.svg";
 
 export const changeTypeToIconComponent = (type: IconTypes) => {
   switch (type) {
@@ -32,8 +36,10 @@ export const changeTypeToIconComponent = (type: IconTypes) => {
       return ConcentricCircles;
     case IconName.MAP:
       return Map;
-    case IconName.HEART:
-      return Heart;
+    case IconName.HEART_OUTLINE:
+      return HeartOutline;
+    case IconName.HEART_FILL:
+      return HeartFill;
     case IconName.CLOCK:
       return Clock;
     case IconName.CALENDAR:
@@ -42,6 +48,12 @@ export const changeTypeToIconComponent = (type: IconTypes) => {
       return CopyClipboardIcon;
     case IconName.CHECK_CIRCLE:
       return CheckCircleIcon;
+    case IconName.SHARE:
+      return ShareIcon;
+    case IconName.LIKE_OUTLINE:
+      return LikeOutlineIcon;
+    case IconName.LIKE_FILL:
+      return LikeFillIcon;
     default:
       return "icon";
   }
@@ -93,14 +105,55 @@ export const changeColorToClassName = (color?: ObjectValues<typeof Colors>) => {
     case Colors.CONTENT_DISABLED:
       return "text-content-disabled";
     case Colors.LINK_PRIMARY:
-      return "link-content-primary";
+      return "text-link-content-primary";
     case Colors.LINK_ACTIVE:
-      return "link-content-active";
+      return "text-link-content-active";
     case Colors.LINK_DISABLED:
-      return "link-content-disabled";
+      return "text-link-content-disabled";
     case Colors.SEMANTIC_SUCCESS:
       return "text-semantic-success";
     default:
       return "text-content-1";
+  }
+};
+
+export const changeFillToClassName = (fill?: ObjectValues<typeof Colors>) => {
+  switch (fill) {
+    case Colors.CONTENT_1:
+      return "fill-content-1";
+    case Colors.CONTENT_2:
+      return "fill-content-2";
+    case Colors.CONTENT_3:
+      return "fill-content-3";
+    case Colors.CONTENT_PRIMARY:
+      return "fill-content-primary";
+    case Colors.CONTENT_PRIMARY_DARK:
+      return "fill-content-primary-dark";
+    case Colors.CONTENT_PRIMARY_LIGHT:
+      return "fill-content-primary-light";
+    case Colors.CONTENT_SECONDARY:
+      return "fill-content-secondary";
+    case Colors.CONTENT_SECONDARY_DARK:
+      return "fill-content-secondary-dark";
+    case Colors.CONTENT_SECONDARY_LIGHT:
+      return "fill-content-secondary-light";
+    case Colors.CONTENT_INVERSE_1:
+      return "fill-content-inverse-1";
+    case Colors.CONTENT_INVERSE_2:
+      return "fill-content-inverse-2";
+    case Colors.CONTENT_INVERSE_3:
+      return "fill-content-inverse-3";
+    case Colors.CONTENT_DISABLED:
+      return "fill-content-disabled";
+    case Colors.LINK_PRIMARY:
+      return "fill-content-primary";
+    case Colors.LINK_ACTIVE:
+      return "fill-content-active";
+    case Colors.LINK_DISABLED:
+      return "fill-content-disabled";
+    case Colors.SEMANTIC_SUCCESS:
+      return "fill-semantic-success";
+    default:
+      return "";
   }
 };
