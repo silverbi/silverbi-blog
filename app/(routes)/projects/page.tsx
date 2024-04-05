@@ -7,6 +7,7 @@ import React from "react";
 import Title from "@components/atoms/Title";
 import Text from "@components/atoms/Text";
 import ProjectList from "@components/organisms/ProjectList";
+import { Colors } from "@styles/themes/types";
 
 const tempProjectsItem = [
   {
@@ -47,7 +48,7 @@ const tempProjectsItem = [
 const Projects = () => {
   return (
     <RootLayout>
-      <Container className="gap-30 my-32">
+      <Container className="my-32">
         <Image priority src={require("@assets/images/projects-thumbnail.png")} alt={"Projects thumbnail"} />
 
         <div className="mt-28 flex w-full flex-col gap-12">

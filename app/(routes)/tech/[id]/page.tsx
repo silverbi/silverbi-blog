@@ -22,7 +22,7 @@ const TechDetail = () => {
 
   return (
     <RootLayout>
-      <Container className="gap-30 my-32">
+      <Container className="my-32">
         <PostDetailSection post={tempItem} />
       </Container>
     </RootLayout>

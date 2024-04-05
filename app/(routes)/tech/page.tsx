@@ -60,7 +60,7 @@ const Tech: React.FC = () => {
 
   return (
     <RootLayout>
-      <Container className="gap-30 my-32">
+      <Container className="my-32">
         <Image priority src={require("@assets/images/tech-thumbnail.png")} alt={"Tech thumbnail"} />
 
         <div className="mt-28 flex w-full flex-col gap-12">

@@ -25,7 +25,7 @@ export const IntroduceSection: React.FC<IntroduceSection> = ({}) => {
         <Text type={Typography.SUBTITLE_1}>South Korea, Seoul</Text>
       </div>
 
-      <div className="flex w-full flex-row items-center justify-between gap-16 py-12">
+      <div className="flex w-full flex-row items-center justify-between gap-12 py-12">
         <Image
           width={300}
           height={510}
@@ -43,12 +43,11 @@ export const IntroduceSection: React.FC<IntroduceSection> = ({}) => {
           </div>
 
           <div className={"flex flex-row gap-1.5"}>
-            <Tag>HTML</Tag>
-            <Tag>CSS</Tag>
-            <Tag>Javascript</Tag>
-            <Tag>Typescript</Tag>
-            <Tag>React</Tag>
-            <Tag>Next.js</Tag>
+            {["HTML", "CSS", "Javascript", "Typescript", "React", "Next.js"].map((label, index) => (
+              <Tag type={"SECONDARY"} key={index}>
+                {label}
+              </Tag>
+            ))}
           </div>
 
           <Text type={Typography.BODY_1}>
