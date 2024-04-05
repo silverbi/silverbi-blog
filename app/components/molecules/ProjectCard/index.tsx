@@ -22,10 +22,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <button
       onClick={handleClickCard}
-      className={" flex h-96 w-1/3 cursor-pointer flex-col rounded-[24px] border border-border-1 bg-background-1"}
+      className={"flex h-96 w-1/3 cursor-pointer flex-col rounded-[24px] border border-border-1 bg-background-1"}
     >
       <div className={"flex w-full items-center gap-3 px-4 py-3"}>
-        <div className={" h-8 w-8 rounded-full bg-content-disabled"} />
+        <div className={"h-8 w-8 rounded-full bg-content-disabled"} />
         <Text bold type={Typography.BODY_1}>
           {label}
         </Text>
@@ -40,20 +40,20 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           ))}
         </div>
         <div className={"flex flex-col items-start justify-start"}>
-          <Text type={Typography.SUBTITLE_2} bold>
+          <Text type={Typography.SUBTITLE_2} bold className={"text-start"}>
             {title}
           </Text>
-          <Text type={Typography.BODY_2}>{subtitle}</Text>
+          <Text type={Typography.BODY_2} className={"text-start"}>
+            {subtitle}
+          </Text>
         </div>
-        <div className={"flex gap-2"}>
+        <div className={"flex items-center gap-2"}>
           <div className={"flex items-center gap-1"}>
-            <Icon type={IconName.CALENDAR} size={IconSizes.XS} />
+            <Icon type={IconName.CALENDAR} size={IconSizes.XS} className={"mb-0.5"} />
             <Text type={Typography.BODY_3}>
               {start_date} - {end_date}
             </Text>
           </div>
-          <Text type={Typography.BODY_3}>|</Text>
-          <Text type={Typography.BODY_3}>{role}</Text>
         </div>
       </div>
     </button>

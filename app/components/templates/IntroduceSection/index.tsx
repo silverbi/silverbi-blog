@@ -27,7 +27,7 @@ export const IntroduceSection: React.FC<IntroduceSection> = ({}) => {
 
       <div className="flex w-full flex-row items-center justify-between gap-16 py-12">
         <Image
-          width={382}
+          width={300}
           height={510}
           src={require("@assets/images/profile-avatar.png")}
           alt={"실버비 프로필 이미지"}
