@@ -27,7 +27,7 @@ const PostDetailSection: React.FC<PostDetailSectionProps> = ({ post }) => {
   };
 
   return (
-    <div className={"flex w-full flex-col items-start justify-start gap-28"}>
+    <div className={"relative flex w-full flex-col items-start justify-start gap-28"}>
       <div className={"flex w-full flex-col gap-6"}>
         <div className={"flex items-center gap-4"}>
           <div className={"flex items-center gap-1"}>
@@ -54,7 +54,7 @@ const PostDetailSection: React.FC<PostDetailSectionProps> = ({ post }) => {
             {subtitle}
           </Text>
         </div>
-        <div className={"flex gap-4"}>
+        <div className={"flex gap-3"}>
           {tags.map((tag, index) => (
             <Tag type={"SECONDARY"} size={"MD"} key={index}>
               {tag}
@@ -67,22 +67,26 @@ const PostDetailSection: React.FC<PostDetailSectionProps> = ({ post }) => {
 
       <Markdown>{body}</Markdown>
 
-      <div className={"fixed bottom-8 right-12 z-20 flex gap-3"}>
-        <IconButton className={"rounded-full border bg-background-1 p-3"} onClick={handleClickLikeButton}>
-          {selectedLikeButton ? (
-            <Icon
-              type={IconName.HEART_FILL}
-              size={"MD"}
-              color={Colors.CONTENT_PRIMARY}
-              className={"hover:opacity-60"}
-            />
-          ) : (
-            <Icon type={IconName.HEART_OUTLINE} size={"MD"} className={"hover:opacity-60"} />
-          )}
-        </IconButton>
-        <IconButton className={"rounded-full border bg-background-1 p-3"} onClick={handleClickShareButton}>
-          <Icon type={IconName.SHARE} size={"MD"} className={"hover:opacity-60"} />
-        </IconButton>
+      <div className={`relative z-20 h-fit w-full`}>
+        <div className={"absolute -right-40 h-fit w-[120px]"}>
+          <div className={`fixed bottom-12 flex h-fit w-fit flex-col gap-3`}>
+            <IconButton className={"rounded-full border bg-background-1 p-3"} onClick={handleClickShareButton}>
+              <Icon type={IconName.SHARE} size={"MD"} className={"hover:opacity-60"} />
+            </IconButton>
+            <IconButton className={"rounded-full border bg-background-1 p-3"} onClick={handleClickLikeButton}>
+              {selectedLikeButton ? (
+                <Icon
+                  type={IconName.HEART_FILL}
+                  size={"MD"}
+                  color={Colors.CONTENT_PRIMARY}
+                  className={"hover:opacity-60"}
+                />
+              ) : (
+                <Icon type={IconName.HEART_OUTLINE} size={"MD"} className={"hover:opacity-60"} />
+              )}
+            </IconButton>
+          </div>
+        </div>
       </div>
     </div>
   );

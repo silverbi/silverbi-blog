@@ -8,7 +8,7 @@ import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@common/constants";
 
 export const Footer: React.FC = () => {
   return (
-    <div className="flex w-full items-center justify-center border-t border-t-border-1 bg-background-1">
+    <div className="relative z-50 flex w-full items-center justify-center border-t border-t-border-1 bg-background-1">
       <div className="flex h-full w-full max-w-[1280px] flex-col items-center justify-between gap-8 py-10">
         <div className="flex w-full items-center justify-between">
           {/** 블로그 로고 */}

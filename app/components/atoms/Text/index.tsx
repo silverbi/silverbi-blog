@@ -26,7 +26,7 @@ export const Text: React.FC<TextProps> = ({ className, children, type, color, bo
       className={[
         ...(Array.isArray(className) ? className : [className]),
         "silverbi-text",
-        "font-pretendard",
+        "break-all font-pretendard",
         changeTypographyToClassName(type),
         changeColorToClassName(color),
         changeWeightToClassName(weight),
