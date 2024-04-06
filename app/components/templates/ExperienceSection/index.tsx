@@ -37,7 +37,7 @@ const ExperienceSection: React.FC = () => {
   };
 
   return (
-    <div className={"flex w-full flex-col gap-16"}>
+    <div className={"flex w-full flex-col gap-8"}>
       <Title>Experience</Title>
       <div className={"flex flex-col divide-y"}>
         {temp.map((item, index) => (

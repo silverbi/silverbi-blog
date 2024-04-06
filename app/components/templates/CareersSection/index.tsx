@@ -91,14 +91,14 @@ const CareersSection: React.FC = () => {
   ];
 
   return (
-    <div className={"flex w-full flex-col gap-12"}>
+    <div className={"flex w-full flex-col gap-4"}>
       <Title>Careers</Title>
 
-      <div className={"flex flex-col gap-8"}>
+      <div className={"flex flex-col divide-y"}>
         {temp.map((items, index) => {
           return (
-            <div className={"flex flex-col"} key={index}>
-              <Text type={Typography.TITLE_2} bold className={"uppercase"}>
+            <div className={"flex flex-col py-12"} key={index}>
+              <Text type={Typography.TITLE_2} bold className={"pb-2 uppercase"}>
                 {`${items.corporation}.`}
               </Text>
               <div className={"flex items-center gap-2"}>
@@ -111,7 +111,7 @@ const CareersSection: React.FC = () => {
                 <Text>{items.role}</Text>
               </div>
 
-              <div className={"my-12 w-full"}>
+              <div className={"mt-12 w-full"}>
                 <div className={"flex flex-col gap-12"}>
                   {items.history.map((item, index) => (
                     <div key={index} className={"flex"}>
