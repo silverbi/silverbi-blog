@@ -19,6 +19,8 @@ import ShareIcon from "@assets/icons/icon-share.svg";
 import LikeFillIcon from "@assets/icons/icon-like-fill.svg";
 import LikeOutlineIcon from "@assets/icons/icon-like-outline.svg";
 import HeartFill from "@assets/icons/icon-heart-fill.svg";
+import Profile from "@assets/icons/icon-profile.svg";
+import Icon from "@components/atoms/Icon/index";
 
 export const changeTypeToIconComponent = (type: IconTypes) => {
   switch (type) {
@@ -54,6 +56,8 @@ export const changeTypeToIconComponent = (type: IconTypes) => {
       return LikeOutlineIcon;
     case IconName.LIKE_FILL:
       return LikeFillIcon;
+    case IconName.PROFILE:
+      return Profile;
     default:
       return "icon";
   }

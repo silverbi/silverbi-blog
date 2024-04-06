@@ -2,6 +2,8 @@ import React from "react";
 import Title from "@components/atoms/Title";
 import Text from "@components/atoms/Text";
 import { Colors, Typography } from "@styles/themes/types";
+import Icon from "@components/atoms/Icon";
+import { IconName } from "@components/atoms/Icon/types";
 
 const CareersSection: React.FC = () => {
   const temp = [
@@ -88,8 +90,6 @@ const CareersSection: React.FC = () => {
     },
   ];
 
-  console.log("d응응", Object.entries(temp));
-
   return (
     <div className={"flex w-full flex-col gap-12"}>
       <Title>Careers</Title>
@@ -98,21 +98,16 @@ const CareersSection: React.FC = () => {
         {temp.map((items, index) => {
           return (
             <div className={"flex flex-col"} key={index}>
-              <Text
-                type={Typography.HEAD_1}
-                className={
-                  "outline-title w-fit cursor-pointer uppercase transition duration-500 ease-in-out hover:text-content-2"
-                }
-                color={Colors.CONTENT_INVERSE_1}
-                bold
-              >
+              <Text type={Typography.TITLE_2} bold className={"uppercase"}>
                 {`${items.corporation}.`}
               </Text>
-              <div className={"flex gap-2"}>
+              <div className={"flex items-center gap-2"}>
+                <Icon type={IconName.CALENDAR} size={"XS"} className={"mb-0.5"} />
                 <Text>
                   {items.start_date} - {items.end_date}
                 </Text>
                 <Text>|</Text>
+                <Icon type={IconName.PROFILE} size={"XS"} />
                 <Text>{items.role}</Text>
               </div>
 
@@ -124,12 +119,12 @@ const CareersSection: React.FC = () => {
                         {item.start_date} - {item.end_date}
                       </Text>
                       <div className={"flex w-9/12 flex-col gap-2"}>
-                        <Text bold className={"-ml-5"}>
+                        <Text type={Typography.SUBTITLE_2} bold className={"-ml-5"}>
                           {item.title}
                         </Text>
                         <ul className={"list-outside list-disc"}>
                           {item.contents.map((content, index) => (
-                            <li key={index} className={"leading-loose"}>
+                            <li key={index} className={"leading-loose text-content-2"}>
                               {content}
                             </li>
                           ))}

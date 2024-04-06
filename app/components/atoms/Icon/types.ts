@@ -15,6 +15,7 @@ export const IconName = {
   SHARE: "SHARE",
   LIKE_OUTLINE: "LIKE_OUTLINE",
   LIKE_FILL: "LIKE_FILL",
+  PROFILE: "PROFILE",
 } as const;
 export type IconTypes = (typeof IconName)[keyof typeof IconName];
 
