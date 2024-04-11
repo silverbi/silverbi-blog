@@ -8,6 +8,7 @@ import Title from "@components/atoms/Title";
 import Text from "@components/atoms/Text";
 import ProjectList from "@components/organisms/ProjectList";
 import { Colors } from "@styles/themes/types";
+import { PROJECT_MAIN_IMAGE } from "@common/images";
 
 const tempProjectsItem = [
   {
@@ -49,7 +50,13 @@ const Projects = () => {
   return (
     <RootLayout>
       <Container className="my-32">
-        <Image priority src={require("@assets/images/projects-thumbnail.png")} alt={"Projects thumbnail"} />
+        <Image
+          priority
+          src={PROJECT_MAIN_IMAGE}
+          alt={"Projects thumbnail"}
+          className={"!relative rounded-[24px]"}
+          fill
+        />
 
         <div className="mt-28 flex w-full flex-col gap-12">
           <Title>Projects</Title>

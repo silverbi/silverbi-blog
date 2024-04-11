@@ -8,6 +8,7 @@ import Image from "next/image";
 import Tag from "@components/atoms/Tag";
 import Link from "next/link";
 import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@common/constants";
+import { RETROSPECT_MAIN_IMAGE, USER_PROFILE } from "@common/images";
 
 export interface IntroduceSection {}
 
@@ -26,12 +27,7 @@ export const IntroduceSection: React.FC<IntroduceSection> = ({}) => {
       </div>
 
       <div className="flex w-full flex-row items-center justify-between gap-12 py-12">
-        <Image
-          width={300}
-          height={510}
-          src={require("@assets/images/profile-avatar.png")}
-          alt={"실버비 프로필 이미지"}
-        />
+        <Image width={300} height={510} src={USER_PROFILE} alt={"실버비 프로필 이미지"} />
         <div className={"flex w-full flex-col gap-7"}>
           <div className={"flex flex-col"}>
             <Text type={Typography.TITLE_3} bold>

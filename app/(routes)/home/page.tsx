@@ -10,6 +10,7 @@ import IntroduceSection from "@components/templates/IntroduceSection";
 import PostListPreviewSection from "app/components/templates/PostListPreviewSection";
 import { useRouter } from "next/navigation";
 import ProjectListPreviewSection from "app/components/templates/ProjectListPreviewSection";
+import { LANDING_MAIN_IMAGE } from "@common/images";
 
 const Home: React.FC = () => {
   const router = useRouter();
@@ -26,13 +27,13 @@ const Home: React.FC = () => {
             SILVERBI BLOG
           </Text>
           <Image
+            className={"!relative"}
             priority
-            src={require("@assets/images/landing-main-image.png")}
+            src={LANDING_MAIN_IMAGE}
             alt={"실버비 블로그 메인 랜딩 이미지"}
+            fill
           />
         </div>
-
-        <IntroduceSection />
 
         <div className={"mb-48 flex flex-col items-center gap-24"}>
           <PostListPreviewSection title={"Tech"} handleClickMore={handleClickMore} />

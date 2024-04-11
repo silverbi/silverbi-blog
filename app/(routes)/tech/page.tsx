@@ -9,6 +9,7 @@ import Text from "@components/atoms/Text";
 import PostList from "@components/organisms/PostList";
 import Tag from "@components/atoms/Tag";
 import { useRouter, useSearchParams } from "next/navigation";
+import { TECH_MAIN_IMAGE } from "@common/images";
 
 const tempPostItem = [
   {
@@ -61,7 +62,7 @@ const Tech: React.FC = () => {
   return (
     <RootLayout>
       <Container className="my-32">
-        <Image priority src={require("@assets/images/tech-thumbnail.png")} alt={"Tech thumbnail"} />
+        <Image priority src={TECH_MAIN_IMAGE} alt={"Tech thumbnail"} className={"!relative rounded-[24px]"} />
 
         <div className="mt-28 flex w-full flex-col gap-12">
           <Title>Tech</Title>
