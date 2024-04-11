@@ -7,7 +7,6 @@ import React from "react";
 import Title from "@components/atoms/Title";
 import Text from "@components/atoms/Text";
 import ProjectList from "@components/organisms/ProjectList";
-import { Colors } from "@styles/themes/types";
 import { PROJECT_MAIN_IMAGE } from "@common/images";
 
 const tempProjectsItem = [

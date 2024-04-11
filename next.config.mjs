@@ -8,8 +8,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'silverbi.s3.ap-southeast-2.amazonaws.com',
+        protocol: "https",
+        hostname: "silverbi.s3.ap-southeast-2.amazonaws.com",
       },
     ],
   },
