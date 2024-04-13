@@ -29,16 +29,16 @@ export const colors = {
     1200: "#FF8C05",
     1300: "#FF6E05",
   },
-  semantic: {
-    success: "#27c265",
-    warning: "#F0CF59",
-    error: "#D14242",
-    info: "#5A80E1",
+  SEMANTIC: {
+    SUCCESS: "#27c265",
+    WARNING: "#F0CF59",
+    ERROR: "#D14242",
+    INFO: "#5A80E1",
   },
-  link: "#FF6E05",
-  black: "#000000",
-  white: "#ffffff",
-  gray: {
+  LINK: "#FF6E05",
+  BLACK: "#000000",
+  WHITE: "#ffffff",
+  GRAY: {
     100: "#F8F8F8",
     200: "#F3F3F3",
     300: "#E4E4E4",

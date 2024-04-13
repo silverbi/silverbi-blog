@@ -1,6 +1,9 @@
 import Head from "next/head";
 import React from "react";
 import "@styles/globals.css";
+import "react-loading-skeleton/dist/skeleton.css";
+import { SkeletonTheme } from "react-loading-skeleton";
+import themes from "@styles/themes";
 
 export const metadata = {
   title: "SILVERBI Tech Blog",
@@ -11,7 +14,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <Head></Head>
-      <body suppressHydrationWarning={true}>{children}</body>
+      <body suppressHydrationWarning={true}>
+        <SkeletonTheme
+          baseColor={themes.colors.light["layer-3"]}
+          highlightColor={themes.colors.light["layer-disabled"]}
+        >
+          {children}
+        </SkeletonTheme>
+      </body>
     </html>
   );
 }

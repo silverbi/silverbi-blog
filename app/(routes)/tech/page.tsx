@@ -62,7 +62,7 @@ const Tech: React.FC = () => {
   return (
     <RootLayout>
       <Container className="my-32">
-        <Image priority src={TECH_MAIN_IMAGE} alt={"Tech thumbnail"} className={"!relative rounded-[24px]"} />
+        <Image priority src={TECH_MAIN_IMAGE} alt={"Tech thumbnail"} className={"!relative rounded-[24px]"} fill />
 
         <div className="mt-28 flex w-full flex-col gap-12">
           <Title>Tech</Title>

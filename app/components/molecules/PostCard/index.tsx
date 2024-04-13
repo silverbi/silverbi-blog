@@ -2,6 +2,8 @@ import React from "react";
 import { PostTypes } from "types/postTypes";
 import Text from "@components/atoms/Text";
 import { Typography } from "@styles/themes/types";
+import Skeleton from "react-loading-skeleton";
+
 import Tag from "@components/atoms/Tag";
 import Icon from "@components/atoms/Icon";
 import { IconName, IconSizes } from "@components/atoms/Icon/types";
@@ -26,8 +28,10 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
         "flex h-full max-h-[240px] w-full cursor-pointer flex-row items-center gap-8 rounded-lg border border-layer-1 p-4 hover:border hover:border-border-3"
       }
     >
-      <div className={"h-full w-1/3 rounded-lg bg-link-disabled"} />
-
+      {/** 스켈레톤 loader */}
+      <div className={"m-0 h-full w-1/3 p-0 leading-none"}>
+        <Skeleton count={1} className={"h-full"} height={"100%"} />
+      </div>
       <div className={"flex h-full w-2/3 flex-col gap-3"}>
         <div className={"flex flex-row gap-2"}>
           {tags.map((tag, index) => (

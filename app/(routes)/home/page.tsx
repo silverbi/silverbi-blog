@@ -6,7 +6,6 @@ import Image from "next/image";
 import Text from "@components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import { Container } from "@components/atoms/Container";
-import IntroduceSection from "@components/templates/IntroduceSection";
 import PostListPreviewSection from "app/components/templates/PostListPreviewSection";
 import { useRouter } from "next/navigation";
 import ProjectListPreviewSection from "app/components/templates/ProjectListPreviewSection";
