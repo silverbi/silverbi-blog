@@ -3,10 +3,6 @@ import { RetrospectTypes } from "types/postTypes";
 import Text from "@components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import Skeleton from "react-loading-skeleton";
-
-import Tag from "@components/atoms/Tag";
-import Icon from "@components/atoms/Icon";
-import { IconName, IconSizes } from "@components/atoms/Icon/types";
 import { useRouter } from "next/navigation";
 import Chip from "@components/atoms/Chip";
 
@@ -14,13 +10,44 @@ export interface RetrospectCardProps {
   retrospect: RetrospectTypes;
 }
 
+export const EmptyRetrospectCard: React.FC = () => {
+  return (
+    <div
+      className={
+        "flex h-[520px] w-full cursor-pointer flex-col items-end gap-6 rounded-lg border border-layer-1 p-4 transition duration-300 ease-in-out hover:border hover:border-border-3"
+      }
+    >
+      <div className={"justify-items flex h-full w-full flex-col items-center gap-4"}>
+        <div className={"m-0 h-full w-full p-0 leading-none"}>
+          <Skeleton count={1} height={"100%"} />
+        </div>
+        <div className={"flex h-full w-full flex-col gap-3"}>
+          <Skeleton count={1} width={"40%"} />
+          <Skeleton count={1} height={28} />
+          <Skeleton count={1} height={28} width={"70%"} />
+          <Skeleton count={3} />
+        </div>
+      </div>
+
+      <div className={"h-fit w-[30%]"}>
+        <Skeleton count={1} height={36} />
+      </div>
+    </div>
+  );
+};
+
 export const RetrospectCard: React.FC<RetrospectCardProps> = ({ retrospect }) => {
   const router = useRouter();
   const { id, title, short_description, date, thumbnail } = retrospect;
+  let empty = true;
 
   const handleClickRetrospectCard = () => {
     router.push(`/retrospects/${id}`);
   };
+
+  if (empty) {
+    return <EmptyRetrospectCard />;
+  }
 
   return (
     <div

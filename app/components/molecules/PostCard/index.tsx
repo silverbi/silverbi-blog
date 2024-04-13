@@ -13,13 +13,38 @@ export interface PostCardProps {
   post: PostTypes;
 }
 
+export const EmptyPostCard: React.FC = () => {
+  return (
+    <div
+      className={
+        "flex h-[240px] w-full cursor-pointer flex-row items-center gap-8 rounded-lg border border-layer-1 p-4 transition duration-300 ease-in-out hover:border hover:border-border-3"
+      }
+    >
+      <div className={"m-0 h-full w-1/3 p-0 leading-none"}>
+        <Skeleton count={1} height={"100%"} />
+      </div>
+      <div className={"flex h-full w-2/3 flex-col gap-3"}>
+        <Skeleton count={1} height={28} width={"40%"} />
+        <Skeleton count={1} height={36} />
+        <Skeleton count={1} height={28} width={"60%"} />
+        <Skeleton count={3} />
+      </div>
+    </div>
+  );
+};
+
 export const PostCard: React.FC<PostCardProps> = ({ post }) => {
   const router = useRouter();
   const { id, title, tags, short_description, date, thumbnail, like, minRead } = post;
+  let empty = true;
 
   const handleClickPostCard = () => {
     router.push(`/tech/${id}`);
   };
+
+  if (empty) {
+    return <EmptyPostCard />;
+  }
 
   return (
     <div
@@ -30,7 +55,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
     >
       {/** 스켈레톤 loader */}
       <div className={"m-0 h-full w-1/3 p-0 leading-none"}>
-        <Skeleton count={1} className={"h-full"} height={"100%"} />
+        <Skeleton count={1} height={"100%"} />
       </div>
       <div className={"flex h-full w-2/3 flex-col gap-3"}>
         <div className={"flex flex-row gap-2"}>
