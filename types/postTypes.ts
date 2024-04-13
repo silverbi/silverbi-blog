@@ -24,3 +24,26 @@ export interface PostDetailTypes {
   series: any;
   linked_posts: any;
 }
+
+export interface RetrospectDetailTypes {
+  id: number;
+  title: string;
+  subtitle: string;
+  short_description: string;
+  body: string;
+  tags: Array<string>;
+  date: string;
+  minRead: number;
+  like: number;
+  thumbnail: string;
+  comments: any;
+  linked_posts: any;
+}
+
+export interface RetrospectTypes {
+  id: number;
+  title: string;
+  date: string;
+  short_description: string;
+  thumbnail: string;
+}

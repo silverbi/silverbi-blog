@@ -25,7 +25,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
     <div
       onClick={handleClickPostCard}
       className={
-        "flex h-full max-h-[240px] w-full cursor-pointer flex-row items-center gap-8 rounded-lg border border-layer-1 p-4 hover:border hover:border-border-3"
+        "flex h-full max-h-[240px] w-full cursor-pointer flex-row items-center gap-8 rounded-lg border border-layer-1 p-4 transition duration-300 ease-in-out hover:border hover:border-border-3"
       }
     >
       {/** 스켈레톤 loader */}
