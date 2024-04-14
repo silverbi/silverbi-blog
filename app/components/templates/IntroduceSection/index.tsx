@@ -47,8 +47,8 @@ export const IntroduceSection: React.FC<IntroduceSection> = ({}) => {
           </div>
 
           <Text type={Typography.BODY_1}>
-            어디에서나 도움을 줄 수 있는 개발자가 되는 것을 목표로 달리고 있습니다. 문제를 찾아서 해결하기 위해
-            주도적으로 행동하고, 조직 문화와 프로덕트가 더 나은 방향으로 나아갈 수 있기 위해 적극 노력합니다.
+            견고하고 유연한 코드를 지향합니다. 이것저것 만드는 것을 좋아합니다. 문제를 찾아서 해결하기 위해 주도적으로
+            행동하고, 조직 문화와 프로덕트가 더 나은 방향으로 나아갈 수 있기 위해 적극 노력합니다.
           </Text>
 
           <div className="flex items-center gap-4">
