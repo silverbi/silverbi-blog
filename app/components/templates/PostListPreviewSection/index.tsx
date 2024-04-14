@@ -47,7 +47,7 @@ export interface PostListPreviewSectionProps {
 export const PostListPreviewSection: React.FC<PostListPreviewSectionProps> = ({ title, handleClickMore }) => {
   return (
     <div className={"flex w-full flex-col gap-24 py-20"}>
-      <div className={"flex flex-row items-center justify-between"}>
+      <div className={"flex w-full flex-row items-center justify-between"}>
         <Title>{title}</Title>
 
         <button className={"cursor-pointer"} onClick={handleClickMore}>

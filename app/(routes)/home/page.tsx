@@ -34,7 +34,7 @@ const Home: React.FC = () => {
           />
         </div>
 
-        <div className={"mb-48 flex flex-col items-center gap-24"}>
+        <div className={"mb-48 flex w-full flex-col items-center gap-24"}>
           <PostListPreviewSection title={"Tech"} handleClickMore={handleClickMore} />
           <ProjectListPreviewSection title={"Projects"} handleClickMore={handleClickMore} />
         </div>

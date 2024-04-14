@@ -101,12 +101,16 @@ del {
     1px 1px 0 #000;
 }
 
+.react-loading-skeleton {
+  border-radius: 1.5rem !important;
+}
+
 @layer components {
-  .project-card {
-    @apply bg-background-1 rounded-xxl p-4 overflow-hidden relative border-2 border-background-1 cursor-pointer;
+  .silverbi-project-card {
+    @apply relative cursor-pointer overflow-hidden rounded-xxl border-2 border-background-1 bg-background-1;
   }
 
-  .project-img {
+  .silverbi-project-img {
     @apply object-cover;
   }
 }
