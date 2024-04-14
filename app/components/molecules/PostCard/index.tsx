@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 
 export interface PostCardProps {
   post: PostTypes;
+  className?: string | Array<string>;
 }
 
 export const EmptyPostCard: React.FC = () => {
@@ -33,7 +34,7 @@ export const EmptyPostCard: React.FC = () => {
   );
 };
 
-export const PostCard: React.FC<PostCardProps> = ({ post }) => {
+export const PostCard: React.FC<PostCardProps> = ({ post, className }) => {
   const router = useRouter();
   const { id, title, tags, short_description, date, thumbnail, like, minRead } = post;
   let empty = true;
@@ -49,9 +50,11 @@ export const PostCard: React.FC<PostCardProps> = ({ post }) => {
   return (
     <div
       onClick={handleClickPostCard}
-      className={
-        "flex h-full max-h-[240px] w-full cursor-pointer flex-row items-center gap-8 rounded-lg border border-layer-1 p-4 transition duration-300 ease-in-out hover:border hover:border-border-3"
-      }
+      className={[
+        ...(Array.isArray(className) ? className : [className]),
+        "silverbi-post-card",
+        "flex h-full max-h-[240px] w-full cursor-pointer flex-row items-center gap-8 rounded-lg border border-layer-1 p-4 transition duration-300 ease-in-out hover:border hover:border-border-3",
+      ].join(" ")}
     >
       {/** 스켈레톤 loader */}
       <div className={"m-0 h-full w-1/3 p-0 leading-none"}>

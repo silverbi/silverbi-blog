@@ -15,6 +15,8 @@ module.exports = {
       sm: ".125rem",
       DEFAULT: ".25rem",
       lg: ".5rem",
+      xl: "1rem",
+      xxl: "1.5rem",
       full: "9999px",
     },
     opacity: {

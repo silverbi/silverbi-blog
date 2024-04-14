@@ -1,7 +1,6 @@
-export interface ProductTypes {
+export interface ProjectTypes {
   id: number;
   title: string;
-  label: string;
   start_date: string;
   end_date: string;
   role: string;

@@ -100,3 +100,13 @@ del {
     -1px 1px 0 #000,
     1px 1px 0 #000;
 }
+
+@layer components {
+  .project-card {
+    @apply bg-background-1 rounded-xxl p-4 overflow-hidden relative border-2 border-background-1 cursor-pointer;
+  }
+
+  .project-img {
+    @apply object-cover;
+  }
+}

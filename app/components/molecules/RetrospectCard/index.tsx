@@ -8,6 +8,7 @@ import Chip from "@components/atoms/Chip";
 
 export interface RetrospectCardProps {
   retrospect: RetrospectTypes;
+  className?: string | Array<string>;
 }
 
 export const EmptyRetrospectCard: React.FC = () => {
@@ -36,7 +37,7 @@ export const EmptyRetrospectCard: React.FC = () => {
   );
 };
 
-export const RetrospectCard: React.FC<RetrospectCardProps> = ({ retrospect }) => {
+export const RetrospectCard: React.FC<RetrospectCardProps> = ({ retrospect, className }) => {
   const router = useRouter();
   const { id, title, short_description, date, thumbnail } = retrospect;
   let empty = true;
@@ -52,9 +53,11 @@ export const RetrospectCard: React.FC<RetrospectCardProps> = ({ retrospect }) =>
   return (
     <div
       onClick={handleClickRetrospectCard}
-      className={
-        "flex h-[520px] w-full cursor-pointer flex-col items-end gap-6 rounded-lg border border-layer-1 p-4 transition duration-300 ease-in-out hover:border hover:border-border-3"
-      }
+      className={[
+        ...(Array.isArray(className) ? className : [className]),
+        "silverbi-retrospect-card",
+        "flex h-[520px] w-full cursor-pointer flex-col items-end gap-6 rounded-lg border border-layer-1 p-4 transition duration-300 ease-in-out hover:border hover:border-border-3",
+      ].join(" ")}
     >
       <div className={"justify-items flex h-full w-full flex-col items-center gap-4"}>
         {/** 스켈레톤 loader */}
