@@ -8,7 +8,7 @@ import Image from "next/image";
 import Tag from "@components/atoms/Tag";
 import Link from "next/link";
 import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@common/constants";
-import { RETROSPECT_MAIN_IMAGE, USER_PROFILE } from "@common/images";
+import { USER_PROFILE } from "@common/images";
 
 export interface IntroduceSection {}
 
