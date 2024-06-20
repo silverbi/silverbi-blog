@@ -53,6 +53,16 @@ export const colors = {
     1200: "#202020",
     1300: "#101010",
   },
+  HOVER: {
+    LIGHT: "rgba(22, 22, 22, 0.04)",
+    DARK: "rgba(22, 22, 22, 0.1)",
+    INVERSE: "rgba(222, 222, 222, 0.04)",
+  },
+  PRESSED: {
+    LIGHT: "rgba(22, 22, 22, 0.1)",
+    DARK: "rgba(22, 22, 22, 0.16)",
+    INVERSE: "rgba(222, 222, 222, 0.1)",
+  },
 };
 
 export default colors;

@@ -44,6 +44,12 @@ const lightColors = {
   "semantic-error": colors.SEMANTIC.ERROR,
   "semantic-warning": colors.SEMANTIC.WARNING,
   "semantic-info": colors.SEMANTIC.INFO,
+  "hover-light": colors.HOVER.LIGHT,
+  "hover-dark": colors.HOVER.DARK,
+  "hover-inverse": colors.HOVER.INVERSE,
+  "pressed-light": colors.PRESSED.LIGHT,
+  "pressed-dark": colors.PRESSED.DARK,
+  "pressed-inverse": colors.PRESSED.INVERSE,
 };
 
 export default lightColors;
