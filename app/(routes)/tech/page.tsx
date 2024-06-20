@@ -3,13 +3,13 @@
 import React from "react";
 import { Container } from "@components/atoms/Container";
 import RootLayout from "@layouts/RootLayout";
-import Image from "next/image";
 import Title from "@components/atoms/Title";
 import Text from "@components/atoms/Text";
 import PostList from "@components/organisms/PostList";
 import Tag from "@components/atoms/Tag";
 import { useRouter, useSearchParams } from "next/navigation";
-import { TECH_MAIN_IMAGE } from "@common/images";
+import CustomImage from "app/components/atoms/CustomImage";
+import { ImageTypes } from "@components/atoms/CustomImage/types";
 
 const tempPostItem = [
   {
@@ -62,7 +62,13 @@ const Tech: React.FC = () => {
   return (
     <RootLayout>
       <Container className="my-32">
-        <Image priority src={TECH_MAIN_IMAGE} alt={"Tech thumbnail"} className={"!relative rounded-[24px]"} fill />
+        <CustomImage
+          tag={ImageTypes.TECH_THUMBNAIL}
+          alt={"Tech thumbnail"}
+          width={980}
+          height={560}
+          className={"rounded-xl"}
+        />
 
         <div className="mt-28 flex w-full flex-col gap-12">
           <Title>Tech</Title>

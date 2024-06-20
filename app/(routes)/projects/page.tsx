@@ -2,20 +2,12 @@
 
 import { Container } from "@components/atoms/Container";
 import RootLayout from "@layouts/RootLayout";
-import Image from "next/image";
 import React from "react";
 import Title from "@components/atoms/Title";
 import Text from "@components/atoms/Text";
 import ProjectList from "@components/organisms/ProjectList";
-import {
-  PROJECT_IDCO,
-  PROJECT_MAIN_IMAGE,
-  PROJECT_MEETPET,
-  PROJECT_MICHELIN_MYEON,
-  PROJECT_MYDREAM,
-  PROJECT_SAEFOLDER,
-  PROJECT_SILVERBI_BLOG,
-} from "@common/images";
+import CustomImage from "app/components/atoms/CustomImage";
+import { ImageTypes } from "@components/atoms/CustomImage/types";
 
 const tempProjectsItem = [
   {
@@ -27,7 +19,7 @@ const tempProjectsItem = [
     role: "Frontend Developer",
     subtitle: "반려동물 안심 입양 플랫폼",
     tags: ["WEB", "Next.js"],
-    thumbnail: PROJECT_MEETPET,
+    thumbnail: ImageTypes.PROJECT_MEETPET,
   },
   {
     id: 1,
@@ -38,7 +30,7 @@ const tempProjectsItem = [
     role: "Frontend Developer",
     subtitle: "함께하는 탐조 생활",
     tags: ["APP", "React Native"],
-    thumbnail: PROJECT_SAEFOLDER,
+    thumbnail: ImageTypes.PROJECT_SAEFOLDER,
   },
   {
     id: 2,
@@ -49,7 +41,7 @@ const tempProjectsItem = [
     role: "Frontend Developer",
     subtitle: "",
     tags: ["WEB", "Next.js", "NestJS"],
-    thumbnail: PROJECT_SILVERBI_BLOG,
+    thumbnail: ImageTypes.PROJECT_SILVERBI_BLOG,
   },
   {
     id: 3,
@@ -60,7 +52,7 @@ const tempProjectsItem = [
     role: "Frontend Developer",
     subtitle: "나만의 맛있는 평양냉면 찾기",
     tags: ["WEB", "React"],
-    thumbnail: PROJECT_MICHELIN_MYEON,
+    thumbnail: ImageTypes.PROJECT_MICHELINMYEON,
   },
   {
     id: 4,
@@ -71,7 +63,7 @@ const tempProjectsItem = [
     role: "Frontend Developer",
     subtitle: "세상에 하나 뿐인 코로 만든 강아지 ID",
     tags: ["APP", "React Native"],
-    thumbnail: PROJECT_IDCO,
+    thumbnail: ImageTypes.PROJECT_IDCO,
   },
   {
     id: 5,
@@ -82,7 +74,7 @@ const tempProjectsItem = [
     role: "Frontend Developer",
     subtitle: "",
     tags: ["WEB", "Next.js"],
-    thumbnail: PROJECT_MYDREAM,
+    thumbnail: ImageTypes.PROJECT_DEEPFALL,
   },
 ];
 
@@ -90,13 +82,7 @@ const Projects = () => {
   return (
     <RootLayout>
       <Container className="my-32">
-        <Image
-          priority
-          src={PROJECT_MAIN_IMAGE}
-          alt={"Projects thumbnail"}
-          className={"!relative rounded-[24px]"}
-          fill
-        />
+        <CustomImage tag={ImageTypes.PROJECTS_THUMBNAIL} alt={"Projects thumbnail"} className={"rounded-[24px]"} />
 
         <div className="mt-28 flex w-full flex-col gap-12">
           <Title>Projects</Title>

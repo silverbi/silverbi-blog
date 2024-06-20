@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
 
   return (
     <div className="fixed z-50 flex h-16 w-full items-center justify-center overflow-hidden border-b bg-background-1">
-      <div className="flex h-fit w-full max-w-[1280px] flex-row items-center justify-between bg-background-1">
+      <div className="flex h-fit w-full max-w-lg flex-row items-center justify-between bg-background-1 px-12">
         {/** 블로그 로고 */}
         <Link scroll={false} href={"/"}>
           <span className={"flex flex-row items-center gap-2"}>

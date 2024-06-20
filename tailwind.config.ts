@@ -13,7 +13,7 @@ module.exports = {
     borderRadius: {
       none: "0",
       sm: ".125rem",
-      DEFAULT: ".25rem",
+      md: ".25rem",
       lg: ".5rem",
       xl: "1rem",
       xxl: "1.5rem",
@@ -63,6 +63,13 @@ module.exports = {
       72: "18rem",
       80: "20rem",
       96: "24rem",
+    },
+    maxWidth: {
+      xs: "320px",
+      sm: "360px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1440px",
     },
     screens: {
       xs: "320px",

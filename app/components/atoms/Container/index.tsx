@@ -9,11 +9,11 @@ export interface ContainerProps {
 
 export const Container: React.FC<ContainerProps> = ({ children, className }) => {
   return (
-    <div className="align-center flex w-full justify-center">
+    <div className="align-center flex w-full justify-center px-12">
       <div
         className={[
           ...(Array.isArray(className) ? className : [className]),
-          `flex w-full max-w-[860px] flex-col items-center justify-center`,
+          `relative flex w-full max-w-[860px] flex-col items-center justify-center`,
           "silverbi-container",
         ].join(" ")}
       >

@@ -9,7 +9,8 @@ import { Container } from "@components/atoms/Container";
 import PostListPreviewSection from "app/components/templates/PostListPreviewSection";
 import { useRouter } from "next/navigation";
 import ProjectListPreviewSection from "app/components/templates/ProjectListPreviewSection";
-import { LANDING_MAIN_IMAGE } from "@common/images";
+import CustomImage from "app/components/atoms/CustomImage";
+import { ImageTypes } from "@components/atoms/CustomImage/types";
 
 const Home: React.FC = () => {
   const router = useRouter();
@@ -21,17 +22,11 @@ const Home: React.FC = () => {
   return (
     <RootLayout>
       <Container className="gap-48">
-        <div className="mt-28 flex flex-col items-center justify-center gap-28">
+        <div className="relative mt-28 flex flex-col items-center justify-center gap-28">
           <Text bold type={Typography.HEAD_2}>
             SILVERBI BLOG
           </Text>
-          <Image
-            className={"!relative"}
-            priority
-            src={LANDING_MAIN_IMAGE}
-            alt={"실버비 블로그 메인 랜딩 이미지"}
-            fill
-          />
+          <CustomImage tag={ImageTypes.LANDING_THUMBNAIL} alt={"블로그 메인 랜딩 이미지"} width={980} height={560} />
         </div>
 
         <div className={"mb-48 flex w-full flex-col items-center gap-24"}>
