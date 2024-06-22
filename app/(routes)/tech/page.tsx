@@ -47,16 +47,16 @@ const tempPostItem = [
   },
 ];
 
-const filter = ["React", "CSS", "CRA"];
+const category = ["React", "CSS", "CRA"];
 
 const Tech: React.FC = () => {
   const router = useRouter();
   const params = useSearchParams();
-  const filterParams = params.get("filter");
-  const selectedFilter = filterParams ? filterParams : filter[0];
+  const categoryParams = params.get("category");
+  const selectedFilter = categoryParams ? categoryParams : category[0];
 
   const handleClickTag = (label: string) => {
-    router.push(`/tech?filter=${label}`);
+    router.push(`/tech?category=${label}`);
   };
 
   return (
@@ -75,7 +75,7 @@ const Tech: React.FC = () => {
           <Text>진합태산(塵合泰山). 공부하고 경험했던 것들을 기록합니다.</Text>
 
           <div className={"flex gap-4 border-y py-4"}>
-            {filter.map((label, index) => (
+            {category.map((label, index) => (
               <div key={index} onClick={() => handleClickTag(label)}>
                 <Tag className={"cursor-pointer"} type={label === selectedFilter ? "PRIMARY" : "SECONDARY"}>
                   {label}

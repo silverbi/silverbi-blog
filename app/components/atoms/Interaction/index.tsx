@@ -11,7 +11,7 @@ export const Interaction: React.FC<InteractionProps> = ({ children, className, f
     <div
       className={[
         ...(Array.isArray(className) ? className : [className]),
-        `hover:bg-hover-light active:bg-pressed-light delay-50 relative flex w-fit items-center justify-center rounded-lg px-3 py-1 transition ease-in-out`,
+        `delay-50 relative flex w-fit items-center justify-center rounded-lg px-3 py-1 transition ease-in-out hover:bg-hover-light active:bg-pressed-light`,
         "silverbi-interaction",
       ].join(" ")}
     >
