@@ -32,7 +32,7 @@ export const TopNav: React.FC = () => {
   };
 
   const wrappers = {
-    active: "max-h-80 visible opacity-100 transition-all ease-in-out duration-300",
+    active: "max-h-96 visible opacity-100 transition-all ease-in-out duration-300",
     inactive: "max-h-0 invisible opacity-0 transition-all ease-in-out duration-300",
   };
   const wrapperClasses = wrappers[isOpenMenu ? "active" : "inactive"];
@@ -40,7 +40,10 @@ export const TopNav: React.FC = () => {
   return (
     <div>
       {isOpenMenu && (
-        <div onClick={handleOpenMenu} className={"z-90 absolute bottom-0 left-0 right-0 top-0 h-screen w-screen"} />
+        <div
+          onClick={handleOpenMenu}
+          className={"z-90 absolute bottom-0 left-0 right-0 top-0 h-screen w-screen cursor-default"}
+        />
       )}
 
       <div className={"relative"}>
@@ -50,30 +53,37 @@ export const TopNav: React.FC = () => {
 
         {/** menu section */}
         <div
-          className={`z-100 origin-top-down absolute right-0 top-12 mt-1 flex w-auto min-w-44 cursor-pointer flex-col gap-1 rounded-lg border border-content-1 bg-content-inverse-1 p-2 drop-shadow-lg ${wrapperClasses}`}
+          className={`z-100 origin-top-down absolute right-0 top-12 mt-1 flex w-auto min-w-44 flex-col gap-6 overflow-hidden rounded-lg border border-content-1 bg-content-inverse-1 px-3 py-4 drop-shadow-lg ${wrapperClasses}`}
         >
-          {routeData.map((item: OptionsTypes, index: number) => {
-            const isSelectedItem = pathname === `/${item.value}`;
-            let colorClasses = colors[isSelectedItem ? "active" : "inactive"];
-            let interactionClasses = interactions[isSelectedItem ? "active" : "inactive"];
+          {routeData.map((items, index) => (
+            <div key={index} className={"flex w-full cursor-default flex-col"}>
+              <Text type={Typography.BODY_3} color={Colors.CONTENT_3}>
+                {items.category}
+              </Text>
+              {items.data.map((item: OptionsTypes, index: number) => {
+                const isSelectedItem = pathname === `/${item.value}`;
+                let colorClasses = colors[isSelectedItem ? "active" : "inactive"];
+                let interactionClasses = interactions[isSelectedItem ? "active" : "inactive"];
 
-            return (
-              <div key={index} className={`overflow-hidden rounded-lg ${interactionClasses}`}>
-                <a
-                  href={`/${item.value}`}
-                  onClick={handleOpenMenu}
-                  className={`flex w-full items-center justify-start gap-2 px-2 py-2 ${colorClasses}`}
-                >
-                  <Icon
-                    type={item.icon}
-                    color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}
-                    size={IconSizes.SM}
-                  />
-                  <Text color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}>{item.label}</Text>
-                </a>
-              </div>
-            );
-          })}
+                return (
+                  <div key={index} className={`overflow-hidden rounded-lg ${interactionClasses}`}>
+                    <a
+                      href={`/${item.value}`}
+                      onClick={handleOpenMenu}
+                      className={`flex w-full cursor-pointer items-center justify-start gap-2 px-2 py-2 ${colorClasses}`}
+                    >
+                      <Icon
+                        type={item.icon}
+                        color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}
+                        size={IconSizes.SM}
+                      />
+                      <Text color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}>{item.label}</Text>
+                    </a>
+                  </div>
+                );
+              })}
+            </div>
+          ))}
         </div>
       </div>
     </div>
