@@ -54,14 +54,14 @@ export const colors = {
     1300: "#101010",
   },
   HOVER: {
-    LIGHT: "rgba(22, 22, 22, 0.04)",
+    LIGHT: "rgba(22, 22, 22, 0.06)",
     DARK: "rgba(22, 22, 22, 0.1)",
-    INVERSE: "rgba(222, 222, 222, 0.04)",
+    INVERSE: "rgba(222, 222, 222, 0.06)",
   },
   PRESSED: {
     LIGHT: "rgba(22, 22, 22, 0.1)",
     DARK: "rgba(22, 22, 22, 0.16)",
-    INVERSE: "rgba(222, 222, 222, 0.1)",
+    INVERSE: "rgba(255, 255, 255, 0.1)",
   },
 };
 

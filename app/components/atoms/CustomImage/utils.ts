@@ -1,5 +1,5 @@
 import { ImageTypes } from "@components/atoms/CustomImage/types";
-import Avatar from "@assets/images/avatar.webp";
+import ProfileCharacter from "@assets/images/profile-character.webp";
 import LandingThumbnail from "@assets/images/landing-thumbnail.webp";
 import ProjectDeepfall from "@assets/images/project-deepfall.webp";
 import ProjectIdco from "@assets/images/project-idco.webp";
@@ -19,8 +19,8 @@ export const changeImageTagToPath = (tag: string) => {
       return TechThumbnail;
     case ImageTypes.PROJECTS_THUMBNAIL:
       return ProjectsThumbnail;
-    case ImageTypes.AVATAR:
-      return Avatar;
+    case ImageTypes.PROFILE_CHARACTER:
+      return ProfileCharacter;
     case ImageTypes.PROJECT_MEETPET:
       return ProjectMeetPet;
     case ImageTypes.PROJECT_IDCO:

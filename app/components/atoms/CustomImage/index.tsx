@@ -10,18 +10,10 @@ interface CustomImageProps {
   width?: number;
   height?: number;
   alt?: string;
-  priority?: boolean;
   sizes?: string;
 }
 
-const CustomImage: React.FC<CustomImageProps> = ({
-  tag,
-  className,
-  alt = "silverbi-blog-image",
-  width,
-  height,
-  priority = false,
-}) => {
+const CustomImage: React.FC<CustomImageProps> = ({ tag, className, alt = "silverbi-blog-image", width, height }) => {
   return (
     <div className={"relative"}>
       <Image
@@ -37,7 +29,6 @@ const CustomImage: React.FC<CustomImageProps> = ({
         fill={!(width || height)}
         width={width}
         height={height}
-        priority={priority}
       />
     </div>
   );
