@@ -1,6 +1,6 @@
 export const colors = {
   PRIMARY: {
-    100: "#EAE2FF",
+    100: "#f2edff",
     200: "#DCD0FF",
     300: "#CBBAFF",
     400: "#B8A1FC",
@@ -35,13 +35,13 @@ export const colors = {
     ERROR: "#D14242",
     INFO: "#5A80E1",
   },
-  LINK: "#FF6E05",
+  LINK: "#8367D5",
   BLACK: "#000000",
   WHITE: "#ffffff",
   GRAY: {
     100: "#F8F8F8",
     200: "#F3F3F3",
-    300: "#E4E4E4",
+    300: "#ededed",
     400: "#CECECE",
     500: "#B0B0B0",
     600: "#929292",
@@ -56,7 +56,7 @@ export const colors = {
   HOVER: {
     LIGHT: "rgba(22, 22, 22, 0.06)",
     DARK: "rgba(22, 22, 22, 0.1)",
-    INVERSE: "rgba(222, 222, 222, 0.06)",
+    INVERSE: "rgba(255, 255, 255, 0.1)",
   },
   PRESSED: {
     LIGHT: "rgba(22, 22, 22, 0.1)",

@@ -22,7 +22,7 @@ export const Text: React.FC<TextProps> = ({ className, children, type, color, bo
   const weight = bold ? "SEMI_BOLD" : light ? "LIGHT" : "MEDIUM";
 
   return (
-    <p
+    <span
       className={[
         ...(Array.isArray(className) ? className : [className]),
         "silverbi-text",
@@ -33,7 +33,7 @@ export const Text: React.FC<TextProps> = ({ className, children, type, color, bo
       ].join(" ")}
     >
       {children}
-    </p>
+    </span>
   );
 };
 

@@ -94,6 +94,9 @@ module.exports = {
         actSlideDown: "slideDown 0.5s forwards",
       },
     },
+    fontFamily: {
+      pretendard: ["var(--font-pretendard)"],
+    },
   },
   plugins: [],
 };

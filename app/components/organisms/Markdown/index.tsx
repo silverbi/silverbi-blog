@@ -1,9 +1,9 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import dracula from "react-syntax-highlighter/dist/cjs/styles/prism/dracula";
 import remarkGfm from "remark-gfm";
-import CodeCopyButton from "@components/molecules/CodeCopyButton";
+import { codeThemes } from "@components/molecules/CodeBlock/codeThemes";
+import CodeBlock from "@components/molecules/CodeBlock";
 
 interface MarkdownProps {
   children: string;
@@ -11,40 +11,19 @@ interface MarkdownProps {
 
 const Markdown: React.FC<MarkdownProps> = ({ children }) => {
   return (
-    <div className={"flex flex-col gap-4"}>
+    <div className={"flex w-full flex-col gap-4"}>
       <ReactMarkdown
+        className={"text-content-3"}
         remarkPlugins={[remarkGfm]}
         components={{
-          code(props) {
-            const { children, className, node, ...rest } = props;
+          code({ node, inline, className, children, ...rest }: any) {
             const match = /language-(\w+)/.exec(className || "");
-
-            return match ? (
-              <pre className={"relative my-8"}>
-                <div className={"absolute top-4 flex w-full items-start justify-between px-6"}>
-                  <div className={"flex gap-1.5"}>
-                    <div className={"h-3 w-3 rounded-full bg-[#EF4444]"} />
-                    <div className={"h-3 w-3 rounded-full bg-[#EAB30A]"} />
-                    <div className={"h-3 w-3 rounded-full bg-[#21C55E]"} />
-                  </div>
-                  <CodeCopyButton>{children}</CodeCopyButton>
-                </div>
-                <SyntaxHighlighter
-                  className={"!w-full !rounded-[12px] !p-6 !pt-12"}
-                  PreTag="div"
-                  children={String(children).replace(/\n$/, "")}
-                  language={match[1]}
-                  wrapLines={true}
-                  wrapLongLines={true}
-                  showLineNumbers={true}
-                  showInlineLineNumbers={false}
-                  style={dracula}
-                />
-              </pre>
+            return !inline && match ? (
+              <CodeBlock value={String(children).replace(/\n$/, "")} language={match[1]} {...rest} />
             ) : (
               <code
                 {...rest}
-                className={`${className} mx-0.5 w-fit rounded-[4px] bg-layer-highlight-light px-1 py-0.5 text-content-primary-dark`}
+                className={`${className} mx-0.5 w-fit rounded-[4px] bg-layer-disabled px-1.5 py-0.5 text-content-2`}
               >
                 {children}
               </code>
@@ -71,21 +50,29 @@ const Markdown: React.FC<MarkdownProps> = ({ children }) => {
           },
           em({ children, ...props }) {
             return (
-              <span style={{ fontStyle: "italic" }} {...props}>
+              <span className={"italic text-content-3"} {...props}>
                 {children}
               </span>
             );
           },
           a({ children, ...props }) {
             return (
-              <span className={"cursor-pointer font-bold text-link-active hover:underline"} {...props}>
+              <a
+                href={props.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={
+                  "cursor-pointer border-b-4 border-b-content-primary-light font-bold text-link-active decoration-2 hover:text-content-primary"
+                }
+                {...props}
+              >
                 {children}
-              </span>
+              </a>
             );
           },
           hr({ children, ...props }) {
             return (
-              <span className={"h-0.5 bg-border-inverse-2"} {...props}>
+              <span className={"h-0.5 bg-border-inverse-2 text-content-3"} {...props}>
                 {children}
               </span>
             );

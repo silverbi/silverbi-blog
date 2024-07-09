@@ -6,8 +6,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕",
-    나눔고딕, "Nanum Gothic", "Noto Sans KR", "Noto Sans CJK KR", arial, 돋움, Dotum, Tahoma, Geneva, sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 36px;
+  font-size: 16px;
+  font-weight: 400;
+  word-break: break-all;
+}
+
+body {
+  cursor: default;
 }
 
 ::-moz-selection {
@@ -24,64 +31,41 @@ pre {
 }
 
 h1 {
-  font-size: 2em;
-  line-height: 1.6;
-  font-weight: bold;
-  word-break: break-all;
+  font-size: 32px;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: 1.5em;
-  line-height: 1.6;
-  font-weight: bold;
-  word-break: break-all;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: 1.25em;
-  line-height: 1.6;
-  font-weight: bold;
-  word-break: break-all;
+  font-size: 20px;
+  line-height: 1.8;
+  font-weight: 600;
 }
 
 h4 {
-  font-size: 1em;
+  font-size: 18px;
   line-height: 1.6;
-  font-weight: bold;
-  word-break: break-all;
-}
-
-h5 {
-  font-size: 0.875em;
-  line-height: 1.6;
-  font-weight: bold;
-  word-break: break-all;
-}
-
-h6 {
-  font-size: 0.85em;
-  line-height: 1.6;
-  font-weight: bold;
-  word-break: break-all;
+  font-weight: 600;
 }
 
 p {
-  font-size: 16px;
-  line-height: 1.8;
   margin: 0;
-  word-break: break-all;
 }
 
-code {
-  font-weight: 500;
+span {
+  margin: 0;
 }
 
 strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 blockquote {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 del {
