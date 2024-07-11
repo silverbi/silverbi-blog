@@ -17,16 +17,17 @@ export type ButtonStyles = "PRIMARY" | "SECONDARY" | "GHOST" | "DISABLED";
 const Button: React.FC<ButtonProps> = ({ className, children, tag = "PRIMARY", onClick, icon }) => {
   return (
     <button
-      className={
-        "relative h-fit w-fit cursor-pointer rounded-xl transition-all duration-300 ease-in-out active:scale-95"
-      }
+      className={[
+        "relative h-fit w-fit cursor-pointer rounded-xl transition-all duration-300 ease-in-out active:scale-95",
+        ...(Array.isArray(className) ? className : [className]),
+      ].join(" ")}
       onClick={onClick}
     >
       <div
         className={[
-          ...(Array.isArray(className) ? className : [className]),
           changeTypeToInteraction(tag),
           "absolute z-10 h-full w-full rounded-xl",
+          ...(Array.isArray(className) ? className : [className]),
         ].join(" ")}
       />
       <div

@@ -10,5 +10,6 @@ export const ImageTypes = {
   PROJECT_SILVERBI_BLOG: "PROJECT_SILVERBI_BLOG",
   PROJECTS_THUMBNAIL: "PROJECTS_THUMBNAIL",
   RETROSPECT_THUMBNAIL: "RETROSPECT_THUMBNAIL",
+  HAND_JAR: "HAND_JAR",
 } as const;
 export type ImageTypes = (typeof ImageTypes)[keyof typeof ImageTypes];

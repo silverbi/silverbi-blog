@@ -8,7 +8,7 @@ import localFont from "next/font/local";
 
 export const metadata = {
   title: "SILVERBI Tech Blog",
-  description: "어제보다 한 걸음 더 나아가기 위해 기록합니다.",
+  description: "어제보다 한 걸음 더 나아가기",
 };
 
 const pretendard = localFont({

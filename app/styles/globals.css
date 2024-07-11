@@ -6,7 +6,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
   line-height: 36px;
   font-size: 16px;
   font-weight: 400;
@@ -15,6 +30,7 @@
 
 body {
   cursor: default;
+  height: 100vh;
 }
 
 ::-moz-selection {
@@ -33,22 +49,24 @@ pre {
 h1 {
   font-size: 32px;
   font-weight: 600;
+  line-height: 62px;
 }
 
 h2 {
   font-size: 24px;
   font-weight: 600;
+  line-height: 56px;
 }
 
 h3 {
   font-size: 20px;
-  line-height: 1.8;
+  line-height: 52px;
   font-weight: 600;
 }
 
 h4 {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 46px;
   font-weight: 600;
 }
 

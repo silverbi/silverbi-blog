@@ -10,6 +10,7 @@ import ProjectSilverbiBlog from "@assets/images/project-saefolder.webp";
 import RetrospectThumbnail from "@assets/images/retrospect-thumbnail.webp";
 import ProjectsThumbnail from "@assets/images/projects-thumbnail.webp";
 import TechThumbnail from "@assets/images/retrospect-thumbnail.webp";
+import HandJar from "@assets/images/hand-jar.webp";
 
 export const changeImageTagToPath = (tag: string) => {
   switch (tag) {
@@ -35,6 +36,8 @@ export const changeImageTagToPath = (tag: string) => {
       return ProjectSilverbiBlog;
     case ImageTypes.RETROSPECT_THUMBNAIL:
       return RetrospectThumbnail;
+    case ImageTypes.HAND_JAR:
+      return HandJar;
     default:
       return "";
   }

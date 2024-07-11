@@ -21,7 +21,7 @@ export const codeThemes = {
     OTabSize: "4",
     tabSize: "4",
     padding: "20px 26px",
-    margin: ".5em 0",
+    margin: "36px 0",
     overflow: "auto",
     borderRadius: "18px",
   },
