@@ -6,7 +6,7 @@ import Text from "@components/atoms/Text";
 import { Colors, Typography } from "@styles/themes/types";
 import Tag from "@components/atoms/Tag";
 import Icon from "@components/atoms/Icon";
-import Markdown from "@components/atoms/Markdown";
+import Markdown from "app/components/organisms/Markdown";
 import { IconName, IconSizes } from "@components/atoms/Icon/types";
 import IconButton from "@components/atoms/IconButton";
 

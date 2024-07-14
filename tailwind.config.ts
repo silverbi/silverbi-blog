@@ -84,6 +84,18 @@ module.exports = {
       fontFamily: {
         pretendard: ["Pretendard", "sans-serif"],
       },
+      keyframes: {
+        slideDown: {
+          "0%": { opacity: 0, transform: "translateY(-10%)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        actSlideDown: "slideDown 0.5s forwards",
+      },
+    },
+    fontFamily: {
+      pretendard: ["var(--font-pretendard)"],
     },
   },
   plugins: [],

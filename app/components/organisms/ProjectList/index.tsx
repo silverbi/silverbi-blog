@@ -7,7 +7,6 @@ export interface ProjectListProps {
 }
 
 export const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
-  console.log(projects);
   return (
     <div className={"grid aspect-square w-full grid-flow-row-dense grid-cols-4 grid-rows-4 gap-4"}>
       {projects.map((project, index) => (

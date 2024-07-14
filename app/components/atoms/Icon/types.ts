@@ -16,6 +16,14 @@ export const IconName = {
   LIKE_OUTLINE: "LIKE_OUTLINE",
   LIKE_FILL: "LIKE_FILL",
   PROFILE: "PROFILE",
+  FOLDER: "FOLDER",
+  GIFT: "GIFT",
+  HOME: "HOME",
+  LOCK: "LOCK",
+  PEN: "PEN",
+  PIN: "PIN",
+  PROFILE_CIRCLE: "PROFILE_CIRCLE",
+  STAR: "STAR",
 } as const;
 export type IconTypes = (typeof IconName)[keyof typeof IconName];
 

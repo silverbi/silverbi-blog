@@ -28,7 +28,7 @@ export const IntroduceSection: React.FC<IntroduceSection> = ({}) => {
       </div>
 
       <div className="flex w-full flex-row items-center justify-between gap-12 py-12">
-        <CustomImage width={300} height={510} tag={ImageTypes.PROFILE_USER} alt={"실버비 프로필 이미지"} />
+        <CustomImage width={300} height={510} tag={ImageTypes.PROFILE_CHARACTER} alt={"실버비 프로필 이미지"} />
         <div className={"flex w-full flex-col gap-7"}>
           <div className={"flex flex-col"}>
             <Text type={Typography.TITLE_3} bold>

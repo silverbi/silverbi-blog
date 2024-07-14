@@ -6,15 +6,15 @@ import { IconName, IconSizes } from "@components/atoms/Icon/types";
 import Text from "@components/atoms/Text";
 import Link from "next/link";
 import { HEADER_MENU } from "@common/constants";
-import IconButton from "@components/atoms/IconButton";
 import { usePathname } from "next/navigation";
 import Interaction from "@components/atoms/Interaction";
+import TopNav from "app/components/organisms/TopNav";
 
 export const Header: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <div className="fixed z-50 flex h-16 w-full items-center justify-center overflow-hidden border-b bg-background-1">
+    <div className="fixed z-50 flex h-16 w-full items-center justify-center border-b bg-background-1">
       <div className="flex h-fit w-full max-w-xl flex-row items-center justify-between bg-background-1 px-12">
         {/** 블로그 로고 */}
         <Link scroll={false} href={"/"}>
@@ -40,9 +40,7 @@ export const Header: React.FC = () => {
           ))}
         </span>
 
-        <IconButton>
-          <Icon type={IconName.MENU_BAR} size={IconSizes.LG} />
-        </IconButton>
+        <TopNav />
       </div>
     </div>
   );

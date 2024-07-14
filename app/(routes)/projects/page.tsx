@@ -82,7 +82,13 @@ const Projects = () => {
   return (
     <RootLayout>
       <Container className="my-32">
-        <CustomImage tag={ImageTypes.PROJECTS_THUMBNAIL} alt={"Projects thumbnail"} className={"rounded-[24px]"} />
+        <CustomImage
+          tag={ImageTypes.PROJECTS_THUMBNAIL}
+          width={980}
+          height={560}
+          alt={"Projects thumbnail"}
+          className={"rounded-[24px]"}
+        />
 
         <div className="mt-28 flex w-full flex-col gap-12">
           <Title>Projects</Title>

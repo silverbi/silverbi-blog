@@ -7,11 +7,13 @@ export interface RootLayoutProps {
 }
 export const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
-    <>
+    <div className={"flex h-full w-full flex-col justify-between"}>
       <Header />
-      <main className={"pt-16"}>{children}</main>
-      <Footer />
-    </>
+      <div className={"flex h-full w-full flex-col justify-between pt-16"}>
+        <main className={""}>{children}</main>
+        <Footer />
+      </div>
+    </div>
   );
 };
 

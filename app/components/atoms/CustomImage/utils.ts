@@ -1,5 +1,5 @@
 import { ImageTypes } from "@components/atoms/CustomImage/types";
-import Avatar from "@assets/images/avatar.webp";
+import ProfileCharacter from "@assets/images/profile-character.webp";
 import LandingThumbnail from "@assets/images/landing-thumbnail.webp";
 import ProjectDeepfall from "@assets/images/project-deepfall.webp";
 import ProjectIdco from "@assets/images/project-idco.webp";
@@ -10,6 +10,7 @@ import ProjectSilverbiBlog from "@assets/images/project-saefolder.webp";
 import RetrospectThumbnail from "@assets/images/retrospect-thumbnail.webp";
 import ProjectsThumbnail from "@assets/images/projects-thumbnail.webp";
 import TechThumbnail from "@assets/images/retrospect-thumbnail.webp";
+import HandJar from "@assets/images/hand-jar.webp";
 
 export const changeImageTagToPath = (tag: string) => {
   switch (tag) {
@@ -19,8 +20,8 @@ export const changeImageTagToPath = (tag: string) => {
       return TechThumbnail;
     case ImageTypes.PROJECTS_THUMBNAIL:
       return ProjectsThumbnail;
-    case ImageTypes.AVATAR:
-      return Avatar;
+    case ImageTypes.PROFILE_CHARACTER:
+      return ProfileCharacter;
     case ImageTypes.PROJECT_MEETPET:
       return ProjectMeetPet;
     case ImageTypes.PROJECT_IDCO:
@@ -35,6 +36,8 @@ export const changeImageTagToPath = (tag: string) => {
       return ProjectSilverbiBlog;
     case ImageTypes.RETROSPECT_THUMBNAIL:
       return RetrospectThumbnail;
+    case ImageTypes.HAND_JAR:
+      return HandJar;
     default:
       return "";
   }

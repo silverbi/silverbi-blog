@@ -10,8 +10,8 @@ interface CustomImageProps {
   width?: number;
   height?: number;
   alt?: string;
-  priority?: boolean;
   sizes?: string;
+  priority?: boolean;
 }
 
 const CustomImage: React.FC<CustomImageProps> = ({
@@ -32,12 +32,12 @@ const CustomImage: React.FC<CustomImageProps> = ({
         ].join(" ")}
         src={changeImageTagToPath(tag)}
         alt={alt}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
+        priority={priority}
         quality={100}
         fill={!(width || height)}
         width={width}
         height={height}
-        priority={priority}
       />
     </div>
   );

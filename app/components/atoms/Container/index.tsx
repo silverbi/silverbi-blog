@@ -9,7 +9,7 @@ export interface ContainerProps {
 
 export const Container: React.FC<ContainerProps> = ({ children, className }) => {
   return (
-    <div className="align-center flex w-full justify-center px-12">
+    <div className="align-center flex h-full w-full justify-center px-12">
       <div
         className={[
           ...(Array.isArray(className) ? className : [className]),

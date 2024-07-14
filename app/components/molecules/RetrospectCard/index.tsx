@@ -55,7 +55,7 @@ export const RetrospectCard: React.FC<RetrospectCardProps> = ({ retrospect, clas
       onClick={handleClickRetrospectCard}
       className={[
         ...(Array.isArray(className) ? className : [className]),
-        "silverbi-retrospect-card",
+        "silverbi-retrospects-card",
         "flex h-[520px] w-full cursor-pointer flex-col items-end gap-6 rounded-lg border border-layer-1 p-4 transition duration-300 ease-in-out hover:border hover:border-border-3",
       ].join(" ")}
     >

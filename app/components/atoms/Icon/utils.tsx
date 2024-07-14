@@ -20,7 +20,14 @@ import LikeFillIcon from "@assets/icons/icon-like-fill.svg";
 import LikeOutlineIcon from "@assets/icons/icon-like-outline.svg";
 import HeartFill from "@assets/icons/icon-heart-fill.svg";
 import Profile from "@assets/icons/icon-profile.svg";
-import Icon from "@components/atoms/Icon/index";
+import FolderIcon from "@assets/icons/icon-folder.svg";
+import GiftIcon from "@assets/icons/icon-gift.svg";
+import HomeIcon from "@assets/icons/icon-home.svg";
+import LockIcon from "@assets/icons/icon-lock.svg";
+import PenIcon from "@assets/icons/icon-pen.svg";
+import PinIcon from "@assets/icons/icon-pin.svg";
+import ProfileCircleIcon from "@assets/icons/icon-profile-circle.svg";
+import StarIcon from "@assets/icons/icon-star.svg";
 
 export const changeTypeToIconComponent = (type: IconTypes) => {
   switch (type) {
@@ -58,6 +65,22 @@ export const changeTypeToIconComponent = (type: IconTypes) => {
       return LikeFillIcon;
     case IconName.PROFILE:
       return Profile;
+    case IconName.FOLDER:
+      return FolderIcon;
+    case IconName.GIFT:
+      return GiftIcon;
+    case IconName.HOME:
+      return HomeIcon;
+    case IconName.LOCK:
+      return LockIcon;
+    case IconName.PEN:
+      return PenIcon;
+    case IconName.PIN:
+      return PinIcon;
+    case IconName.PROFILE_CIRCLE:
+      return ProfileCircleIcon;
+    case IconName.STAR:
+      return StarIcon;
     default:
       return "icon";
   }
