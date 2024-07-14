@@ -32,7 +32,7 @@ const Markdown: React.FC<MarkdownProps> = ({ children }) => {
           blockquote({ children, ...props }) {
             // 인용구 (>)
             return (
-              <div className={"my-8 flex gap-4 border-l-4 border-border-primary bg-background-2 px-5 py-3"}>
+              <div className={"login-8 flex gap-4 border-l-4 border-border-primary bg-background-2 px-5 py-3"}>
                 <blockquote className={"text-content-inverse-3"} {...props}>
                   {children}
                 </blockquote>
@@ -42,7 +42,7 @@ const Markdown: React.FC<MarkdownProps> = ({ children }) => {
           img({ ...props }) {
             return (
               <img
-                className={"!my-8 !rounded-[12px]"}
+                className={"!login-8 !rounded-[12px]"}
                 src={props.src?.replace("../../../../public/", "/")}
                 alt="post image"
               />

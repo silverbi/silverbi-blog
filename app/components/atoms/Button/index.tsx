@@ -8,19 +8,21 @@ export interface ButtonProps {
   className?: string | Array<string>;
   children: React.ReactNode;
   tag?: ButtonStyles;
-  onClick: () => void;
+  onClick?: () => void;
+  formAction?: (formData: FormData) => void;
   icon?: IconTypes;
 }
 
 export type ButtonStyles = "PRIMARY" | "SECONDARY" | "GHOST" | "DISABLED";
 
-const Button: React.FC<ButtonProps> = ({ className, children, tag = "PRIMARY", onClick, icon }) => {
+const Button: React.FC<ButtonProps> = ({ className, children, tag = "PRIMARY", onClick, formAction, icon }) => {
   return (
     <button
       className={[
         "relative h-fit w-fit cursor-pointer rounded-xl transition-all duration-300 ease-in-out active:scale-95",
         ...(Array.isArray(className) ? className : [className]),
       ].join(" ")}
+      formAction={formAction}
       onClick={onClick}
     >
       <div

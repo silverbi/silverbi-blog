@@ -13,6 +13,6 @@ export const routeData = [
   },
   {
     category: "SETTING",
-    data: [{ label: "My", value: "my", icon: IconName.LOCK }],
+    data: [{ label: "My", value: "login", icon: IconName.LOCK }],
   },
 ];

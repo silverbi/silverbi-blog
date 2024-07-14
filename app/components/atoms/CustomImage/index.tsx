@@ -11,9 +11,17 @@ interface CustomImageProps {
   height?: number;
   alt?: string;
   sizes?: string;
+  priority?: boolean;
 }
 
-const CustomImage: React.FC<CustomImageProps> = ({ tag, className, alt = "silverbi-blog-image", width, height }) => {
+const CustomImage: React.FC<CustomImageProps> = ({
+  tag,
+  className,
+  alt = "silverbi-blog-image",
+  width,
+  height,
+  priority = false,
+}) => {
   return (
     <div className={"relative"}>
       <Image
@@ -24,7 +32,8 @@ const CustomImage: React.FC<CustomImageProps> = ({ tag, className, alt = "silver
         ].join(" ")}
         src={changeImageTagToPath(tag)}
         alt={alt}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
+        priority={priority}
         quality={100}
         fill={!(width || height)}
         width={width}
