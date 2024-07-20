@@ -2,7 +2,6 @@
 
 import React from "react";
 import RootLayout from "@layouts/RootLayout";
-import Image from "next/image";
 import Text from "@components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import { Container } from "@components/atoms/Container";
@@ -26,7 +25,13 @@ const Home: React.FC = () => {
           <Text bold type={Typography.HEAD_2}>
             SILVERBI BLOG
           </Text>
-          <CustomImage tag={ImageTypes.LANDING_THUMBNAIL} alt={"블로그 메인 랜딩 이미지"} width={980} height={560} />
+          <CustomImage
+            priority
+            tag={ImageTypes.LANDING_THUMBNAIL}
+            alt={"블로그 메인 랜딩 이미지"}
+            width={980}
+            height={560}
+          />
         </div>
 
         <div className={"mb-48 flex w-full flex-col items-center gap-24"}>
