@@ -21,9 +21,28 @@ export const login = async (provider: "github" | "google", nextUrl: string) => {
     redirect("/error");
   }
 
-  console.log("data ,", data);
-
   if (data.url) {
     redirect(data.url);
   }
+};
+
+export const logout = async () => {
+  const supabase = createClient();
+
+  const { error } = await supabase.auth.signOut();
+
+  if (error) {
+    redirect("/error");
+  }
+
+  redirect("/");
+};
+
+export const getUser = async () => {
+  const supabase = createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  return user;
 };

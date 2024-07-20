@@ -1,12 +1,16 @@
 import React from "react";
 import Button from "@components/atoms/Button";
 import { IconName } from "@components/atoms/Icon/types";
-import { usePathname } from "next/navigation";
-import { login } from "@components/organisms/LoginForm/action";
+import { useSearchParams } from "next/navigation";
+import { login } from "@utils/auth";
 
 export const LoginForm: React.FC = () => {
+  const searchParams = useSearchParams();
+
   const handleLogin = async () => {
-    login("github", "/my");
+    const nextUrl = searchParams.get("next") ?? "/";
+
+    login("github", nextUrl);
   };
 
   return (

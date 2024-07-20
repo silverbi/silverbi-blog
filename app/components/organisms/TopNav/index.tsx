@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import IconButton from "@components/atoms/IconButton";
 import Icon from "@components/atoms/Icon";
 import { IconName, IconSizes, IconTypes } from "@components/atoms/Icon/types";
@@ -37,6 +37,48 @@ export const TopNav: React.FC = () => {
   };
   const wrapperClasses = wrappers[isOpenMenu ? "active" : "inactive"];
 
+  const TopNavItem = ({ item }: { item: OptionsTypes }) => {
+    const isSelectedItem = pathname === `/${item.value}`;
+    let colorClasses = colors[isSelectedItem ? "active" : "inactive"];
+    let interactionClasses = interactions[isSelectedItem ? "active" : "inactive"];
+
+    if (item.label === "Login") {
+      return (
+        <div className={`overflow-hidden rounded-lg ${interactionClasses}`}>
+          <a
+            href={`/${item.value}`}
+            onClick={handleOpenMenu}
+            className={`flex w-full cursor-pointer items-center justify-start gap-2 px-2 py-2 ${colorClasses}`}
+          >
+            <Icon
+              type={item.icon}
+              color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}
+              size={IconSizes.SM}
+            />
+            <Text color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}>{item.label}</Text>
+          </a>
+        </div>
+      );
+    }
+
+    return (
+      <div className={`overflow-hidden rounded-lg ${interactionClasses}`}>
+        <a
+          href={`/${item.value}`}
+          onClick={handleOpenMenu}
+          className={`flex w-full cursor-pointer items-center justify-start gap-2 px-2 py-2 ${colorClasses}`}
+        >
+          <Icon
+            type={item.icon}
+            color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}
+            size={IconSizes.SM}
+          />
+          <Text color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}>{item.label}</Text>
+        </a>
+      </div>
+    );
+  };
+
   return (
     <div>
       {isOpenMenu && (
@@ -61,26 +103,7 @@ export const TopNav: React.FC = () => {
                 {items.category}
               </Text>
               {items.data.map((item: OptionsTypes, index: number) => {
-                const isSelectedItem = pathname === `/${item.value}`;
-                let colorClasses = colors[isSelectedItem ? "active" : "inactive"];
-                let interactionClasses = interactions[isSelectedItem ? "active" : "inactive"];
-
-                return (
-                  <div key={index} className={`overflow-hidden rounded-lg ${interactionClasses}`}>
-                    <a
-                      href={`/${item.value}`}
-                      onClick={handleOpenMenu}
-                      className={`flex w-full cursor-pointer items-center justify-start gap-2 px-2 py-2 ${colorClasses}`}
-                    >
-                      <Icon
-                        type={item.icon}
-                        color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}
-                        size={IconSizes.SM}
-                      />
-                      <Text color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}>{item.label}</Text>
-                    </a>
-                  </div>
-                );
+                return <TopNavItem key={index} item={item} />;
               })}
             </div>
           ))}
