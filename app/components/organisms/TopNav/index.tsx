@@ -4,8 +4,9 @@ import Icon from "@components/atoms/Icon";
 import { IconName, IconSizes, IconTypes } from "@components/atoms/Icon/types";
 import Text from "@components/atoms/Text";
 import { routeData } from "@components/organisms/TopNav/routeDataSet";
-import { usePathname } from "next/navigation";
 import { Colors, Typography } from "@styles/themes/types";
+import { getUser } from "@utils/auth";
+import { TopNavItem } from "@components/molecules/TopNavItem";
 
 export type OptionsTypes = {
   label: string | number;
@@ -14,21 +15,23 @@ export type OptionsTypes = {
 };
 
 export const TopNav: React.FC = () => {
-  const pathname = usePathname();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
 
-  const handleOpenMenu = () => {
+  useEffect(() => {
+    getUser()
+      .then(value => {
+        if (value) return setIsLoggedIn(true);
+        return setIsLoggedIn(false);
+      })
+      .catch(error => {
+        console.error(error);
+        setIsLoggedIn(false);
+      });
+  }, []);
+
+  const handleClickMenu = () => {
     setIsOpenMenu(!isOpenMenu);
-  };
-
-  const interactions = {
-    active: "duration-300 bg-transparent transition ease-in-out",
-    inactive: "duration-300 bg-transparent transition ease-in-out hover:bg-hover-light",
-  };
-
-  const colors = {
-    active: "duration-300 bg-content-1 transition ease-in-out active:scale-90",
-    inactive: "duration-300 bg-transparent transition ease-in-out active:scale-90",
   };
 
   const wrappers = {
@@ -37,59 +40,17 @@ export const TopNav: React.FC = () => {
   };
   const wrapperClasses = wrappers[isOpenMenu ? "active" : "inactive"];
 
-  const TopNavItem = ({ item }: { item: OptionsTypes }) => {
-    const isSelectedItem = pathname === `/${item.value}`;
-    let colorClasses = colors[isSelectedItem ? "active" : "inactive"];
-    let interactionClasses = interactions[isSelectedItem ? "active" : "inactive"];
-
-    if (item.label === "Login") {
-      return (
-        <div className={`overflow-hidden rounded-lg ${interactionClasses}`}>
-          <a
-            href={`/${item.value}`}
-            onClick={handleOpenMenu}
-            className={`flex w-full cursor-pointer items-center justify-start gap-2 px-2 py-2 ${colorClasses}`}
-          >
-            <Icon
-              type={item.icon}
-              color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}
-              size={IconSizes.SM}
-            />
-            <Text color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}>{item.label}</Text>
-          </a>
-        </div>
-      );
-    }
-
-    return (
-      <div className={`overflow-hidden rounded-lg ${interactionClasses}`}>
-        <a
-          href={`/${item.value}`}
-          onClick={handleOpenMenu}
-          className={`flex w-full cursor-pointer items-center justify-start gap-2 px-2 py-2 ${colorClasses}`}
-        >
-          <Icon
-            type={item.icon}
-            color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}
-            size={IconSizes.SM}
-          />
-          <Text color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}>{item.label}</Text>
-        </a>
-      </div>
-    );
-  };
-
   return (
     <div>
       {isOpenMenu && (
         <div
-          onClick={handleOpenMenu}
+          onClick={handleClickMenu}
           className={"z-90 absolute bottom-0 left-0 right-0 top-0 h-screen w-screen cursor-default"}
         />
       )}
 
       <div className={"relative"}>
-        <IconButton onClick={handleOpenMenu} interactionClasses={isOpenMenu ? "bg-hover-light" : ""}>
+        <IconButton onClick={handleClickMenu} interactionClasses={isOpenMenu ? "bg-hover-light" : ""}>
           <Icon type={IconName.MENU_BAR} size={IconSizes.LG} />
         </IconButton>
 
@@ -103,7 +64,7 @@ export const TopNav: React.FC = () => {
                 {items.category}
               </Text>
               {items.data.map((item: OptionsTypes, index: number) => {
-                return <TopNavItem key={index} item={item} />;
+                return <TopNavItem key={index} item={item} isLoggedIn={isLoggedIn} onClose={handleClickMenu} />;
               })}
             </div>
           ))}
