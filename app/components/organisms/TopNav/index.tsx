@@ -15,20 +15,7 @@ export type OptionsTypes = {
 };
 
 export const TopNav: React.FC = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
-
-  useEffect(() => {
-    getUser()
-      .then(value => {
-        if (value) return setIsLoggedIn(true);
-        return setIsLoggedIn(false);
-      })
-      .catch(error => {
-        console.error(error);
-        setIsLoggedIn(false);
-      });
-  }, []);
 
   const handleClickMenu = () => {
     setIsOpenMenu(!isOpenMenu);
@@ -64,7 +51,7 @@ export const TopNav: React.FC = () => {
                 {items.category}
               </Text>
               {items.data.map((item: OptionsTypes, index: number) => {
-                return <TopNavItem key={index} item={item} isLoggedIn={isLoggedIn} onClose={handleClickMenu} />;
+                return <TopNavItem key={index} item={item} onClose={handleClickMenu} />;
               })}
             </div>
           ))}
