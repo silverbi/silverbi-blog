@@ -28,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({ className, children, tag = "PRIMARY", o
       <div
         className={[
           changeTypeToInteraction(tag),
-          "absolute z-10 h-full w-full rounded-xl",
+          "absolute z-10 h-full w-full cursor-pointer rounded-xl",
           ...(Array.isArray(className) ? className : [className]),
         ].join(" ")}
       />
@@ -37,7 +37,7 @@ const Button: React.FC<ButtonProps> = ({ className, children, tag = "PRIMARY", o
           ...(Array.isArray(className) ? className : [className]),
           changeTypeToClassname(tag),
           "silverbi-button",
-          "flex w-fit items-center justify-center gap-2 rounded-xl px-6 py-3",
+          "flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl px-6 py-3",
         ].join(" ")}
       >
         {icon && <Icon type={icon} size={IconSizes.SM} color={changeTypeToTextColors(tag)} />}

@@ -6,16 +6,17 @@ import Text from "@components/atoms/Text";
 import { usePathname } from "next/navigation";
 import { OptionsTypes } from "@components/organisms/TopNav";
 import { logout } from "@utils/auth";
+import { useUser } from "@/store/user";
 
 interface TopNavItemProps {
   item: OptionsTypes;
-  isLoggedIn: boolean;
   onClose: () => void;
 }
 
-export const TopNavItem: React.FC<TopNavItemProps> = ({ item, isLoggedIn, onClose }) => {
+export const TopNavItem: React.FC<TopNavItemProps> = ({ item, onClose }) => {
   const pathname = usePathname();
   const isSelectedItem = pathname === `/${item.value}`;
+  const user = useUser(state => state.user);
 
   const interactions = {
     active: "duration-300 bg-transparent transition ease-in-out",
@@ -31,7 +32,7 @@ export const TopNavItem: React.FC<TopNavItemProps> = ({ item, isLoggedIn, onClos
   let interactionClasses = interactions[isSelectedItem ? "active" : "inactive"];
 
   if (item.label === "Login") {
-    if (!isLoggedIn) {
+    if (!user?.id) {
       return (
         <div className={`overflow-hidden rounded-lg ${interactionClasses}`}>
           <a

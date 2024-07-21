@@ -11,6 +11,7 @@ import RetrospectThumbnail from "@assets/images/retrospect-thumbnail.webp";
 import ProjectsThumbnail from "@assets/images/projects-thumbnail.webp";
 import TechThumbnail from "@assets/images/retrospect-thumbnail.webp";
 import HandJar from "@assets/images/hand-jar.webp";
+import ErrorBackground from "@assets/images/error-background.png";
 
 export const changeImageTagToPath = (tag: string) => {
   switch (tag) {
@@ -38,6 +39,8 @@ export const changeImageTagToPath = (tag: string) => {
       return RetrospectThumbnail;
     case ImageTypes.HAND_JAR:
       return HandJar;
+    case ImageTypes.ERROR_BACKGROUND:
+      return ErrorBackground;
     default:
       return "";
   }

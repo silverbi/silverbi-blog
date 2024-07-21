@@ -5,6 +5,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { SkeletonTheme } from "react-loading-skeleton";
 import themes from "@styles/themes";
 import localFont from "next/font/local";
+import SessionProvider from "@layouts/sessionProvider";
 
 export const metadata = {
   title: "SILVERBI Tech Blog",
@@ -22,12 +23,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <body suppressHydrationWarning={true} className={`${pretendard.variable} font-pretendard`}>
-        <SkeletonTheme
-          baseColor={themes.colors.light["layer-3"]}
-          highlightColor={themes.colors.light["layer-disabled"]}
-        >
-          {children}
-        </SkeletonTheme>
+        <SessionProvider>
+          <SkeletonTheme
+            baseColor={themes.colors.light["layer-3"]}
+            highlightColor={themes.colors.light["layer-disabled"]}
+          >
+            {children}
+          </SkeletonTheme>
+        </SessionProvider>
       </body>
     </html>
   );
