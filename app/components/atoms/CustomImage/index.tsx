@@ -12,6 +12,7 @@ interface CustomImageProps {
   alt?: string;
   sizes?: string;
   priority?: boolean;
+  fill?: boolean;
 }
 
 const CustomImage: React.FC<CustomImageProps> = ({
@@ -20,26 +21,25 @@ const CustomImage: React.FC<CustomImageProps> = ({
   alt = "silverbi-blog-image",
   width,
   height,
+  fill = false,
   priority = false,
 }) => {
   return (
-    <div className={"relative"}>
-      <Image
-        className={[
-          "silverbi-image",
-          "relative cursor-default object-contain",
-          ...(Array.isArray(className) ? className : [className]),
-        ].join(" ")}
-        src={changeImageTagToPath(tag)}
-        alt={alt}
-        loading={priority ? "eager" : "lazy"}
-        priority={priority}
-        quality={100}
-        fill={!(width || height)}
-        width={width}
-        height={height}
-      />
-    </div>
+    <Image
+      className={[
+        "silverbi-image",
+        "relative cursor-default object-contain",
+        ...(Array.isArray(className) ? className : [className]),
+      ].join(" ")}
+      src={changeImageTagToPath(tag)}
+      alt={alt}
+      loading={priority ? "eager" : "lazy"}
+      priority={priority}
+      quality={100}
+      fill={fill}
+      width={width}
+      height={height}
+    />
   );
 };
 

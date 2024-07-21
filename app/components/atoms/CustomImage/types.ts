@@ -11,5 +11,6 @@ export const ImageTypes = {
   PROJECTS_THUMBNAIL: "PROJECTS_THUMBNAIL",
   RETROSPECT_THUMBNAIL: "RETROSPECT_THUMBNAIL",
   HAND_JAR: "HAND_JAR",
+  ERROR_BACKGROUND: "ERROR_BACKGROUND",
 } as const;
 export type ImageTypes = (typeof ImageTypes)[keyof typeof ImageTypes];

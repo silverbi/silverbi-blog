@@ -4,7 +4,7 @@ import { Container } from "@components/atoms/Container";
 import IntroduceSection from "@components/templates/IntroduceSection";
 import CareersSection from "@components/templates/CareersSection";
 import ExperienceSection from "@components/templates/ExperienceSection";
-import StackSection from "@components/templates/StackSection/indx";
+import StackSection from "@components/templates/StackSection";
 
 const About: React.FC = () => {
   return (
