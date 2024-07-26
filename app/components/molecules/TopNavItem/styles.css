@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .nav-item-wrapper {
+        @apply overflow-hidden rounded-lg;
+    }
+
+    .nav-item-link {
+        @apply flex w-full cursor-pointer items-center justify-start gap-2 px-2 py-2;
+    }
+
+    .interactions-active {
+        @apply duration-300 bg-transparent transition ease-in-out;
+    }
+
+    .interactions-inactive {
+        @apply duration-300 bg-transparent transition ease-in-out hover:bg-hover-light
+    }
+
+    .colors-active {
+        @apply duration-300 bg-content-1 transition ease-in-out active:scale-90;
+    }
+
+    .colors-inactive {
+        @apply duration-300 bg-transparent transition ease-in-out active:scale-90;
+    }
+}

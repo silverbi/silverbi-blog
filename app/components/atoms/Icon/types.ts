@@ -25,6 +25,7 @@ export const IconName = {
   PROFILE_CIRCLE: "PROFILE_CIRCLE",
   STAR: "STAR",
   PROFILE_ACCEPTED: "PROFILE_ACCEPTED",
+  GRAPH: "GRAPH",
 } as const;
 export type IconTypes = (typeof IconName)[keyof typeof IconName];
 

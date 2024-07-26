@@ -15,7 +15,9 @@ export const routeData = [
     category: "SETTING",
     data: [
       { label: "My", value: "my", icon: IconName.LOCK },
+      { label: "Dashboard", value: "dashboard", icon: IconName.GRAPH },
       { label: "Login", value: "auth/login", icon: IconName.PROFILE_ACCEPTED },
+      { label: "Logout", value: "auth/logout", icon: IconName.PROFILE_ACCEPTED },
     ],
   },
 ];

@@ -1,6 +1,13 @@
 import React from "react";
 import Text from "@components/atoms/Text";
-import { changeTypeToClassname, changeTypeToInteraction, changeTypeToTextColors } from "@components/atoms/Button/utils";
+import {
+  changeInteractionSizeToClassname,
+  changeSizeToClassname,
+  changeTypeToClassname,
+  changeTypeToInteraction,
+  changeTypeToTextColors,
+  changeTypeToTextSize,
+} from "@components/atoms/Button/utils";
 import { IconSizes, IconTypes } from "@components/atoms/Icon/types";
 import Icon from "@components/atoms/Icon";
 
@@ -11,15 +18,26 @@ export interface ButtonProps {
   onClick?: () => void;
   formAction?: (formData: FormData) => void;
   icon?: IconTypes;
+  size?: ButtonSize;
 }
 
-export type ButtonStyles = "PRIMARY" | "SECONDARY" | "GHOST" | "DISABLED";
+export type ButtonStyles = "PRIMARY" | "SECONDARY" | "GHOST" | "DISABLED" | "NEGATIVE" | "INFO";
+export type ButtonSize = "SM" | "MD" | "LG" | "XL";
 
-const Button: React.FC<ButtonProps> = ({ className, children, tag = "PRIMARY", onClick, formAction, icon }) => {
+const Button: React.FC<ButtonProps> = ({
+  className,
+  children,
+  tag = "PRIMARY",
+  onClick,
+  formAction,
+  icon,
+  size = "MD",
+}) => {
   return (
     <button
       className={[
-        "relative h-fit w-fit cursor-pointer rounded-xl transition-all duration-300 ease-in-out active:scale-95",
+        changeInteractionSizeToClassname(size),
+        "relative h-fit w-fit shrink-0 cursor-pointer transition-all duration-300 ease-in-out active:scale-95",
         ...(Array.isArray(className) ? className : [className]),
       ].join(" ")}
       formAction={formAction}
@@ -28,7 +46,8 @@ const Button: React.FC<ButtonProps> = ({ className, children, tag = "PRIMARY", o
       <div
         className={[
           changeTypeToInteraction(tag),
-          "absolute z-10 h-full w-full cursor-pointer rounded-xl",
+          changeSizeToClassname(size),
+          "absolute z-10 h-full w-full cursor-pointer",
           ...(Array.isArray(className) ? className : [className]),
         ].join(" ")}
       />
@@ -36,12 +55,15 @@ const Button: React.FC<ButtonProps> = ({ className, children, tag = "PRIMARY", o
         className={[
           ...(Array.isArray(className) ? className : [className]),
           changeTypeToClassname(tag),
+          changeSizeToClassname(size),
           "silverbi-button",
-          "flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl px-6 py-3",
+          "flex w-fit cursor-pointer items-center justify-center gap-2",
         ].join(" ")}
       >
         {icon && <Icon type={icon} size={IconSizes.SM} color={changeTypeToTextColors(tag)} />}
-        <Text color={changeTypeToTextColors(tag)}>{children}</Text>
+        <Text color={changeTypeToTextColors(tag)} type={changeTypeToTextSize(size)}>
+          {children}
+        </Text>
       </div>
     </button>
   );

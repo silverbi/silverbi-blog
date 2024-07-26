@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import IconButton from "@components/atoms/IconButton";
 import Icon from "@components/atoms/Icon";
 import { IconName, IconSizes, IconTypes } from "@components/atoms/Icon/types";
 import Text from "@components/atoms/Text";
 import { routeData } from "@components/organisms/TopNav/routeDataSet";
 import { Colors, Typography } from "@styles/themes/types";
-import { getUser } from "@utils/auth";
 import { TopNavItem } from "@components/molecules/TopNavItem";
 
 export type OptionsTypes = {
-  label: string | number;
+  label: string;
   value: string | number;
   icon: IconTypes;
 };
@@ -22,8 +21,8 @@ export const TopNav: React.FC = () => {
   };
 
   const wrappers = {
-    active: "max-h-96 visible opacity-100 transition-all ease-in-out duration-300",
-    inactive: "max-h-0 invisible opacity-0 transition-all ease-in-out duration-300",
+    active: "overflow-hidden max-h-[500px] visible opacity-100 transition-all ease-in-out duration-200",
+    inactive: "max-h-0 invisible opacity-0 transition-all ease-in-out duration-200",
   };
   const wrapperClasses = wrappers[isOpenMenu ? "active" : "inactive"];
 
@@ -43,7 +42,7 @@ export const TopNav: React.FC = () => {
 
         {/** menu section */}
         <div
-          className={`z-100 origin-top-down absolute right-0 top-12 mt-1 flex w-auto min-w-44 flex-col gap-6 overflow-hidden rounded-lg border border-content-1 bg-content-inverse-1 px-3 py-4 drop-shadow-lg ${wrapperClasses}`}
+          className={`z-100 origin-top-down absolute right-0 top-12 mt-1 flex w-auto min-w-44 flex-col gap-6 rounded-lg border border-content-1 bg-content-inverse-1 px-3 py-4 drop-shadow-lg ${wrapperClasses}`}
         >
           {routeData.map((items, index) => (
             <div key={index} className={"flex w-full cursor-default flex-col"}>

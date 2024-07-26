@@ -37,10 +37,3 @@ export const logout = async () => {
 
   redirect("/");
 };
-
-export const getUser = async () => {
-  const supabase = createClient();
-  const { data } = await supabase.auth.getUser();
-
-  return data.user;
-};

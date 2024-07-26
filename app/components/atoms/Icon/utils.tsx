@@ -29,6 +29,7 @@ import PinIcon from "@assets/icons/icon-pin.svg";
 import ProfileCircleIcon from "@assets/icons/icon-profile-circle.svg";
 import StarIcon from "@assets/icons/icon-star.svg";
 import ProfileAcceptedIcon from "@assets/icons/icon-profile-accepted.svg";
+import GraphIcon from "@assets/icons/icon-graph.svg";
 
 export const changeTypeToIconComponent = (type: IconTypes) => {
   switch (type) {
@@ -84,6 +85,8 @@ export const changeTypeToIconComponent = (type: IconTypes) => {
       return StarIcon;
     case IconName.PROFILE_ACCEPTED:
       return ProfileAcceptedIcon;
+    case IconName.GRAPH:
+      return GraphIcon;
     default:
       return "icon";
   }

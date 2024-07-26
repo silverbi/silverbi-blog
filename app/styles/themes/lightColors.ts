@@ -50,6 +50,7 @@ const lightColors = {
   "pressed-light": colors.PRESSED.LIGHT,
   "pressed-dark": colors.PRESSED.DARK,
   "pressed-inverse": colors.PRESSED.INVERSE,
+  transparent: "transparent",
 };
 
 export default lightColors;
