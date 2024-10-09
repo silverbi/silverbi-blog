@@ -13,7 +13,7 @@ const TextTypeMenu = ({ editor }: TextTypeMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   type OptionsType = {
-    value: Level;
+    value: Level | 0;
     label: string;
   };
   const options: OptionsType[] = [
@@ -30,7 +30,7 @@ const TextTypeMenu = ({ editor }: TextTypeMenuProps) => {
       label: "H3",
     },
     {
-      value: 4,
+      value: 0,
       label: "P",
     },
   ];
@@ -43,8 +43,8 @@ const TextTypeMenu = ({ editor }: TextTypeMenuProps) => {
     setIsOpen(false);
   };
 
-  const handleSelectHeading = (heading: Level) => {
-    if (heading === 4) {
+  const handleSelectHeading = (heading: Level | 0) => {
+    if (heading === 0) {
       editor.chain().focus().setParagraph().run();
       setIsOpen(false);
       return;
@@ -73,7 +73,7 @@ const TextTypeMenu = ({ editor }: TextTypeMenuProps) => {
           {options.map((option: OptionsType, index: number) => {
             const isSelectedMenu =
               editor.isActive("heading", { level: option.value }) ||
-              (!editor.getAttributes("heading")?.level && option.value === 4);
+              (!editor.getAttributes("heading")?.level && option.value === 0);
 
             return (
               <button
