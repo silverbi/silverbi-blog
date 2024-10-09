@@ -6,7 +6,7 @@ import Text from "@components/atoms/Text";
 import { useState } from "react";
 
 interface TextTypeMenuProps {
-  editor: Editor | null;
+  editor: Editor;
 }
 
 const TextTypeMenu = ({ editor }: TextTypeMenuProps) => {
@@ -19,15 +19,19 @@ const TextTypeMenu = ({ editor }: TextTypeMenuProps) => {
   const options: OptionsType[] = [
     {
       value: 1,
-      label: "Heading1",
+      label: "H1",
     },
     {
       value: 2,
-      label: "Heading2",
+      label: "H2",
     },
     {
       value: 3,
-      label: "Heading3",
+      label: "H3",
+    },
+    {
+      value: 4,
+      label: "P",
     },
   ];
 
@@ -40,7 +44,13 @@ const TextTypeMenu = ({ editor }: TextTypeMenuProps) => {
   };
 
   const handleSelectHeading = (heading: Level) => {
-    editor?.chain().focus().toggleHeading({ level: heading }).run();
+    if (heading === 4) {
+      editor.chain().focus().setParagraph().run();
+      setIsOpen(false);
+      return;
+    }
+
+    editor.chain().focus().toggleHeading({ level: heading }).run();
     setIsOpen(false);
   };
 
@@ -55,13 +65,15 @@ const TextTypeMenu = ({ editor }: TextTypeMenuProps) => {
           <Icon type={IconName.TEXT_TYPE} size={"SM"} />
         </button>
         <div
-          className={`absolute right-0 top-8 z-50 flex w-32 origin-top-right flex-col gap-1 rounded-md border bg-background-1 p-2 shadow-lg ${isOpen ? "visible" : "hidden"}`}
+          className={`absolute right-0 top-8 z-50 flex w-20 origin-top-right flex-col gap-1 rounded-md border bg-background-1 p-2 shadow-lg ${isOpen ? "visible" : "hidden"}`}
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
         >
           {options.map((option: OptionsType, index: number) => {
-            const isSelectedMenu = editor?.isActive("heading", { level: option.value });
+            const isSelectedMenu =
+              editor.isActive("heading", { level: option.value }) ||
+              (!editor.getAttributes("heading")?.level && option.value === 4);
 
             return (
               <button

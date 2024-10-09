@@ -2,21 +2,16 @@ import { useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Highlight from "@tiptap/extension-highlight";
 import Image from "@tiptap/extension-image";
-import Heading from "@tiptap/extension-heading";
 import Underline from "@tiptap/extension-underline";
-import OrderedList from "@tiptap/extension-ordered-list";
 import TextStyle from "@tiptap/extension-text-style";
 import Placeholder from "@tiptap/extension-placeholder";
 import Link from "@tiptap/extension-link";
 import TextAlign from "@tiptap/extension-text-align";
-import Document from "@tiptap/extension-document";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
-import Blockquote from "@tiptap/extension-blockquote";
 import ListItem from "@tiptap/extension-list-item";
-import Paragraph from "@tiptap/extension-paragraph";
-import BulletList from "@tiptap/extension-bullet-list";
 import { Color } from "@tiptap/extension-color";
-import Text from "@tiptap/extension-text";
+import HorizontalRule from "@tiptap/extension-horizontal-rule";
+
 import { useState } from "react";
 import { common, createLowlight } from "lowlight";
 
@@ -42,6 +37,11 @@ export const useTextEditor = () => {
         },
         heading: {
           levels: [1, 2, 3],
+        },
+      }),
+      HorizontalRule.configure({
+        HTMLAttributes: {
+          style: "tiptap-horizontal-line",
         },
       }),
       Color.configure({ types: [TextStyle.name, ListItem.name] }),
@@ -72,6 +72,7 @@ export const useTextEditor = () => {
           },
         ],
         HTMLAttributes: {
+          class: "tiptap-link",
           rel: "noopener noreferrer",
           target: null,
         },

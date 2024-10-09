@@ -67,6 +67,9 @@ export const IconName = {
   CODE_SNIPPET: "CODE_SNIPPET",
   SAVE: "SAVE",
   QUOTE: "QUOTE",
+  VIDEO: "VIDEO",
+  EMAIL: "EMAIL",
+  DOTTED_LINE: "DOTTED_LINE",
 } as const;
 export type IconName = (typeof IconName)[keyof typeof IconName];
 
