@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
 import themes from "./app/styles/themes";
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: "jit",
   content: [
@@ -8,6 +8,7 @@ module.exports = {
     "./app/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/layouts/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/(routes)/layout.tsx",
   ],
   theme: {
     borderRadius: {
@@ -98,5 +99,5 @@ module.exports = {
       pretendard: ["var(--font-pretendard)"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss"), require("autoprefixer")],
 };

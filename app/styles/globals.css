@@ -42,54 +42,6 @@ body {
   color: white;
 }
 
-pre {
-  width: 100%;
-}
-
-h1 {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 62px;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 56px;
-}
-
-h3 {
-  font-size: 20px;
-  line-height: 52px;
-  font-weight: 600;
-}
-
-h4 {
-  font-size: 18px;
-  line-height: 46px;
-  font-weight: 600;
-}
-
-p {
-  margin: 0;
-}
-
-span {
-  margin: 0;
-}
-
-strong {
-  font-weight: 600;
-}
-
-blockquote {
-  font-weight: 600;
-}
-
-del {
-  font-weight: 400;
-}
-
 .react-syntax-highlighter-line-number {
   margin-right: 16px;
   color: darkgray;
@@ -115,5 +67,12 @@ del {
 
   .silverbi-project-img {
     @apply object-cover;
+  }
+}
+
+@layer base {
+  ul,
+  ol {
+    list-style: revert;
   }
 }

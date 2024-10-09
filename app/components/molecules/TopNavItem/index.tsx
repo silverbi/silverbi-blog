@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { OptionsTypes } from "@components/organisms/TopNav";
 import { logout } from "@utils/auth";
 import { useUser } from "@/store/user";
+import "./styles.css";
 
 interface TopNavItemProps {
   item: OptionsTypes;
@@ -17,50 +18,25 @@ export const TopNavItem: React.FC<TopNavItemProps> = ({ item, onClose }) => {
   const pathname = usePathname();
   const isSelectedItem = pathname === `/${item.value}`;
   const user = useUser(state => state.user);
+  const isAdmin = user?.user_metadata?.role === "admin";
 
-  const interactions = {
-    active: "duration-300 bg-transparent transition ease-in-out",
-    inactive: "duration-300 bg-transparent transition ease-in-out hover:bg-hover-light",
+  let colorClasses = isSelectedItem ? "colors-active" : "colors-inactive";
+  let interactionClasses = isSelectedItem ? "interactions-active" : "interactions-inactive";
+
+  const handleLogout = async () => {
+    await logout();
+    onClose();
   };
 
-  const colors = {
-    active: "duration-300 bg-content-1 transition ease-in-out active:scale-90",
-    inactive: "duration-300 bg-transparent transition ease-in-out active:scale-90",
-  };
+  if (user?.id) {
+    if (item.label === "Login") {
+      return;
+    }
 
-  let colorClasses = colors[isSelectedItem ? "active" : "inactive"];
-  let interactionClasses = interactions[isSelectedItem ? "active" : "inactive"];
-
-  if (item.label === "Login") {
-    if (!user?.id) {
+    if (item.label === "Logout") {
       return (
-        <div className={`overflow-hidden rounded-lg ${interactionClasses}`}>
-          <a
-            href={`/${item.value}`}
-            onClick={onClose}
-            className={`flex w-full cursor-pointer items-center justify-start gap-2 px-2 py-2 ${colorClasses}`}
-          >
-            <Icon
-              type={item.icon}
-              color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}
-              size={IconSizes.SM}
-            />
-            <Text color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}>Login</Text>
-          </a>
-        </div>
-      );
-    } else {
-      const handleLogout = async () => {
-        await logout();
-        onClose();
-      };
-
-      return (
-        <div className={`overflow-hidden rounded-lg ${interactions["inactive"]}`}>
-          <button
-            onClick={handleLogout}
-            className={`flex w-full cursor-pointer items-center justify-start gap-2 px-2 py-2 ${colors["inactive"]}`}
-          >
+        <div className={`nav-item-wrapper interactions-inactive`}>
+          <button onClick={handleLogout} className={`nav-item-link colors-inactive`}>
             <Icon type={item.icon} color={Colors.CONTENT_1} size={IconSizes.SM} />
             <Text color={Colors.CONTENT_1}>Logout</Text>
           </button>
@@ -69,13 +45,19 @@ export const TopNavItem: React.FC<TopNavItemProps> = ({ item, onClose }) => {
     }
   }
 
+  if (!isAdmin && ["Dashboard", "My"].includes(item.label)) {
+    return;
+  }
+
+  if (!user?.id) {
+    if (item.label === "Logout") {
+      return;
+    }
+  }
+
   return (
-    <div className={`overflow-hidden rounded-lg ${interactionClasses}`}>
-      <a
-        href={`/${item.value}`}
-        onClick={onClose}
-        className={`flex w-full cursor-pointer items-center justify-start gap-2 px-2 py-2 ${colorClasses}`}
-      >
+    <div className={`nav-item-wrapper ${interactionClasses}`}>
+      <a href={`/${item.value}`} onClick={onClose} className={`nav-item-link ${colorClasses}`}>
         <Icon
           type={item.icon}
           color={isSelectedItem ? Colors.CONTENT_INVERSE_1 : Colors.CONTENT_1}

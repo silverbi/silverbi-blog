@@ -54,15 +54,13 @@ export async function updateSession(request: NextRequest) {
     },
   );
 
-  const { error, data } = await supabase.auth.getUser();
+  const { data } = await supabase.auth.getSession();
 
-  if (request.nextUrl.pathname.startsWith("/my") && error) {
-    return NextResponse.redirect(new URL("/auth/login?next=/my", request.url));
-  }
-
-  if (request.nextUrl.pathname.startsWith("/auth/login") && data.user) {
+  if (data.session) {
+    if (data.session.user.user_metadata.role !== "admin") {
+      return NextResponse.redirect(new URL("/", request.url));
+    }
+  } else {
     return NextResponse.redirect(new URL("/", request.url));
   }
-
-  return response;
 }

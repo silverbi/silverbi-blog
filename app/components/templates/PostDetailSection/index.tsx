@@ -31,17 +31,17 @@ const PostDetailSection: React.FC<PostDetailSectionProps> = ({ post }) => {
       <div className={"flex w-full flex-col gap-6"}>
         <div className={"flex items-center gap-4"}>
           <div className={"flex items-center gap-1"}>
-            <Icon type={IconName.CALENDAR} size={IconSizes.SM} />
+            <Icon type={IconName.CALENDAR_CHECK} size={IconSizes.SM} />
             <Text type={Typography.BODY_2}>{date}</Text>
           </div>
           <Text type={Typography.BODY_2}>|</Text>
           <div className={"flex items-center gap-1"}>
-            <Icon type={IconName.CLOCK} size={IconSizes.SM} />
+            <Icon type={IconName.ALARM_CLOCK} size={IconSizes.SM} />
             <Text type={Typography.BODY_2}>{minRead} min read</Text>
           </div>
           <Text type={Typography.BODY_2}>|</Text>
           <div className={"flex items-center gap-1"}>
-            <Icon type={IconName.HEART_OUTLINE} size={IconSizes.SM} />
+            <Icon type={IconName.HEART_ROUNDED} size={IconSizes.SM} />
             <Text type={Typography.BODY_2}>{like}</Text>
           </div>
         </div>
@@ -76,13 +76,13 @@ const PostDetailSection: React.FC<PostDetailSectionProps> = ({ post }) => {
             <IconButton className={"rounded-full border bg-background-1 p-3"} onClick={handleClickLikeButton}>
               {selectedLikeButton ? (
                 <Icon
-                  type={IconName.HEART_FILL}
+                  type={IconName.HEART_ROUNDED_FILL}
                   size={"MD"}
                   color={Colors.CONTENT_PRIMARY}
                   className={"hover:opacity-60"}
                 />
               ) : (
-                <Icon type={IconName.HEART_OUTLINE} size={"MD"} className={"hover:opacity-60"} />
+                <Icon type={IconName.HEART_ROUNDED} size={"MD"} className={"hover:opacity-60"} />
               )}
             </IconButton>
           </div>

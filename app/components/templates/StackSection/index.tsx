@@ -15,11 +15,10 @@ const StackSection: React.FC = () => {
           {temp.map((label, index) => (
             <div
               className={
-                "flex h-36 w-full max-w-36 cursor-default flex-col items-center justify-center gap-6 rounded-[16px] border border-border-1 p-4"
+                "max-w-36 flex h-36 w-full cursor-default flex-col items-center justify-center gap-6 rounded-[16px] border border-border-1 p-4"
               }
               key={index}
             >
-              <Icon type={IconName.LIKE_FILL} size={"LG"} />
               <Text>{label}</Text>
             </div>
           ))}
@@ -32,11 +31,10 @@ const StackSection: React.FC = () => {
           {temp.map((label, index) => (
             <div
               className={
-                "flex h-36 w-full max-w-36 cursor-default flex-col items-center justify-center gap-6 rounded-[16px] border border-border-1 p-4"
+                "max-w-36 flex h-36 w-full cursor-default flex-col items-center justify-center gap-6 rounded-[16px] border border-border-1 p-4"
               }
               key={index}
             >
-              <Icon type={IconName.LIKE_FILL} size={"LG"} />
               <Text>{label}</Text>
             </div>
           ))}
