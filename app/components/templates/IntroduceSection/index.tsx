@@ -16,14 +16,14 @@ export interface IntroduceSection {}
 export const IntroduceSection: React.FC<IntroduceSection> = ({}) => {
   return (
     <div className="flex w-full flex-col gap-6">
-      <Chip icon={IconName.CONCENTRIC_CIRCLES}>Available for work</Chip>
+      <Chip icon={IconName.STICKER_CIRCLE}>Available for work</Chip>
 
       <Text type={Typography.TITLE_1} bold>
         Welcome to my world ✨
       </Text>
 
       <div className={"flex flex-row items-center gap-3"}>
-        <Icon type={IconName.MAP} size={"MD"} />
+        <Icon type={IconName.MARKER_PIN} size={"MD"} />
         <Text type={Typography.SUBTITLE_1}>South Korea, Seoul</Text>
       </div>
 

@@ -5,12 +5,12 @@ import {
   changeTypeToIconComponent,
   changeTypeToSizeComponent,
 } from "@components/atoms/Icon/utils";
-import { IconTypes, IconSizes, SizesTypes } from "@components/atoms/Icon/types";
+import { IconName, IconSizes, SizesTypes } from "@components/atoms/Icon/types";
 import { Colors } from "@styles/themes/types";
 import { ObjectValues } from "@utils/typeHelpers/objectValues";
 
 export interface IconProps {
-  type: IconTypes;
+  type: IconName;
   color?: ObjectValues<typeof Colors>;
   width?: number;
   height?: number;

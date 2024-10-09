@@ -73,17 +73,17 @@ export const PostCard: React.FC<PostCardProps> = ({ post, className }) => {
         </Text>
         <div className={"flex items-center gap-4"}>
           <div className={"flex items-center gap-1"}>
-            <Icon type={IconName.CALENDAR} size={IconSizes.XS} />
+            <Icon type={IconName.CALENDAR_CHECK} size={IconSizes.XS} />
             <Text type={Typography.BODY_3}>{date}</Text>
           </div>
           <Text type={Typography.BODY_3}>|</Text>
           <div className={"flex items-center gap-1"}>
-            <Icon type={IconName.CLOCK} size={IconSizes.XS} />
+            <Icon type={IconName.ALARM_CLOCK} size={IconSizes.XS} />
             <Text type={Typography.BODY_3}>{minRead} min read</Text>
           </div>
           <Text type={Typography.BODY_3}>|</Text>
           <div className={"flex items-center gap-1"}>
-            <Icon type={IconName.HEART_OUTLINE} size={IconSizes.XS} />
+            <Icon type={IconName.HEART_ROUNDED} size={IconSizes.XS} />
             <Text type={Typography.BODY_3}>{like}</Text>
           </div>
         </div>

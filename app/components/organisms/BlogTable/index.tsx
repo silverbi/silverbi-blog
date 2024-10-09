@@ -1,7 +1,7 @@
 import React from "react";
 import Text from "@components/atoms/Text";
 import Button from "@components/atoms/Button";
-import Toggle from "@components/atoms/Togle";
+import Toggle from "app/components/atoms/Toggle";
 
 const BlogTable: React.FC = () => {
   return (

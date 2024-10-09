@@ -102,12 +102,12 @@ const CareersSection: React.FC = () => {
                 {`${items.corporation}.`}
               </Text>
               <div className={"flex items-center gap-2"}>
-                <Icon type={IconName.CALENDAR} size={"XS"} className={"mb-0.5"} />
+                <Icon type={IconName.CALENDAR_CHECK} size={"XS"} className={"mb-0.5"} />
                 <Text>
                   {items.start_date} - {items.end_date}
                 </Text>
                 <Text>|</Text>
-                <Icon type={IconName.PROFILE} size={"XS"} />
+                <Icon type={IconName.USER} size={"XS"} />
                 <Text>{items.role}</Text>
               </div>
 

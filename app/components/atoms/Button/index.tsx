@@ -8,7 +8,7 @@ import {
   changeTypeToTextColors,
   changeTypeToTextSize,
 } from "@components/atoms/Button/utils";
-import { IconSizes, IconTypes } from "@components/atoms/Icon/types";
+import { IconSizes, IconName } from "@components/atoms/Icon/types";
 import Icon from "@components/atoms/Icon";
 
 export interface ButtonProps {
@@ -17,7 +17,7 @@ export interface ButtonProps {
   tag?: ButtonStyles;
   onClick?: () => void;
   formAction?: (formData: FormData) => void;
-  icon?: IconTypes;
+  icon?: IconName;
   size?: ButtonSize;
 }
 

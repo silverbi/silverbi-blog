@@ -1,0 +1,9 @@
+.editor-content {
+    padding: 40px 32px;
+
+    .tiptap {
+        height: 600px;
+        overflow-y: auto;
+        outline: none;
+    }
+}

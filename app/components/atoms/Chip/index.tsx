@@ -2,7 +2,7 @@ import React from "react";
 import { changeSizeToClassName, changeTypeToStyles } from "@components/atoms/Chip/utils";
 import Text from "@components/atoms/Text";
 import { Colors, Typography } from "@styles/themes/types";
-import { IconName, IconTypes } from "@components/atoms/Icon/types";
+import { IconName } from "@components/atoms/Icon/types";
 import Icon from "@components/atoms/Icon";
 
 export interface ChipProps {
@@ -11,7 +11,7 @@ export interface ChipProps {
   size?: "SM" | "MD" | "LG";
   type?: "PRIMARY" | "SECONDARY" | "DISABLED";
   position?: "TEXT" | "TEXT_ICON" | "ICON_TEXT";
-  icon?: IconTypes;
+  icon?: IconName;
 }
 
 export const Chip: React.FC<ChipProps> = ({

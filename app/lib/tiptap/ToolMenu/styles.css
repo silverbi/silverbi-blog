@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .tool-icon {
+        @apply rounded-md p-1 hover:bg-background-2;
+    }
+
+    .is-active {
+        @apply bg-background-2;
+    }
+
+    .disabled {
+        @apply cursor-default hover:bg-transparent;
+    }
+
+    .dropdown-wrapper {
+        @apply flex flex-row items-center justify-center w-fit h-fit rounded-md p-1 hover:bg-background-2 gap-0.5;
+    }
+}
+
+p, h1, h2, h3 {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* placeholder */
+p.is-editor-empty:first-child::before {
+    color: #a4a5a6;
+    content: attr(data-placeholder);
+    float: left;
+    height: 0;
+    pointer-events: none;
+}
+
+ul,
+ol {
+    padding: 0 1rem;
+    margin: 1.25rem 1rem 1.25rem 0.4rem;
+
+    li p {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+    }
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+h1 {
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 2.15rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.color-palette {
+    height: 18px;
+    width: 18px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="color"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    height: 18px;
+    width: 18px;
+}
+
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+::-webkit-color-swatch{
+    border: 0;
+    border-radius: 6px;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner{
+    border: 0;
+}
+
+::-moz-focus-inner{
+    padding: 0;
+}
+
+.tiptap {
+    :first-child {
+        margin-top: 0;
+    }
+
+    blockquote {
+        border-left: 4px solid black;
+        padding: 0.5rem 1.25rem;
+        background-color: #F3F3F3;
+
+        p {
+            line-height: 1.6;
+        }
+    }
+
+    .tiptap-code {
+        width: fit-content;
+        border-radius: 4px;
+        background-color: #F3F3F3;
+        padding: 0.2rem 0.5rem;
+        font-weight: 600;
+    }
+
+    .tiptap-code-block {
+        background-color: rgb(242, 244, 246);
+        padding: 1.75rem 1.5rem;
+        margin: 2rem 0;
+        border-radius: 1rem;
+
+        .hljs-comment,
+        .hljs-quote {
+            color: #a4a5a6;
+        }
+
+        .hljs-variable,
+        .hljs-attribute,
+        .hljs-attr,
+        .hljs-params,
+        .hljs-type {
+            color: #d44659;
+        }
+
+        .hljs-bullet,
+        .hljs-symbol,
+        .hljs-link,
+        .hljs-number,
+        .hljs-string {
+            color: rgb(255, 183, 77);
+        }
+
+
+        .hljs-title,
+        .hljs-section,
+        .hljs-meta,
+        .hljs-built_in,
+        .hljs-builtin-name,
+        .hljs-name,
+        .hljs-literal {
+            color: black;
+        }
+
+        .hljs-template-variable,
+        .hljs-name,
+        .hljs-regexp,
+        .hljs-selector-id,
+        .hljs-selector-class {
+            color: #4593fc;
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag {
+            color: rgb(0, 166, 97);
+        }
+
+        .hljs-emphasis {
+            font-style: italic;
+        }
+
+        .hljs-strong {
+            font-weight: 700;
+        }
+
+        .hljs-tag.hljs-string {
+            color: black;
+        }
+
+        .hljs-tag.hljs-attr {
+            color: black;
+        }
+    }
+}

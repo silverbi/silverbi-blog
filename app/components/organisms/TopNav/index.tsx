@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import IconButton from "@components/atoms/IconButton";
 import Icon from "@components/atoms/Icon";
-import { IconName, IconSizes, IconTypes } from "@components/atoms/Icon/types";
+import { IconName, IconSizes } from "@components/atoms/Icon/types";
 import Text from "@components/atoms/Text";
 import { routeData } from "@components/organisms/TopNav/routeDataSet";
 import { Colors, Typography } from "@styles/themes/types";
@@ -10,7 +10,7 @@ import { TopNavItem } from "@components/molecules/TopNavItem";
 export type OptionsTypes = {
   label: string;
   value: string | number;
-  icon: IconTypes;
+  icon: IconName;
 };
 
 export const TopNav: React.FC = () => {
@@ -37,7 +37,7 @@ export const TopNav: React.FC = () => {
 
       <div className={"relative"}>
         <IconButton onClick={handleClickMenu} interactionClasses={isOpenMenu ? "bg-hover-light" : ""}>
-          <Icon type={IconName.MENU_BAR} size={IconSizes.LG} />
+          <Icon type={IconName.MENU} size={IconSizes.MD} />
         </IconButton>
 
         {/** menu section */}
