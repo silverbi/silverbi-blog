@@ -226,12 +226,6 @@ ToolMenu.Link = ({ editor }: ToolBarProps) => {
     </button>
   );
 };
-// Email
-ToolMenu.Email = ({ editor }: ToolBarProps) => (
-  <button onClick={() => editor.chain().focus().redo().run()} disabled={false} className={`tool-icon`}>
-    <Icon type={IconName.EMAIL} color={Colors.CONTENT_1} size={"SM"} />
-  </button>
-);
 // Video
 ToolMenu.Video = ({ editor }: ToolBarProps) => (
   <button onClick={() => editor.chain().focus().redo().run()} disabled={false} className={`tool-icon`}>

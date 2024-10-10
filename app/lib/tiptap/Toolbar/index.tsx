@@ -49,7 +49,6 @@ const ToolBar = ({ editor }: ToolBarProps) => {
         <div className="flex items-center justify-center gap-1 border-r border-border-inverse-2 px-6">
           <ToolMenu.HorizontalRule editor={editor} />
           <ToolMenu.Link editor={editor} />
-          <ToolMenu.Email editor={editor} />
         </div>
         <div className="flex items-center justify-center gap-1 border-r border-border-inverse-2 px-6">
           <ToolMenu.Video editor={editor} />
