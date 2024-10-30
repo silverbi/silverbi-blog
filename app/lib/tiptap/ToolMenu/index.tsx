@@ -243,8 +243,12 @@ ToolMenu.Image = ({ editor }: ToolBarProps) => (
 );
 // FootNote
 ToolMenu.FootNote = ({ editor }: ToolBarProps) => (
-  <button onClick={() => editor?.commands.addFootnote()} disabled={false} className={`tool-icon`}>
-    <Icon type={IconName.IMAGE} color={Colors.CONTENT_1} size={"SM"} />
+  <button
+    onClick={() => editor?.commands.addFootnote()}
+    disabled={false}
+    className={`tool-icon ${!editor.can() ? "disabled" : ""}`}
+  >
+    <Icon type={IconName.FOOTNOTE} color={Colors.CONTENT_1} size={"SM"} />
   </button>
 );
 

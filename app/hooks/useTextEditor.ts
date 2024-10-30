@@ -12,6 +12,7 @@ import ListItem from "@tiptap/extension-list-item";
 import { Color } from "@tiptap/extension-color";
 import HorizontalRule from "@tiptap/extension-horizontal-rule";
 import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
+import Document from "@tiptap/extension-document";
 
 import { useState } from "react";
 import { common, createLowlight } from "lowlight";
@@ -39,6 +40,10 @@ export const useTextEditor = () => {
         heading: {
           levels: [1, 2, 3],
         },
+        document: false,
+      }),
+      Document.extend({
+        content: "block+ footnotes?",
       }),
       HorizontalRule.configure({
         HTMLAttributes: {
@@ -78,9 +83,21 @@ export const useTextEditor = () => {
           target: null,
         },
       }),
-      Footnotes,
-      Footnote,
-      FootnoteReference,
+      Footnotes.configure({
+        HTMLAttributes: {
+          class: "tiptap-footnotes",
+        },
+      }),
+      Footnote.configure({
+        HTMLAttributes: {
+          class: "tiptap-footnote",
+        },
+      }),
+      FootnoteReference.configure({
+        HTMLAttributes: {
+          class: "tiptap-footnote-reference",
+        },
+      }),
     ],
     onUpdate({ editor }) {
       setEditorContent(editor.getHTML());

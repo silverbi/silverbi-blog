@@ -73,6 +73,7 @@ import QuoteIcon from "@assets/icons/icon-quote.svg";
 import VideoIcon from "@assets/icons/icon-video.svg";
 import EmailIcon from "@assets/icons/icon-email.svg";
 import DottedLineIcon from "@assets/icons/icon-dotted-line.svg";
+import FootnoteIcon from "@assets/icons/icon-footnote.svg";
 
 export const changeTypeToIconComponent = (type: IconName) => {
   switch (type) {
@@ -216,6 +217,8 @@ export const changeTypeToIconComponent = (type: IconName) => {
       return EmailIcon;
     case IconName.DOTTED_LINE:
       return DottedLineIcon;
+    case IconName.FOOTNOTE:
+      return FootnoteIcon;
     default:
       return null;
   }

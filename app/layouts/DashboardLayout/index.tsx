@@ -16,12 +16,12 @@ export const DashboardLayout = () => {
     {
       href: "/dashboard",
       text: "dashboard",
-      icon: IconName.GRAPH,
+      icon: IconName.FOLDER,
     },
     {
       href: "/dashboard/user",
       text: "user",
-      icon: IconName.PROFILE_CIRCLE,
+      icon: IconName.SEARCH,
     },
   ];
 
