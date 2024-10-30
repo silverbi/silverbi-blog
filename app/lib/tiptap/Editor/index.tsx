@@ -7,6 +7,7 @@ import Text from "@components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import { useTextEditor } from "@hooks/useTextEditor";
 import "./styles.css";
+import BubbleEditorMenu from "@lib/tiptap/BubbleEditorMenu";
 
 const Editor = () => {
   const editor = useTextEditor();
@@ -24,6 +25,7 @@ const Editor = () => {
       <div className={"mb-4 w-full rounded-lg border"}>
         <ToolBar editor={editor} />
         <div className={"w-full"}>
+          <BubbleEditorMenu editor={editor} duration={100} />
           <EditorContent
             className={"editor-content cursor-text"}
             id="tiptap"

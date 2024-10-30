@@ -11,6 +11,7 @@ import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import ListItem from "@tiptap/extension-list-item";
 import { Color } from "@tiptap/extension-color";
 import HorizontalRule from "@tiptap/extension-horizontal-rule";
+import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
 
 import { useState } from "react";
 import { common, createLowlight } from "lowlight";
@@ -77,6 +78,9 @@ export const useTextEditor = () => {
           target: null,
         },
       }),
+      Footnotes,
+      Footnote,
+      FootnoteReference,
     ],
     onUpdate({ editor }) {
       setEditorContent(editor.getHTML());

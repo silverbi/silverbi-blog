@@ -33,6 +33,7 @@ const ToolBar = ({ editor }: ToolBarProps) => {
           <ToolMenu.Code editor={editor} />
           <ToolMenu.CodeBlock editor={editor} />
           <ToolMenu.Blockquote editor={editor} />
+          <ToolMenu.FootNote editor={editor} />
         </div>
       </div>
       <div className={"flex items-center justify-center border-b px-6 py-3"}>

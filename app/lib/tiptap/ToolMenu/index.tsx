@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useCallback, useState } from "react";
+import React, { ChangeEvent, useCallback } from "react";
 import { Editor } from "@tiptap/react";
 import Icon from "@components/atoms/Icon";
 import { IconName } from "@components/atoms/Icon/types";
@@ -12,6 +12,7 @@ interface ToolBarProps {
 const ToolMenu = ({}) => {
   return <div id={"tool-menu"} className={"tool-menu"}></div>;
 };
+ToolMenu.displayName = "ToolMenu";
 
 // Bold
 ToolMenu.Bold = ({ editor }: ToolBarProps) => {
@@ -27,6 +28,7 @@ ToolMenu.Bold = ({ editor }: ToolBarProps) => {
     </button>
   );
 };
+
 // Italic
 ToolMenu.Italic = ({ editor }: ToolBarProps) => (
   <button
@@ -57,6 +59,7 @@ ToolMenu.Underline = ({ editor }: ToolBarProps) => (
     <Icon type={IconName.TEXT_UNDERLINE} size={"SM"} />
   </button>
 );
+
 // Color
 ToolMenu.Color = ({ editor }: ToolBarProps) => (
   <div
@@ -235,6 +238,12 @@ ToolMenu.Video = ({ editor }: ToolBarProps) => (
 // Image
 ToolMenu.Image = ({ editor }: ToolBarProps) => (
   <button onClick={() => editor.chain().focus().redo().run()} disabled={false} className={`tool-icon`}>
+    <Icon type={IconName.IMAGE} color={Colors.CONTENT_1} size={"SM"} />
+  </button>
+);
+// FootNote
+ToolMenu.FootNote = ({ editor }: ToolBarProps) => (
+  <button onClick={() => editor?.commands.addFootnote()} disabled={false} className={`tool-icon`}>
     <Icon type={IconName.IMAGE} color={Colors.CONTENT_1} size={"SM"} />
   </button>
 );
