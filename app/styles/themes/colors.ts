@@ -63,6 +63,9 @@ export const colors = {
     DARK: "rgba(22, 22, 22, 0.16)",
     INVERSE: "rgba(255, 255, 255, 0.1)",
   },
+  MODAL: {
+    OVERLAY: "rgba(0, 0, 0, 0.5)",
+  },
 };
 
 export default colors;

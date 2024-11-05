@@ -11,7 +11,7 @@ import ProjectListPreviewSection from "app/components/templates/ProjectListPrevi
 import CustomImage from "app/components/atoms/CustomImage";
 import { ImageTypes } from "@components/atoms/CustomImage/types";
 
-const Home: React.FC = () => {
+const Home = () => {
   const router = useRouter();
 
   const handleClickMore = () => {

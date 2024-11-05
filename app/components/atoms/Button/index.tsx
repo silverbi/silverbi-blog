@@ -19,9 +19,10 @@ export interface ButtonProps {
   formAction?: (formData: FormData) => void;
   icon?: IconName;
   size?: ButtonSize;
+  type?: "submit" | "reset" | "button" | undefined;
 }
 
-export type ButtonStyles = "PRIMARY" | "SECONDARY" | "GHOST" | "DISABLED" | "NEGATIVE" | "INFO";
+export type ButtonStyles = "PRIMARY" | "TERTIARY" | "SECONDARY" | "GHOST" | "DISABLED" | "NEGATIVE" | "INFO";
 export type ButtonSize = "SM" | "MD" | "LG" | "XL";
 
 const Button: React.FC<ButtonProps> = ({
@@ -32,6 +33,7 @@ const Button: React.FC<ButtonProps> = ({
   formAction,
   icon,
   size = "MD",
+  type = "button",
 }) => {
   return (
     <button
@@ -42,6 +44,7 @@ const Button: React.FC<ButtonProps> = ({
       ].join(" ")}
       formAction={formAction}
       onClick={onClick}
+      type={type}
     >
       <div
         className={[
@@ -61,7 +64,7 @@ const Button: React.FC<ButtonProps> = ({
         ].join(" ")}
       >
         {icon && <Icon type={icon} size={IconSizes.SM} color={changeTypeToTextColors(tag)} />}
-        <Text color={changeTypeToTextColors(tag)} type={changeTypeToTextSize(size)}>
+        <Text color={changeTypeToTextColors(tag)} bold type={changeTypeToTextSize(size)}>
           {children}
         </Text>
       </div>

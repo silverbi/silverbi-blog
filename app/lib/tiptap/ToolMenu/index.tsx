@@ -1,9 +1,11 @@
-import React, { ChangeEvent, useCallback } from "react";
+import React, { ChangeEvent, useCallback, useState } from "react";
 import { Editor } from "@tiptap/react";
 import Icon from "@components/atoms/Icon";
 import { IconName } from "@components/atoms/Icon/types";
 import "./styles.css";
 import { Colors } from "@styles/themes/types";
+import Modal from "@components/atoms/Modal";
+import ImageUploadModal, { FilePreviewProps } from "../../../components/molecules/CustomModal/ImageUploadModal";
 
 interface ToolBarProps {
   editor: Editor;
@@ -236,11 +238,36 @@ ToolMenu.Video = ({ editor }: ToolBarProps) => (
   </button>
 );
 // Image
-ToolMenu.Image = ({ editor }: ToolBarProps) => (
-  <button onClick={() => editor.chain().focus().redo().run()} disabled={false} className={`tool-icon`}>
-    <Icon type={IconName.IMAGE} color={Colors.CONTENT_1} size={"SM"} />
-  </button>
-);
+ToolMenu.Image = ({ editor }: ToolBarProps) => {
+  const [visible, setVisible] = useState(false);
+
+  const handleSaveImage = (selectedFiles: FilePreviewProps[]) => {
+    if (!selectedFiles?.length) return;
+
+    selectedFiles.map((item, index) => {
+      console.log("item ", item);
+      if (!item?.previewUrl) return;
+
+      console.log("previewUrl: ", item?.previewUrl);
+      editor.chain().focus().setImage({ src: item.previewUrl }).run();
+    });
+    console.log("selectedFiles ", selectedFiles);
+  };
+
+  return (
+    <>
+      <ImageUploadModal
+        visible={visible}
+        onClose={() => setVisible(false)}
+        handleSaveImage={handleSaveImage}
+      ></ImageUploadModal>
+
+      <button onClick={() => setVisible(true)} disabled={false} className={`tool-icon`}>
+        <Icon type={IconName.IMAGE} color={Colors.CONTENT_1} size={"SM"} />
+      </button>
+    </>
+  );
+};
 // FootNote
 ToolMenu.FootNote = ({ editor }: ToolBarProps) => (
   <button

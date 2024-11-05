@@ -28,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             highlightColor={themes.colors.light["layer-disabled"]}
           >
             {children}
+            <div id="modal"></div>
           </SkeletonTheme>
         </SessionProvider>
       </body>
