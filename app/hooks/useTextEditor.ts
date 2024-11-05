@@ -11,6 +11,7 @@ import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import ListItem from "@tiptap/extension-list-item";
 import { Color } from "@tiptap/extension-color";
 import HorizontalRule from "@tiptap/extension-horizontal-rule";
+import ImageResize from "tiptap-extension-resize-image";
 import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
 import Document from "@tiptap/extension-document";
 
@@ -98,6 +99,7 @@ export const useTextEditor = () => {
           class: "tiptap-footnote-reference",
         },
       }),
+      ImageResize,
     ],
     onUpdate({ editor }) {
       setEditorContent(editor.getHTML());

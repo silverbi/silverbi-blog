@@ -71,7 +71,7 @@ ol {
 }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.6;
 }
@@ -287,4 +287,21 @@ input[type="color"] {
       color: black;
     }
   }
+}
+
+.image-resizer {
+  display: inline-flex;
+  position: relative;
+  flex-grow: 0;
+}
+.image-resizer .resize-trigger {
+  position: absolute;
+  right: -6px;
+  bottom: -9px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #3259a5;
+}
+.image-resizer:hover .resize-trigger {
+  opacity: 1;
 }

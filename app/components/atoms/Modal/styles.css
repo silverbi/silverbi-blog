@@ -1,36 +1,35 @@
 .silverbi-modal-enter {
-    opacity: 0;
+  opacity: 0;
 }
 
 .silverbi-modal-enter-active {
-    opacity: 1;
-    transition: opacity 0.3s ease;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 .silverbi-modal-exit {
-    opacity: 1;
+  opacity: 1;
 }
 
 .silverbi-modal-exit-active {
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-
 .silverbi-modal-content-enter {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .silverbi-modal-content-enter-active {
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
 }
 
 .silverbi-modal-content-exit {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .silverbi-modal-content-exit-active {
-    transform: translateY(20px);
-    transition: transform 0.4s ease;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
 }
