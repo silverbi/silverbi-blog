@@ -5626,6 +5626,11 @@ tippy.js@^6.3.7:
   dependencies:
     "@popperjs/core" "^2.9.0"
 
+tiptap-extension-resize-image@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/tiptap-extension-resize-image/-/tiptap-extension-resize-image-1.1.9.tgz#771fa810adb6d914ccd704851e913db070b44db5"
+  integrity sha512-CyApEvMgxCmHx8DxormIbGD6lZ+7fFeq49OOPPquNIWCRigkqgyFQ3KFJeSN446JlwjyuCMVIYdkKY/m5IBu6A==
+
 tiptap-footnotes@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/tiptap-footnotes/-/tiptap-footnotes-2.0.1.tgz#a8f01a6d7e32d7ce67442e81d0f5a12388d1ec74"
