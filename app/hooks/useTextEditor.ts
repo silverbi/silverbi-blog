@@ -15,6 +15,7 @@ import ImageResize from "tiptap-extension-resize-image";
 import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
 import Document from "@tiptap/extension-document";
 import Youtube from "@tiptap/extension-youtube";
+import CharacterCount from "@tiptap/extension-character-count";
 
 import { useState } from "react";
 import { common, createLowlight } from "lowlight";
@@ -105,6 +106,7 @@ export const useTextEditor = () => {
         controls: false,
         nocookie: true,
       }),
+      CharacterCount,
     ],
     onUpdate({ editor }) {
       setEditorContent(editor.getHTML());

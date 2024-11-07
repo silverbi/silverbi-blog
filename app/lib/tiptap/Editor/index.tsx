@@ -35,7 +35,7 @@ const Editor = () => {
         </div>
 
         <div className={"flex h-8 w-full items-center border-t px-4"}>
-          <Text type={Typography.BODY_3}>0 words</Text>
+          <Text type={Typography.BODY_3}>{editor.storage.characterCount.characters()} words</Text>
         </div>
       </div>
 
