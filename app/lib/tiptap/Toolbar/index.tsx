@@ -1,7 +1,29 @@
 import React from "react";
 import { Editor } from "@tiptap/react";
-import ToolMenu from "app/lib/tiptap/ToolMenu";
 import TextTypeMenu from "@lib/tiptap/TextTypeMenu";
+import {
+  Bold,
+  Italic,
+  Redo,
+  Undo,
+  Underline,
+  Strike,
+  Color,
+  Code,
+  CodeBlock,
+  Blockquote,
+  FootNote,
+  BulletList,
+  OrderedList,
+  AlignLeft,
+  AlignCenter,
+  AlignRight,
+  AlignJustify,
+  HorizontalRule,
+  Link,
+  Video,
+  Image,
+} from "../ToolMenu";
 
 interface ToolBarProps {
   editor: Editor | null;
@@ -13,8 +35,8 @@ const ToolBar = ({ editor }: ToolBarProps) => {
     <div className="flex flex-col">
       <div className={"flex items-center justify-center border-b px-6 py-3"}>
         <div className="flex items-center justify-center gap-1 border-r border-border-inverse-2 px-6">
-          <ToolMenu.Undo editor={editor} />
-          <ToolMenu.Redo editor={editor} />
+          <Undo editor={editor} />
+          <Redo editor={editor} />
         </div>
 
         <div className="flex items-center justify-center gap-1 border-r border-border-inverse-2 px-6">
@@ -22,38 +44,38 @@ const ToolBar = ({ editor }: ToolBarProps) => {
         </div>
 
         <div className="flex items-center justify-center gap-1 border-r border-border-inverse-2 px-6">
-          <ToolMenu.Bold editor={editor} />
-          <ToolMenu.Italic editor={editor} />
-          <ToolMenu.Underline editor={editor} />
-          <ToolMenu.Strike editor={editor} />
-          <ToolMenu.Color editor={editor} />
+          <Bold editor={editor} />
+          <Italic editor={editor} />
+          <Underline editor={editor} />
+          <Strike editor={editor} />
+          <Color editor={editor} />
         </div>
 
         <div className="flex items-center justify-center gap-1 border-r border-border-inverse-2 px-6">
-          <ToolMenu.Code editor={editor} />
-          <ToolMenu.CodeBlock editor={editor} />
-          <ToolMenu.Blockquote editor={editor} />
-          <ToolMenu.FootNote editor={editor} />
+          <Code editor={editor} />
+          <CodeBlock editor={editor} />
+          <Blockquote editor={editor} />
+          <FootNote editor={editor} />
         </div>
       </div>
       <div className={"flex items-center justify-center border-b px-6 py-3"}>
         <div className="flex items-center justify-center gap-1 border-r border-border-inverse-2 px-6">
-          <ToolMenu.BulletList editor={editor} />
-          <ToolMenu.OrderedList editor={editor} />
+          <BulletList editor={editor} />
+          <OrderedList editor={editor} />
         </div>
         <div className="flex items-center justify-center gap-1 border-r border-border-inverse-2 px-6">
-          <ToolMenu.AlignLeft editor={editor} />
-          <ToolMenu.AlignCenter editor={editor} />
-          <ToolMenu.AlignRight editor={editor} />
-          <ToolMenu.AlignJustify editor={editor} />
+          <AlignLeft editor={editor} />
+          <AlignCenter editor={editor} />
+          <AlignRight editor={editor} />
+          <AlignJustify editor={editor} />
         </div>
         <div className="flex items-center justify-center gap-1 border-r border-border-inverse-2 px-6">
-          <ToolMenu.HorizontalRule editor={editor} />
-          <ToolMenu.Link editor={editor} />
+          <HorizontalRule editor={editor} />
+          <Link editor={editor} />
         </div>
         <div className="flex items-center justify-center gap-1 border-r border-border-inverse-2 px-6">
-          <ToolMenu.Video editor={editor} />
-          <ToolMenu.Image editor={editor} />
+          <Video editor={editor} />
+          <Image editor={editor} />
         </div>
       </div>
     </div>

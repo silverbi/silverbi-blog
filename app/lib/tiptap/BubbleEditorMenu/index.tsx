@@ -1,5 +1,5 @@
 import { BubbleMenu, Editor } from "@tiptap/react";
-import ToolMenu from "@lib/tiptap/ToolMenu";
+import { Color, Underline, Bold, Italic, Strike } from "@lib/tiptap/ToolMenu";
 import React from "react";
 
 interface BubbleEditorMenuProps {
@@ -14,11 +14,11 @@ export const BubbleEditorMenu = ({ editor, duration = 100 }: BubbleEditorMenuPro
       tippyOptions={{ duration: duration }}
       editor={editor}
     >
-      <ToolMenu.Bold editor={editor} />
-      <ToolMenu.Italic editor={editor} />
-      <ToolMenu.Underline editor={editor} />
-      <ToolMenu.Strike editor={editor} />
-      <ToolMenu.Color editor={editor} />
+      <Bold editor={editor} />
+      <Italic editor={editor} />
+      <Underline editor={editor} />
+      <Strike editor={editor} />
+      <Color editor={editor} />
     </BubbleMenu>
   );
 };

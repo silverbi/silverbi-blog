@@ -1,6 +1,6 @@
 import Button from "@/components/atoms/Button";
 import FormModal from "../FormModal";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { Inputs } from "types/hooks";
 import Text from "@/components/atoms/Text";
 import { Typography } from "@/styles/themes/types";
@@ -20,14 +20,14 @@ export const VideoUploadModal = ({ visible, onClose, handleSaveVideoLink }: Vide
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSubmit = (values: Inputs) => {
+  const onSubmit: SubmitHandler<Inputs> = (values: Inputs) => {
     handleSaveVideoLink(values.video);
     onClose();
     reset();
   };
 
   return (
-    <FormModal visible={visible} onClose={onClose} title={"비디오 업로드"} onSubmit={handleSubmit(onSubmit)}>
+    <FormModal visible={visible} onClose={onClose} title={"비디오 업로드"} onSubmit={() => handleSubmit(onSubmit)}>
       <div className={"flex flex-col items-center gap-8"}>
         <div className={"flex w-96 flex-col items-center justify-center gap-3 overflow-hidden rounded-lg px-3 py-2"}>
           <Text type={Typography.SUBTITLE_2} bold>
