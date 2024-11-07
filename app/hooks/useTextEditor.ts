@@ -14,6 +14,7 @@ import HorizontalRule from "@tiptap/extension-horizontal-rule";
 import ImageResize from "tiptap-extension-resize-image";
 import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
 import Document from "@tiptap/extension-document";
+import Youtube from "@tiptap/extension-youtube";
 
 import { useState } from "react";
 import { common, createLowlight } from "lowlight";
@@ -100,6 +101,10 @@ export const useTextEditor = () => {
         },
       }),
       ImageResize,
+      Youtube.configure({
+        controls: false,
+        nocookie: true,
+      }),
     ],
     onUpdate({ editor }) {
       setEditorContent(editor.getHTML());

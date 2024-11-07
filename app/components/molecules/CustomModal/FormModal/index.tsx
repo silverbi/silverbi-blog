@@ -4,6 +4,8 @@ import Text from "@components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import Icon from "@components/atoms/Icon";
 import { IconName } from "@components/atoms/Icon/types";
+import { SubmitHandler } from "react-hook-form";
+import { Inputs } from "types/hooks";
 
 export interface FormModalProps {
   visible: boolean;
@@ -11,9 +13,10 @@ export interface FormModalProps {
   onClose: () => void;
   children: ReactNode;
   padding?: string;
+  onSubmit?: SubmitHandler<Inputs>;
 }
 
-export const FormModal = ({ visible, onClose, title, children, padding }: FormModalProps) => {
+export const FormModal = ({ onSubmit, visible, onClose, title, children, padding }: FormModalProps) => {
   return (
     <Modal visible={visible} onClose={onClose} width={800}>
       <div className={"flex w-full flex-row justify-between border-b border-b-content-inverse-2 px-5 py-3"}>
@@ -26,7 +29,9 @@ export const FormModal = ({ visible, onClose, title, children, padding }: FormMo
         </button>
       </div>
 
-      <form className={padding ? padding : "px-5 py-4"}>{children}</form>
+      <form onSubmit={onSubmit} className={padding ? padding : "px-5 py-4"}>
+        {children}
+      </form>
     </Modal>
   );
 };

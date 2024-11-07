@@ -6,6 +6,7 @@ import "./styles.css";
 import { Colors } from "@styles/themes/types";
 import Modal from "@components/atoms/Modal";
 import ImageUploadModal, { FilePreviewProps } from "../../../components/molecules/CustomModal/ImageUploadModal";
+import VideoUploadModal from "@/components/molecules/CustomModal/VideoUploadModal";
 
 interface ToolBarProps {
   editor: Editor;
@@ -232,11 +233,27 @@ ToolMenu.Link = ({ editor }: ToolBarProps) => {
   );
 };
 // Video
-ToolMenu.Video = ({ editor }: ToolBarProps) => (
-  <button onClick={() => editor.chain().focus().redo().run()} disabled={false} className={`tool-icon`}>
-    <Icon type={IconName.VIDEO} color={Colors.CONTENT_1} size={"SM"} />
-  </button>
-);
+ToolMenu.Video = ({ editor }: ToolBarProps) => {
+  const [visible, setVisible] = useState(false);
+
+  const handleSaveVideoLink = (url: string) => {
+    editor.commands.setYoutubeVideo({
+      src: url,
+      width: 640,
+      height: 480,
+    });
+  };
+
+  return (
+    <>
+      <VideoUploadModal visible={visible} onClose={() => setVisible(false)} handleSaveVideoLink={handleSaveVideoLink} />
+
+      <button onClick={() => setVisible(true)} disabled={false} className={`tool-icon`}>
+        <Icon type={IconName.VIDEO} color={Colors.CONTENT_1} size={"SM"} />
+      </button>
+    </>
+  );
+};
 // Image
 ToolMenu.Image = ({ editor }: ToolBarProps) => {
   const [visible, setVisible] = useState(false);
@@ -248,10 +265,8 @@ ToolMenu.Image = ({ editor }: ToolBarProps) => {
       console.log("item ", item);
       if (!item?.previewUrl) return;
 
-      console.log("previewUrl: ", item?.previewUrl);
       editor.chain().focus().setImage({ src: item.previewUrl }).run();
     });
-    console.log("selectedFiles ", selectedFiles);
   };
 
   return (
