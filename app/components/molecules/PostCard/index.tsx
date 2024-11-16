@@ -14,7 +14,7 @@ export interface PostCardProps {
   className?: string | Array<string>;
 }
 
-export const EmptyPostCard: React.FC = () => {
+export const EmptyPostCard = () => {
   return (
     <div
       className={
@@ -34,7 +34,7 @@ export const EmptyPostCard: React.FC = () => {
   );
 };
 
-export const PostCard: React.FC<PostCardProps> = ({ post, className }) => {
+export const PostCard = ({ post, className }: PostCardProps) => {
   const router = useRouter();
   const { id, title, tags, short_description, date, thumbnail, like, minRead } = post;
   let empty = true;

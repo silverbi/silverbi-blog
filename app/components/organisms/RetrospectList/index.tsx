@@ -6,7 +6,7 @@ export interface RetrospectListProps {
   retrospects: RetrospectTypes[];
 }
 
-export const RetrospectList: React.FC<RetrospectListProps> = ({ retrospects }) => {
+export const RetrospectList = ({ retrospects }: RetrospectListProps) => {
   return (
     <div className={"grid w-full grid-cols-3 gap-3"}>
       {retrospects.map((retrospect, index) => (

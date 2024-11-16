@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import RootLayout from "@layouts/RootLayout";
 import { Container } from "@components/atoms/Container";
@@ -8,7 +6,7 @@ import Link from "next/link";
 import Button from "@components/atoms/Button";
 import BlogTable from "@components/organisms/BlogTable";
 
-const My: React.FC = () => {
+const My = () => {
   return (
     <RootLayout>
       <Container className="my-32">

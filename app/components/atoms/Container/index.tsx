@@ -7,7 +7,7 @@ export interface ContainerProps {
   className?: string | string[];
 }
 
-export const Container: React.FC<ContainerProps> = ({ children, className }) => {
+export const Container = ({ children, className }: ContainerProps) => {
   return (
     <div className="align-center flex h-full w-full justify-center px-12">
       <div

@@ -1,10 +1,8 @@
 import React from "react";
 import Title from "@components/atoms/Title";
 import Text from "@components/atoms/Text";
-import Icon from "@components/atoms/Icon";
-import { IconName } from "@components/atoms/Icon/types";
 
-const StackSection: React.FC = () => {
+const StackSection = () => {
   const temp = ["HTML", "CSS", "Javascript", "Typescript", "React", "React Native", "Next.js"];
 
   return (

@@ -49,7 +49,7 @@ const tempPostItem = [
 
 const category = ["React", "CSS", "CRA"];
 
-const Tech: React.FC = () => {
+const Tech = () => {
   const router = useRouter();
   const params = useSearchParams();
   const categoryParams = params.get("category");

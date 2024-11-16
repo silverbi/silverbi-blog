@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 import Interaction from "@components/atoms/Interaction";
 import TopNav from "app/components/organisms/TopNav";
 
-export const Header: React.FC = () => {
+export const Header = () => {
   const pathname = usePathname();
 
   return (

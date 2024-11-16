@@ -10,7 +10,7 @@ export interface TagProps {
   className?: string | Array<string>;
 }
 
-export const Tag: React.FC<TagProps> = ({ className, type = "PRIMARY", size = "MD", children = "label" }) => {
+export const Tag = ({ className, type = "PRIMARY", size = "MD", children = "label" }: TagProps) => {
   return (
     <div
       className={[

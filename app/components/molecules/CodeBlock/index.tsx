@@ -7,7 +7,7 @@ interface CodeBlockProps {
   value: string;
 }
 
-const CodeBlock: React.FC<CodeBlockProps> = ({ language, value }) => {
+const CodeBlock = ({ language, value }: CodeBlockProps) => {
   return (
     <SyntaxHighlighter language={language} style={codeThemes}>
       {value}

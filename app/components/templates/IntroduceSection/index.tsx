@@ -11,9 +11,7 @@ import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@common/constants";
 import CustomImage from "app/components/atoms/CustomImage";
 import { ImageTypes } from "@components/atoms/CustomImage/types";
 
-export interface IntroduceSection {}
-
-export const IntroduceSection: React.FC<IntroduceSection> = ({}) => {
+export const IntroduceSection = () => {
   return (
     <div className="flex w-full flex-col gap-6">
       <Chip icon={IconName.STICKER_CIRCLE}>Available for work</Chip>

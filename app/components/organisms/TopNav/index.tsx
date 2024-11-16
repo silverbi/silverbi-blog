@@ -13,7 +13,7 @@ export type OptionsTypes = {
   icon: IconName;
 };
 
-export const TopNav: React.FC = () => {
+export const TopNav = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
 
   const handleClickMenu = () => {

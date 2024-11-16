@@ -19,7 +19,7 @@ export const EmptyProjectCard = ({ title }: { title: string }) => {
   );
 };
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ className, project }) => {
+export const ProjectCard = ({ className, project }: ProjectCardProps) => {
   const router = useRouter();
   const { id, title, tags, start_date, end_date, thumbnail, role } = project;
   let empty = true;

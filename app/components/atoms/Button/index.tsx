@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Text from "@components/atoms/Text";
 import {
@@ -25,7 +27,7 @@ export interface ButtonProps {
 export type ButtonStyles = "PRIMARY" | "TERTIARY" | "SECONDARY" | "GHOST" | "DISABLED" | "NEGATIVE" | "INFO";
 export type ButtonSize = "SM" | "MD" | "LG" | "XL";
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
   className,
   children,
   tag = "PRIMARY",
@@ -34,7 +36,7 @@ const Button: React.FC<ButtonProps> = ({
   icon,
   size = "MD",
   type = "button",
-}) => {
+}: ButtonProps) => {
   return (
     <button
       className={[

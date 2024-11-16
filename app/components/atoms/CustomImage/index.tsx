@@ -15,7 +15,7 @@ interface CustomImageProps {
   fill?: boolean;
 }
 
-const CustomImage: React.FC<CustomImageProps> = ({
+const CustomImage = ({
   tag,
   className,
   alt = "silverbi-blog-image",
@@ -23,7 +23,7 @@ const CustomImage: React.FC<CustomImageProps> = ({
   height,
   fill = false,
   priority = false,
-}) => {
+}: CustomImageProps) => {
   return (
     <Image
       className={[

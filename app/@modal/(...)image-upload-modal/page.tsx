@@ -1,15 +1,15 @@
-import FormModal from "@components/molecules/CustomModal/FormModal";
-import { ChangeEvent, useRef, useState } from "react";
+"use client";
+
+import { FormModal } from "@/components/molecules/CustomModal/FormModal";
+import { useRef, useState } from "react";
 import Button from "@components/atoms/Button";
 import Text from "@/components/atoms/Text";
 import Image from "next/image";
+import { Inputs } from "types/hooks";
 import { Colors, Typography } from "@/styles/themes/types";
-
-export interface ImageUploadModalProps {
-  visible: boolean;
-  onClose: () => void;
-  handleSaveImage: (selectedFileArray: FilePreviewProps[]) => void;
-}
+import { useRouter } from "next/navigation";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useEditorState } from "@/store/editors";
 
 export interface FilePreviewProps {
   file: File;
@@ -17,16 +17,32 @@ export interface FilePreviewProps {
   isSelected: boolean;
 }
 
-export const ImageUploadModal = ({ visible, onClose, handleSaveImage }: ImageUploadModalProps) => {
+export const ImageUploadModal = () => {
+  const router = useRouter();
+  const editor = useEditorState(state => state.editor);
+  const setEditor = useEditorState(state => state.setEditor);
+
   const [files, setFiles] = useState<FilePreviewProps[]>([]);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const hasFiles = files?.length;
 
-  const handleUploadFiles = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>();
+
+  const handleUploadImages = () => {
     const selectedFileArray = files.filter(file => file.isSelected);
-    handleSaveImage(selectedFileArray);
+    if (!selectedFileArray?.length) return;
+
+    selectedFileArray.map((item, index) => {
+      if (!item?.previewUrl) return;
+
+      editor?.chain().focus().setImage({ src: item.previewUrl }).run();
+    });
+    setEditor(editor);
     setFiles([]);
-    onClose();
   };
 
   const handleClickButton = () => {
@@ -56,8 +72,13 @@ export const ImageUploadModal = ({ visible, onClose, handleSaveImage }: ImageUpl
     setFiles(prevFiles => prevFiles.map((file, i) => (i === index ? { ...file, isSelected: !file.isSelected } : file)));
   };
 
+  const onSubmit: SubmitHandler<Inputs> = (values: Inputs) => {
+    handleUploadImages();
+    router.back();
+  };
+
   return (
-    <FormModal visible={visible} onClose={onClose} title={"이미지 업로드"} padding={"py-3 0"}>
+    <FormModal onSubmit={handleSubmit(onSubmit)} title={"이미지 업로드"} padding={"py-3 0"}>
       {Boolean(hasFiles) && (
         <div
           className={"flex w-full flex-row items-end justify-start gap-2 border-b border-b-content-inverse-2 px-5 pb-3"}
@@ -122,6 +143,7 @@ export const ImageUploadModal = ({ visible, onClose, handleSaveImage }: ImageUpl
         )}
 
         <input
+          {...register("images")}
           ref={fileInputRef}
           id="fileInput"
           className="file-input hidden"
@@ -132,10 +154,10 @@ export const ImageUploadModal = ({ visible, onClose, handleSaveImage }: ImageUpl
         />
 
         <div className={"flex w-fit gap-2"}>
-          <Button size={"SM"} tag={"TERTIARY"} type="button" onClick={onClose}>
+          <Button size={"SM"} tag={"TERTIARY"} type="button" onClick={() => router.back()}>
             취소
           </Button>
-          <Button size={"SM"} type="button" onClick={handleUploadFiles}>
+          <Button size={"SM"} type="submit">
             업로드
           </Button>
         </div>

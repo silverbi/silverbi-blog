@@ -9,7 +9,7 @@ interface MarkdownProps {
   children: string;
 }
 
-const Markdown: React.FC<MarkdownProps> = ({ children }) => {
+const Markdown = ({ children }: MarkdownProps) => {
   return (
     <div className={"flex w-full flex-col gap-4"}>
       <ReactMarkdown

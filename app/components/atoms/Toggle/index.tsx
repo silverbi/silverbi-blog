@@ -5,7 +5,7 @@ interface ToggleProps {
   className?: string;
 }
 
-const Toggle: React.FC<ToggleProps> = ({ checked = false, className }) => {
+const Toggle = ({ checked = false, className }: ToggleProps) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   const handleChangeToggle = () => {

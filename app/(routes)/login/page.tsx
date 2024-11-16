@@ -9,7 +9,7 @@ import CustomImage from "@components/atoms/CustomImage";
 import { ImageTypes } from "@components/atoms/CustomImage/types";
 import { LoginForm } from "@components/organisms/LoginForm";
 
-const Login: React.FC = () => {
+const Login = () => {
   return (
     <RootLayout>
       <Container className="my-32">

@@ -18,7 +18,7 @@ export interface TextProps {
   underline?: boolean;
 }
 
-export const Text: React.FC<TextProps> = ({ className, children, type, color, bold, light, italic, underline }) => {
+export const Text = ({ className, children, type, color, bold, light, italic, underline }: TextProps) => {
   const weight = bold ? "SEMI_BOLD" : light ? "LIGHT" : "MEDIUM";
 
   return (

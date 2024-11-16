@@ -17,11 +17,12 @@ import Document from "@tiptap/extension-document";
 import Youtube from "@tiptap/extension-youtube";
 import CharacterCount from "@tiptap/extension-character-count";
 
-import { useState } from "react";
 import { common, createLowlight } from "lowlight";
+import { useEditorState } from "@/store/editors";
 
 export const useTextEditor = () => {
-  const [editorContent, setEditorContent] = useState("");
+  const setEditorContent = useEditorState(state => state.setEditorContent);
+  const setEditor = useEditorState(state => state.setEditor);
   const lowlight = createLowlight(common);
   const editor = useEditor({
     extensions: [
@@ -109,6 +110,7 @@ export const useTextEditor = () => {
       CharacterCount,
     ],
     onUpdate({ editor }) {
+      setEditor(editor);
       setEditorContent(editor.getHTML());
     },
   });

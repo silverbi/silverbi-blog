@@ -19,7 +19,7 @@ export interface IconProps {
   className?: string;
 }
 
-export const Icon: React.FC<IconProps> = ({
+export const Icon = ({
   type,
   color = Colors.CONTENT_1,
   width = 20,
@@ -27,7 +27,7 @@ export const Icon: React.FC<IconProps> = ({
   size = IconSizes.MD,
   className,
   fill,
-}) => {
+}: IconProps) => {
   const SVGIcon = changeTypeToIconComponent(type);
 
   return (

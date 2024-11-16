@@ -1,9 +1,11 @@
+"use client";
+
 import React from "react";
 import Text from "@components/atoms/Text";
 import Button from "@components/atoms/Button";
 import Toggle from "app/components/atoms/Toggle";
 
-const BlogTable: React.FC = () => {
+const BlogTable = () => {
   return (
     <div className={"w-full overflow-x-scroll"}>
       <div className={"h-fit w-[860px] rounded-lg border"}>

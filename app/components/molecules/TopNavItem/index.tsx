@@ -14,7 +14,7 @@ interface TopNavItemProps {
   onClose: () => void;
 }
 
-export const TopNavItem: React.FC<TopNavItemProps> = ({ item, onClose }) => {
+export const TopNavItem = ({ item, onClose }: TopNavItemProps) => {
   const pathname = usePathname();
   const isSelectedItem = pathname === `/${item.value}`;
   const user = useUser(state => state.user);

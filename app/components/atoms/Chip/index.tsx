@@ -14,14 +14,14 @@ export interface ChipProps {
   icon?: IconName;
 }
 
-export const Chip: React.FC<ChipProps> = ({
+export const Chip = ({
   className,
   children = "label",
   position = "ICON_TEXT",
   icon,
   size = "MD",
   type = "PRIMARY",
-}) => {
+}: ChipProps) => {
   return (
     <div
       className={[

@@ -6,7 +6,7 @@ interface InteractionProps {
   full?: boolean;
 }
 
-export const Interaction: React.FC<InteractionProps> = ({ children, className, full }) => {
+export const Interaction = ({ children, className, full }: InteractionProps) => {
   return (
     <div
       className={[

@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import ProjectListPreviewSection from "app/components/templates/ProjectListPreviewSection";
 import CustomImage from "app/components/atoms/CustomImage";
 import { ImageTypes } from "@components/atoms/CustomImage/types";
+import Link from "next/link";
 
 const Home = () => {
   const router = useRouter();

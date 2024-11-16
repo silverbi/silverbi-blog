@@ -5,7 +5,7 @@ import Title from "@components/atoms/Title";
 import Text from "@components/atoms/Text";
 import { Colors, Typography } from "@styles/themes/types";
 
-const ExperienceSection: React.FC = () => {
+const ExperienceSection = () => {
   const temp = [
     {
       id: "1",

@@ -14,7 +14,7 @@ export interface PostDetailSectionProps {
   post: PostDetailTypes;
 }
 
-const PostDetailSection: React.FC<PostDetailSectionProps> = ({ post }) => {
+const PostDetailSection = ({ post }: PostDetailSectionProps) => {
   const { title, subtitle, short_description, body, tags, date, minRead, like, comments, series, linked_posts } = post;
   const [selectedShareButton, setSelectedShareButton] = useState(false);
   const [selectedLikeButton, setSelectedLikeButton] = useState(false);

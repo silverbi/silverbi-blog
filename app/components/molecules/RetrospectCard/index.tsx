@@ -11,7 +11,7 @@ export interface RetrospectCardProps {
   className?: string | Array<string>;
 }
 
-export const EmptyRetrospectCard: React.FC = () => {
+export const EmptyRetrospectCard = () => {
   return (
     <div
       className={
@@ -37,7 +37,7 @@ export const EmptyRetrospectCard: React.FC = () => {
   );
 };
 
-export const RetrospectCard: React.FC<RetrospectCardProps> = ({ retrospect, className }) => {
+export const RetrospectCard = ({ retrospect, className }: RetrospectCardProps) => {
   const router = useRouter();
   const { id, title, short_description, date, thumbnail } = retrospect;
   let empty = true;

@@ -1,5 +1,3 @@
-"use client";
-
 import { EditorContent } from "@tiptap/react";
 import ToolBar from "@lib/tiptap/Toolbar";
 import Button from "@components/atoms/Button";
@@ -33,15 +31,15 @@ const Editor = () => {
             onClick={() => editor?.commands.focus()}
           />
         </div>
-
         <div className={"flex h-8 w-full items-center border-t px-4"}>
           <Text type={Typography.BODY_3}>{editor.storage.characterCount.characters()} words</Text>
         </div>
       </div>
 
       <div className={"flex flex-row justify-end gap-4"}>
-        <Button onClick={() => console.log("")}>Preview</Button>
-        <Button onClick={handleSubmitEditor}>Save</Button>
+        <Button size={"SM"} onClick={handleSubmitEditor}>
+          Upload
+        </Button>
       </div>
     </div>
   );

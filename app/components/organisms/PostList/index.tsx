@@ -6,7 +6,7 @@ export interface PostListProps {
   posts: PostTypes[];
 }
 
-export const PostList: React.FC<PostListProps> = ({ posts }) => {
+export const PostList = ({ posts }: PostListProps) => {
   return (
     <div className={"flex w-full flex-col gap-6"}>
       {posts.map((post, index) => (

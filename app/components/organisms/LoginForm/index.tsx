@@ -4,7 +4,7 @@ import { IconName } from "@components/atoms/Icon/types";
 import { useSearchParams } from "next/navigation";
 import { login } from "@utils/auth";
 
-export const LoginForm: React.FC = () => {
+export const LoginForm = () => {
   const searchParams = useSearchParams();
 
   const handleLogin = async () => {
