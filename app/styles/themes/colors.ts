@@ -32,8 +32,8 @@ export const colors = {
   SEMANTIC: {
     SUCCESS: "#27c265",
     WARNING: "#F0CF59",
-    ERROR: "#D14242",
-    INFO: "#5A80E1",
+    ERROR: "#e64237",
+    INFO: "#1363FF",
   },
   LINK: "#8367D5",
   BLACK: "#000000",

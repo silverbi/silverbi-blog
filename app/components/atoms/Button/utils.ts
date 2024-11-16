@@ -15,9 +15,9 @@ export const changeTypeToClassname = (tag: ButtonStyles) => {
     case "DISABLED":
       return "";
     case "NEGATIVE":
-      return "border-bg-semantic-error border bg-semantic-error";
+      return "border-semantic-error border bg-semantic-error";
     case "INFO":
-      return "border border-bg-semantic-info bg-semantic-info";
+      return "border border-semantic-info bg-semantic-info";
     default:
       return;
   }
@@ -25,6 +25,8 @@ export const changeTypeToClassname = (tag: ButtonStyles) => {
 
 export const changeSizeToClassname = (tag: ButtonSize) => {
   switch (tag) {
+    case "XS":
+      return "rounded-lg px-3 py-1";
     case "SM":
       return "rounded-lg px-3 py-1.5";
     case "MD":
@@ -40,6 +42,8 @@ export const changeSizeToClassname = (tag: ButtonSize) => {
 
 export const changeInteractionSizeToClassname = (tag: ButtonSize) => {
   switch (tag) {
+    case "XS":
+      return "rounded-lg";
     case "SM":
       return "rounded-lg";
     case "MD":
@@ -72,6 +76,8 @@ export const changeTypeToTextColors = (tag: ButtonStyles) => {
 
 export const changeTypeToTextSize = (size: ButtonSize) => {
   switch (size) {
+    case "XS":
+      return Typography.BODY_3;
     case "SM":
       return Typography.BODY_2;
     case "MD":

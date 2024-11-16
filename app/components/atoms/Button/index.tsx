@@ -25,7 +25,7 @@ export interface ButtonProps {
 }
 
 export type ButtonStyles = "PRIMARY" | "TERTIARY" | "SECONDARY" | "GHOST" | "DISABLED" | "NEGATIVE" | "INFO";
-export type ButtonSize = "SM" | "MD" | "LG" | "XL";
+export type ButtonSize = "XS" | "SM" | "MD" | "LG" | "XL";
 
 const Button = ({
   className,
@@ -66,7 +66,7 @@ const Button = ({
         ].join(" ")}
       >
         {icon && <Icon type={icon} size={IconSizes.SM} color={changeTypeToTextColors(tag)} />}
-        <Text color={changeTypeToTextColors(tag)} bold type={changeTypeToTextSize(size)}>
+        <Text color={changeTypeToTextColors(tag)} bold={size !== "XS"} type={changeTypeToTextSize(size)}>
           {children}
         </Text>
       </div>
