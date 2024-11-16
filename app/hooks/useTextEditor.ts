@@ -70,7 +70,7 @@ export const useTextEditor = () => {
         },
       }),
       Placeholder.configure({
-        placeholder: "Write something …",
+        placeholder: "내용을 입력하세요",
       }),
       Link.configure({
         protocols: [

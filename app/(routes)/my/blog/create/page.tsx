@@ -1,19 +1,22 @@
 "use client";
 
-import RootLayout from "@layouts/RootLayout";
-import { Container } from "@components/atoms/Container";
-import Title from "@components/atoms/Title";
+import { useTextEditor } from "@/hooks/useTextEditor";
 import Editor from "@lib/tiptap/Editor";
+import { Inputs } from "types/hooks";
 
 const Create = () => {
-  return (
-    <RootLayout>
-      <Container className="my-32">
-        <Title className={"mb-16"}>Create</Title>
+  const editor = useTextEditor();
 
-        <Editor />
-      </Container>
-    </RootLayout>
+  const handleUploadPost = (values: Inputs) => {
+    console.log("vaelus ", values);
+
+    const html = editor?.getHTML();
+  };
+
+  return (
+    <div className={"h-screen w-full overflow-hidden py-12"}>
+      <Editor editor={editor} handleUploadPost={handleUploadPost} />
+    </div>
   );
 };
 
