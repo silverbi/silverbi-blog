@@ -8,7 +8,7 @@ export const OrderedList = ({ editor }: ToolMenuEditorProps) => (
     onClick={() => editor.chain().focus().toggleOrderedList().run()}
     className={`tool-icon ${editor.isActive("orderedList") ? "is-active" : ""}`}
   >
-    <Icon type={IconName.DOTPOINTS} size={"SM"} />
+    <Icon type={IconName.NUMBERED_LIST} size={"SM"} />
   </button>
 );
 OrderedList.displayName = "OrderedList";

@@ -74,6 +74,7 @@ import VideoIcon from "@assets/icons/icon-video.svg";
 import EmailIcon from "@assets/icons/icon-email.svg";
 import DottedLineIcon from "@assets/icons/icon-dotted-line.svg";
 import FootnoteIcon from "@assets/icons/icon-footnote.svg";
+import NumberedList from "@assets/icons/icon-numbered-list.svg";
 
 export const changeTypeToIconComponent = (type: IconName) => {
   switch (type) {
@@ -93,6 +94,8 @@ export const changeTypeToIconComponent = (type: IconName) => {
       return MarkerPinIcon;
     case IconName.HEART_ROUNDED:
       return HeartRoundedIcon;
+    case IconName.NUMBERED_LIST:
+      return NumberedList;
     case IconName.HEART_ROUNDED_FILL:
       return HeartRoundedFillIcon;
     case IconName.ALARM_CLOCK:

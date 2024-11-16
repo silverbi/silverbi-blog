@@ -71,6 +71,7 @@ export const IconName = {
   EMAIL: "EMAIL",
   DOTTED_LINE: "DOTTED_LINE",
   FOOTNOTE: "FOOTNOTE",
+  NUMBERED_LIST: "NUMBERED_LIST",
 } as const;
 export type IconName = (typeof IconName)[keyof typeof IconName];
 
