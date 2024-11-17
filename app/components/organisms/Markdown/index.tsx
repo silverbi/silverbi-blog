@@ -2,8 +2,8 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import remarkGfm from "remark-gfm";
-import { codeThemes } from "@components/molecules/CodeBlock/codeThemes";
-import CodeBlock from "@components/molecules/CodeBlock";
+import { codeThemes } from "@/components/molecules/CodeBlock/codeThemes";
+import CodeBlock from "@/components/molecules/CodeBlock";
 
 interface MarkdownProps {
   children: string;

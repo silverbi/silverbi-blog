@@ -1,7 +1,7 @@
 import React from "react";
-import Title from "@components/atoms/Title";
-import Chip from "@components/atoms/Chip";
-import PostList from "@components/organisms/PostList";
+import Title from "@/components/atoms/Title";
+import Chip from "@/components/atoms/Chip";
+import PostList from "@/components/organisms/PostList";
 
 const tempPostItem = [
   {

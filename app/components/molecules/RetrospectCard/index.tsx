@@ -1,10 +1,10 @@
 import React from "react";
 import { RetrospectTypes } from "types/postTypes";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import Skeleton from "react-loading-skeleton";
 import { useRouter } from "next/navigation";
-import Chip from "@components/atoms/Chip";
+import Chip from "@/components/atoms/Chip";
 
 export interface RetrospectCardProps {
   retrospect: RetrospectTypes;

@@ -1,5 +1,5 @@
 import RootLayout from "@layouts/RootLayout";
-import { Container } from "@components/atoms/Container";
+import { Container } from "@/components/atoms/Container";
 import { DashboardLayout } from "@layouts/DashboardLayout";
 import React from "react";
 

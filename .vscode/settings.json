@@ -2,14 +2,8 @@
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno"
   },
-  "cSpell.words": [
-    "pretendard",
-    "silverbi",
-    "tiptap"
-  ],
-  "deno.enablePaths": [
-    "supabase/functions"
-  ],
+  "cSpell.words": ["pretendard", "silverbi", "tiptap"],
+  "deno.enablePaths": ["supabase/functions"],
   "deno.lint": true,
   "deno.unstable": [
     "bare-node-builtins",

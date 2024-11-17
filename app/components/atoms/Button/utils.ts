@@ -1,4 +1,4 @@
-import { ButtonSize, type ButtonStyles } from "@components/atoms/Button/index";
+import { ButtonSize, type ButtonStyles } from "@/components/atoms/Button/index";
 import { Colors, Typography } from "@styles/themes/types";
 import { ObjectValues } from "@utils/typeHelpers/objectValues";
 

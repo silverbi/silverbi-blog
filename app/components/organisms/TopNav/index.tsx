@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import IconButton from "@components/atoms/IconButton";
-import Icon from "@components/atoms/Icon";
-import { IconName, IconSizes } from "@components/atoms/Icon/types";
-import Text from "@components/atoms/Text";
-import { routeData } from "@components/organisms/TopNav/routeDataSet";
+import IconButton from "@/components/atoms/IconButton";
+import Icon from "@/components/atoms/Icon";
+import { IconName, IconSizes } from "@/components/atoms/Icon/types";
+import Text from "@/components/atoms/Text";
+import { routeData } from "@/components/organisms/TopNav/routeDataSet";
 import { Colors, Typography } from "@styles/themes/types";
-import { TopNavItem } from "@components/molecules/TopNavItem";
+import { TopNavItem } from "@/components/molecules/TopNavItem";
 
 export type OptionsTypes = {
   label: string;

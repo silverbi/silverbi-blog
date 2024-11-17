@@ -1,11 +1,11 @@
 "use client";
 
 import RootLayout from "@layouts/RootLayout";
-import { Container } from "@components/atoms/Container";
-import Title from "@components/atoms/Title";
-import Text from "@components/atoms/Text";
+import { Container } from "@/components/atoms/Container";
+import Title from "@/components/atoms/Title";
+import Text from "@/components/atoms/Text";
 import React from "react";
-import RetrospectList from "@components/organisms/RetrospectList";
+import RetrospectList from "@/components/organisms/RetrospectList";
 
 const temp = [
   {

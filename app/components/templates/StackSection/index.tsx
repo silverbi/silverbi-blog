@@ -1,6 +1,6 @@
 import React from "react";
-import Title from "@components/atoms/Title";
-import Text from "@components/atoms/Text";
+import Title from "@/components/atoms/Title";
+import Text from "@/components/atoms/Text";
 
 const StackSection = () => {
   const temp = ["HTML", "CSS", "Javascript", "Typescript", "React", "React Native", "Next.js"];

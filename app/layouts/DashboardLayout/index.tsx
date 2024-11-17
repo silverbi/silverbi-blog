@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { cn } from "@utils/styles";
-import Icon from "@components/atoms/Icon";
+import Icon from "@/components/atoms/Icon";
 import { Colors } from "@styles/themes/types";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import React from "react";
 import { usePathname } from "next/navigation";
-import { IconName } from "@components/atoms/Icon/types";
+import { IconName } from "@/components/atoms/Icon/types";
 
 export const DashboardLayout = () => {
   const pathname = usePathname();

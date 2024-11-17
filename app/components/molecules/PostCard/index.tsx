@@ -1,12 +1,12 @@
 import React from "react";
 import { PostTypes } from "types/postTypes";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import Skeleton from "react-loading-skeleton";
 
-import Tag from "@components/atoms/Tag";
-import Icon from "@components/atoms/Icon";
-import { IconName, IconSizes } from "@components/atoms/Icon/types";
+import Tag from "@/components/atoms/Tag";
+import Icon from "@/components/atoms/Icon";
+import { IconName, IconSizes } from "@/components/atoms/Icon/types";
 import { useRouter } from "next/navigation";
 
 export interface PostCardProps {

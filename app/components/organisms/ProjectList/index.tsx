@@ -1,6 +1,6 @@
 import React from "react";
 import { ProjectTypes } from "types/projectTypes";
-import ProjectCard from "@components/molecules/ProjectCard";
+import ProjectCard from "@/components/molecules/ProjectCard";
 
 export interface ProjectListProps {
   projects: ProjectTypes[];

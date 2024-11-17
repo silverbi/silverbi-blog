@@ -3,8 +3,8 @@ import { ProjectTypes } from "types/projectTypes";
 import Skeleton from "react-loading-skeleton";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { changeProjectToStyles } from "@components/molecules/ProjectCard/utils";
-import Text from "@components/atoms/Text";
+import { changeProjectToStyles } from "@/components/molecules/ProjectCard/utils";
+import Text from "@/components/atoms/Text";
 
 export interface ProjectCardProps {
   project: ProjectTypes;

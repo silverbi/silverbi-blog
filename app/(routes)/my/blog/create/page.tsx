@@ -1,7 +1,7 @@
 "use client";
 
 import { useTextEditor } from "@/hooks/useTextEditor";
-import Editor from "@lib/tiptap/Editor";
+import Editor from "lib/tiptap/Editor";
 import { Inputs } from "types/hooks";
 
 const Create = () => {

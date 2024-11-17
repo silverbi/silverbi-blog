@@ -1,13 +1,13 @@
 "use client";
 
-import { Container } from "@components/atoms/Container";
+import { Container } from "@/components/atoms/Container";
 import RootLayout from "@layouts/RootLayout";
 import React from "react";
-import Title from "@components/atoms/Title";
-import Text from "@components/atoms/Text";
-import ProjectList from "@components/organisms/ProjectList";
+import Title from "@/components/atoms/Title";
+import Text from "@/components/atoms/Text";
+import ProjectList from "@/components/organisms/ProjectList";
 import CustomImage from "app/components/atoms/CustomImage";
-import { ImageTypes } from "@components/atoms/CustomImage/types";
+import { ImageTypes } from "@/components/atoms/CustomImage/types";
 
 const tempProjectsItem = [
   {

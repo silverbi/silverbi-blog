@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FocusEvent, MouseEvent, useState } from "react";
-import Interaction from "@components/atoms/Interaction";
+import Interaction from "@/components/atoms/Interaction";
 
 export interface IconButtonProps {
   className?: string | Array<string>;

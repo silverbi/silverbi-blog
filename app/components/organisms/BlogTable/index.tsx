@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import Toggle from "app/components/atoms/Toggle";
 import Icon from "@/components/atoms/Icon";
 import { IconName } from "@/components/atoms/Icon/types";

@@ -1,5 +1,5 @@
 import { BubbleMenu, Editor } from "@tiptap/react";
-import { Color, Underline, Bold, Italic, Strike } from "@lib/tiptap/ToolMenu";
+import { Color, Underline, Bold, Italic, Strike } from "lib/tiptap/ToolMenu";
 import React from "react";
 
 interface BubbleEditorMenuProps {

@@ -1,5 +1,5 @@
 import React from "react";
-import { changeTypeToSizeComponent } from "@components/atoms/Icon/utils";
+import { changeTypeToSizeComponent } from "@/components/atoms/Icon/utils";
 import { MAX_CONTENT_WIDTH } from "@common/constants";
 
 export interface ContainerProps {

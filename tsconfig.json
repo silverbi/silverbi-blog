@@ -27,8 +27,8 @@
       "@styles/*": ["./app/styles/*"],
       "@utils/*": ["./app/utils/*"],
       "@hooks/*": ["./app/hooks/*"],
-      "@lib/*": ["./app/lib/*"],
-      "@assets/*": ["./app/assets/*"],
+      "@lib/*": ["./lib/*"],
+      "@assets/*": ["./assets/*"],
       "@state/*": ["./app/state/*"],
       "@layouts/*": ["./app/layouts/*"],
       "types": ["./types/*", "node", "vite/client"]

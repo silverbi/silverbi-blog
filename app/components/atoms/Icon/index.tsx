@@ -4,8 +4,8 @@ import {
   changeFillToClassName,
   changeTypeToIconComponent,
   changeTypeToSizeComponent,
-} from "@components/atoms/Icon/utils";
-import { IconName, IconSizes, SizesTypes } from "@components/atoms/Icon/types";
+} from "@/components/atoms/Icon/utils";
+import { IconName, IconSizes, SizesTypes } from "@/components/atoms/Icon/types";
 import { Colors } from "@styles/themes/types";
 import { ObjectValues } from "@utils/typeHelpers/objectValues";
 

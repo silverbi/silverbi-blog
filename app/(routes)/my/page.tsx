@@ -1,10 +1,10 @@
 import React from "react";
 import RootLayout from "@layouts/RootLayout";
-import { Container } from "@components/atoms/Container";
-import Title from "@components/atoms/Title";
+import { Container } from "@/components/atoms/Container";
+import Title from "@/components/atoms/Title";
 import Link from "next/link";
-import Button from "@components/atoms/Button";
-import BlogTable from "@components/organisms/BlogTable";
+import Button from "@/components/atoms/Button";
+import BlogTable from "@/components/organisms/BlogTable";
 
 const My = () => {
   return (

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { changeImageTagToPath } from "@components/atoms/CustomImage/utils";
+import { changeImageTagToPath } from "@/components/atoms/CustomImage/utils";
 
 interface CustomImageProps {
   tag: string;

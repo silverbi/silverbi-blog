@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "@components/atoms/Button";
-import { IconName } from "@components/atoms/Icon/types";
+import Button from "@/components/atoms/Button";
+import { IconName } from "@/components/atoms/Icon/types";
 import { useSearchParams } from "next/navigation";
 import { login } from "@utils/auth";
 

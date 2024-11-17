@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import {
   changeInteractionSizeToClassname,
   changeSizeToClassname,
@@ -9,9 +9,9 @@ import {
   changeTypeToInteraction,
   changeTypeToTextColors,
   changeTypeToTextSize,
-} from "@components/atoms/Button/utils";
-import { IconSizes, IconName } from "@components/atoms/Icon/types";
-import Icon from "@components/atoms/Icon";
+} from "@/components/atoms/Button/utils";
+import { IconSizes, IconName } from "@/components/atoms/Icon/types";
+import Icon from "@/components/atoms/Icon";
 
 export interface ButtonProps {
   className?: string | Array<string>;

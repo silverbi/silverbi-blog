@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import Icon from "@components/atoms/Icon";
-import { IconName, IconSizes } from "@components/atoms/Icon/types";
-import Text from "@components/atoms/Text";
+import Icon from "@/components/atoms/Icon";
+import { IconName, IconSizes } from "@/components/atoms/Icon/types";
+import Text from "@/components/atoms/Text";
 import { Colors, Typography } from "@styles/themes/types";
 import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@common/constants";
 

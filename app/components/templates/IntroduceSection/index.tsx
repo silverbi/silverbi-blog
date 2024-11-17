@@ -1,15 +1,15 @@
 import React from "react";
-import Chip from "@components/atoms/Chip";
-import { IconName, IconSizes } from "@components/atoms/Icon/types";
-import Text from "@components/atoms/Text";
+import Chip from "@/components/atoms/Chip";
+import { IconName, IconSizes } from "@/components/atoms/Icon/types";
+import Text from "@/components/atoms/Text";
 import { Typography } from "@styles/themes/types";
-import Icon from "@components/atoms/Icon";
+import Icon from "@/components/atoms/Icon";
 import Image from "next/image";
-import Tag from "@components/atoms/Tag";
+import Tag from "@/components/atoms/Tag";
 import Link from "next/link";
 import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@common/constants";
 import CustomImage from "app/components/atoms/CustomImage";
-import { ImageTypes } from "@components/atoms/CustomImage/types";
+import { ImageTypes } from "@/components/atoms/CustomImage/types";
 
 export const IntroduceSection = () => {
   return (

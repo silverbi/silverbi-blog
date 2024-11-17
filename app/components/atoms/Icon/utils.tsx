@@ -1,5 +1,5 @@
-import { IconName } from "@components/atoms/Icon/types";
-import { Sizes } from "@components/atoms/IconButton/types";
+import { IconName } from "@/components/atoms/Icon/types";
+import { Sizes } from "@/components/atoms/IconButton/types";
 import { ObjectValues } from "@utils/typeHelpers/objectValues";
 import { Colors } from "@styles/themes/types";
 

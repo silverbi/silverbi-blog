@@ -1,4 +1,4 @@
-import { IconName } from "@components/atoms/Icon/types";
+import { IconName } from "@/components/atoms/Icon/types";
 
 export const routeData = [
   {

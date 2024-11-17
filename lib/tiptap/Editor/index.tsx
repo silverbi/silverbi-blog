@@ -1,12 +1,12 @@
 import { EditorContent } from "@tiptap/react";
-import ToolBar from "@lib/tiptap/Toolbar";
-import Button from "@components/atoms/Button";
-import Text from "@components/atoms/Text";
+import ToolBar from "lib/tiptap/Toolbar";
+import Button from "@/components/atoms/Button";
+import Text from "@/components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import { useTextEditor } from "@hooks/useTextEditor";
 import "./styles.css";
 import { Editor as EditorTypes } from "@tiptap/react";
-import BubbleEditorMenu from "@lib/tiptap/BubbleEditorMenu";
+import BubbleEditorMenu from "lib/tiptap/BubbleEditorMenu";
 import IconButton from "@/components/atoms/IconButton";
 import Icon from "@/components/atoms/Icon";
 import { IconName } from "@/components/atoms/Icon/types";

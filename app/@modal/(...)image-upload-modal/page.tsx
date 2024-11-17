@@ -2,7 +2,7 @@
 
 import { FormModal } from "@/components/molecules/CustomModal/FormModal";
 import { useRef, useState } from "react";
-import Button from "@components/atoms/Button";
+import Button from "@/components/atoms/Button";
 import Text from "@/components/atoms/Text";
 import Image from "next/image";
 import { Inputs } from "types/hooks";

@@ -1,6 +1,6 @@
 import React from "react";
 import { RetrospectTypes } from "types/postTypes";
-import RetrospectCard from "@components/molecules/RetrospectCard";
+import RetrospectCard from "@/components/molecules/RetrospectCard";
 
 export interface RetrospectListProps {
   retrospects: RetrospectTypes[];

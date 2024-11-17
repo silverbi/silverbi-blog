@@ -1,4 +1,4 @@
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import React from "react";
 import { Typography } from "@styles/themes/types";
 

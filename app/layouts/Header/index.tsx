@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import Icon from "@components/atoms/Icon";
-import { IconName, IconSizes } from "@components/atoms/Icon/types";
-import Text from "@components/atoms/Text";
+import Icon from "@/components/atoms/Icon";
+import { IconName, IconSizes } from "@/components/atoms/Icon/types";
+import Text from "@/components/atoms/Text";
 import Link from "next/link";
 import { HEADER_MENU } from "@common/constants";
 import { usePathname } from "next/navigation";
-import Interaction from "@components/atoms/Interaction";
+import Interaction from "@/components/atoms/Interaction";
 import TopNav from "app/components/organisms/TopNav";
 
 export const Header = () => {

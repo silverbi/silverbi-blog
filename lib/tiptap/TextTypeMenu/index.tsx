@@ -1,8 +1,8 @@
 import { Editor } from "@tiptap/react";
 import { Level } from "@tiptap/extension-heading";
-import Icon from "@components/atoms/Icon";
-import { IconName } from "@components/atoms/Icon/types";
-import Text from "@components/atoms/Text";
+import Icon from "@/components/atoms/Icon";
+import { IconName } from "@/components/atoms/Icon/types";
+import Text from "@/components/atoms/Text";
 import { useState } from "react";
 
 interface TextTypeMenuProps {

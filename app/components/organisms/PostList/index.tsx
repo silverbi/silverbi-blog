@@ -1,6 +1,6 @@
 import React from "react";
 import { PostTypes } from "types/postTypes";
-import PostCard from "@components/molecules/PostCard";
+import PostCard from "@/components/molecules/PostCard";
 
 export interface PostListProps {
   posts: PostTypes[];

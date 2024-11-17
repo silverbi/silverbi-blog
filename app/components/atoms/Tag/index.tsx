@@ -1,6 +1,6 @@
 import React from "react";
 import { changeSizeToClassName, changeSizeToTypography, changeTypeToClassName } from "./utils";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import { Colors } from "@styles/themes/types";
 
 export interface TagProps {

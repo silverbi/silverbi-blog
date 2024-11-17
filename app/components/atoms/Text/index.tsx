@@ -3,7 +3,7 @@ import {
   changeColorToClassName,
   changeTypographyToClassName,
   changeWeightToClassName,
-} from "@components/atoms/Text/utils";
+} from "@/components/atoms/Text/utils";
 import { ObjectValues } from "@utils/typeHelpers/objectValues";
 import { Colors, Typography } from "@styles/themes/types";
 

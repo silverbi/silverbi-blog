@@ -1,10 +1,10 @@
 "use client";
 
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import { Colors, Typography } from "@styles/themes/types";
-import CustomImage from "@components/atoms/CustomImage";
-import { ImageTypes } from "@components/atoms/CustomImage/types";
-import { LoginForm } from "@components/organisms/LoginForm";
+import CustomImage from "@/components/atoms/CustomImage";
+import { ImageTypes } from "@/components/atoms/CustomImage/types";
+import { LoginForm } from "@/components/organisms/LoginForm";
 
 const AuthCodeError = () => {
   return (

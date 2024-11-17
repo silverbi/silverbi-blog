@@ -1,6 +1,6 @@
 import React from "react";
 import { Editor } from "@tiptap/react";
-import TextTypeMenu from "@lib/tiptap/TextTypeMenu";
+import TextTypeMenu from "lib/tiptap/TextTypeMenu";
 import {
   Bold,
   Italic,
