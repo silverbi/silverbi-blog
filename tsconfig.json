@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -23,47 +19,19 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "@/*": [
-        "./app/*"
-      ],
-      "@apis/*": [
-        "./app/apis/*"
-      ],
-      "@components/*": [
-        "./app/components/*"
-      ],
-      "@common/*": [
-        "./app/common/*"
-      ],
-      "@routes/*": [
-        "./app/(routes)/*"
-      ],
-      "@styles/*": [
-        "./app/styles/*"
-      ],
-      "@utils/*": [
-        "./app/utils/*"
-      ],
-      "@hooks/*": [
-        "./app/hooks/*"
-      ],
-      "@lib/*": [
-        "./lib/*"
-      ],
-      "@assets/*": [
-        "./assets/*"
-      ],
-      "@state/*": [
-        "./app/state/*"
-      ],
-      "@layouts/*": [
-        "./app/layouts/*"
-      ],
-      "types": [
-        "./types/*",
-        "node",
-        "vite/client"
-      ]
+      "@/*": ["./app/*"],
+      "@apis/*": ["./app/apis/*"],
+      "@components/*": ["./app/components/*"],
+      "@common/*": ["./app/common/*"],
+      "@routes/*": ["./app/(routes)/*"],
+      "@styles/*": ["./app/styles/*"],
+      "@utils/*": ["./app/utils/*"],
+      "@hooks/*": ["./app/hooks/*"],
+      "@lib/*": ["./lib/*"],
+      "@assets/*": ["./assets/*"],
+      "@state/*": ["./app/state/*"],
+      "@layouts/*": ["./app/layouts/*"],
+      "types": ["./types/*", "node", "vite/client"]
     },
     "target": "ES2017"
   },
@@ -75,8 +43,5 @@
     ".next/types/**/*.ts",
     "app/@modal/default.js"
   ],
-  "exclude": [
-    "public/**/*",
-    "node_modules"
-  ]
+  "exclude": ["public/**/*", "node_modules"]
 }
