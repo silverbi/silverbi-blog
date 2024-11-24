@@ -3,7 +3,7 @@ current_branch=$(git symbolic-ref --short HEAD)
 
 
 # Run lint:fix and test scripts
-if ! (echo "Running ESLint..." && yarn run lint:fix) ; then
+if ! (echo "Running ESLint..." && yarn lint:fix) ; then
   echo "Linting failed, push not allowed"
   exit 1
 fi 
