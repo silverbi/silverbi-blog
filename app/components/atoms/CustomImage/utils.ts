@@ -1,5 +1,5 @@
 import { ImageTypes } from "@/components/atoms/CustomImage/types";
-import ProfileCharacter from "@assets/images/profile-character.webp";
+import ProfileCharacter from "@assets/images/profile-character.png";
 import LandingThumbnail from "@assets/images/landing-thumbnail.webp";
 import ProjectDeepfall from "@assets/images/project-deepfall.webp";
 import ProjectIdco from "@assets/images/project-idco.webp";

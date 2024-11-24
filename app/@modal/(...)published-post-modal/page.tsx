@@ -19,7 +19,7 @@ export interface FilePreviewProps {
   isSelected: boolean;
 }
 
-export const PublishedPostModal = () => {
+const PublishedPostModal = () => {
   const router = useRouter();
   const post = usePostState(state => state.post);
   const {
