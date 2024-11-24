@@ -10,7 +10,7 @@ import BubbleEditorMenu from "lib/tiptap/BubbleEditorMenu";
 import IconButton from "@/components/atoms/IconButton";
 import Icon from "@/components/atoms/Icon";
 import { IconName } from "@/components/atoms/Icon/types";
-import { Inputs } from "types/hooks";
+import { useRouter } from "next/navigation";
 
 interface EditorProps {
   editor: EditorTypes | null;
@@ -18,6 +18,8 @@ interface EditorProps {
 }
 
 const Editor = ({ editor, register }: EditorProps) => {
+  const router = useRouter();
+
   if (!editor) {
     return null;
   }
@@ -25,9 +27,9 @@ const Editor = ({ editor, register }: EditorProps) => {
   return (
     <div className="flex h-full w-full flex-col items-center justify-center">
       <div
-        className={"fixed left-0 right-0 top-0 z-50 flex w-full justify-between border-b bg-background-1 px-4 py-1.5"}
+        className={"fixed left-0 right-0 top-0 z-40 flex w-full justify-between border-b bg-background-1 px-4 py-1.5"}
       >
-        <IconButton>
+        <IconButton onClick={() => router.back()}>
           <Icon type={IconName.X_CLOSE} size={"SM"} />
         </IconButton>
 
@@ -39,7 +41,7 @@ const Editor = ({ editor, register }: EditorProps) => {
         </div>
       </div>
 
-      <div className={"fixed top-12 w-full bg-background-1"}>
+      <div className={"fixed top-12 z-30 w-full bg-background-1"}>
         <ToolBar editor={editor} />
       </div>
 

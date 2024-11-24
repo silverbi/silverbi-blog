@@ -2,6 +2,7 @@ import { SkeletonTheme } from "react-loading-skeleton";
 import SessionProvider from "@layouts/sessionProvider";
 import themes from "@styles/themes";
 import localFont from "next/font/local";
+import ToastProvider from "@components/atoms/Toast/ToastProvider";
 
 export const metadata = {
   title: "Next.js",
@@ -20,6 +21,7 @@ export default function RootLayout({ children, modal }: { modal: React.ReactNode
     <html lang="ko">
       <body suppressHydrationWarning={true} className={`${pretendard.variable} font-pretendard`}>
         <SessionProvider>
+          <ToastProvider />
           <SkeletonTheme
             baseColor={themes.colors.light["layer-3"]}
             highlightColor={themes.colors.light["layer-disabled"]}

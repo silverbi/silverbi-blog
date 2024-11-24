@@ -6,8 +6,6 @@ import Text from "@/components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import Icon from "@/components/atoms/Icon";
 import { IconName } from "@/components/atoms/Icon/types";
-import { SubmitHandler } from "react-hook-form";
-import { Inputs } from "types/hooks";
 import { useRouter } from "next/navigation";
 
 export interface FormModalProps {

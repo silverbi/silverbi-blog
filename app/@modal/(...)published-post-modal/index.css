@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .flex-box {
+    @apply flex flex-col gap-1;
+  }
+
+  .tag {
+    @apply flex cursor-pointer items-center justify-center rounded-lg border px-3 py-1;
+  }
+}
