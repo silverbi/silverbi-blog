@@ -1,6 +1,4 @@
-import RootLayout from "@layouts/RootLayout";
-import { Container } from "@/components/atoms/Container";
-import PostDetailSection from "@/components/templates/PostDetailSection";
+import RootLayout from "@/app/layouts/RootLayout";
 
 const TechDetail = () => {
   const tempItem = {
@@ -22,9 +20,10 @@ const TechDetail = () => {
 
   return (
     <RootLayout>
-      <Container className="my-32">
+      <div />
+      {/* <Container className="my-32">
         <PostDetailSection post={tempItem} />
-      </Container>
+      </Container> */}
     </RootLayout>
   );
 };

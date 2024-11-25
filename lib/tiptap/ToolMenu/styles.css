@@ -71,7 +71,7 @@ ol {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 600;
   line-height: 1.6;
 }
@@ -163,62 +163,11 @@ input[type="color"] {
   .tiptap-link {
     text-decoration: underline;
     font-weight: 600;
-    color: #2c6bc9;
-    background-color: #e8f4ff;
-    padding: 0.125rem 0.25rem;
-    border-radius: 0.25rem;
+    color: #5b3cb6;
+    background-color: #f2edff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
     cursor: pointer;
-  }
-
-  .tiptap-footnote-reference {
-    font-size: 14px;
-  }
-
-  .tiptap-footnotes {
-    border-top: 1px solid black;
-    margin-top: 20px;
-    padding: 20px 0 0 20px;
-    list-style-type: decimal;
-
-    li {
-      font-size: 14px;
-      font-family:
-        "Pretendard Variable",
-        Pretendard,
-        -apple-system,
-        BlinkMacSystemFont,
-        system-ui,
-        Roboto,
-        "Helvetica Neue",
-        "Segoe UI",
-        "Apple SD Gothic Neo",
-        "Noto Sans KR",
-        "Malgun Gothic",
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-        sans-serif;
-    }
-
-    p {
-      font-size: 14px;
-      font-family:
-        "Pretendard Variable",
-        Pretendard,
-        -apple-system,
-        BlinkMacSystemFont,
-        system-ui,
-        Roboto,
-        "Helvetica Neue",
-        "Segoe UI",
-        "Apple SD Gothic Neo",
-        "Noto Sans KR",
-        "Malgun Gothic",
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-        sans-serif;
-    }
   }
 
   .tiptap-code-block {
@@ -287,21 +236,4 @@ input[type="color"] {
       color: black;
     }
   }
-}
-
-.image-resizer {
-  display: inline-flex;
-  position: relative;
-  flex-grow: 0;
-}
-.image-resizer .resize-trigger {
-  position: absolute;
-  right: -6px;
-  bottom: -9px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  color: #3259a5;
-}
-.image-resizer:hover .resize-trigger {
-  opacity: 1;
 }

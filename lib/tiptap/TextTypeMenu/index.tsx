@@ -1,8 +1,5 @@
-import { Editor } from "@tiptap/react";
+import { Editor } from "@tiptap/core";
 import { Level } from "@tiptap/extension-heading";
-import Icon from "@/components/atoms/Icon";
-import { IconName } from "@/components/atoms/Icon/types";
-import Text from "@/components/atoms/Text";
 import { useState } from "react";
 
 interface TextTypeMenuProps {
@@ -57,13 +54,13 @@ const TextTypeMenu = ({ editor }: TextTypeMenuProps) => {
   return (
     <>
       <div className="relative flex">
-        <button
+        {/* <button
           type="button"
           className={`flex flex-row items-center rounded-md p-1 hover:bg-background-2`}
           onClick={handleOpenMenu}
         >
           <Icon type={IconName.TEXT_TYPE} size={"SM"} />
-        </button>
+        </button> */}
         <div
           className={`absolute right-0 top-8 z-50 flex w-20 origin-top-right flex-col gap-1 rounded-md border bg-background-1 p-2 shadow-lg ${isOpen ? "visible" : "hidden"}`}
           role="menu"
@@ -81,7 +78,7 @@ const TextTypeMenu = ({ editor }: TextTypeMenuProps) => {
                 onClick={() => handleSelectHeading(option.value)}
                 className={`flex w-full flex-row items-center gap-2 rounded-md px-2 py-1 hover:bg-background-2 ${isSelectedMenu ? "bg-background-2" : "in-active"}`}
               >
-                <Text>{option.label}</Text>
+                {/* <Text>{option.label}</Text> */}
               </button>
             );
           })}

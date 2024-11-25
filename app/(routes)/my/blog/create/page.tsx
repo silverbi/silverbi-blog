@@ -1,11 +1,9 @@
 "use client";
 
-import { errorToast } from "@/components/atoms/Toast";
-import { useTextEditor } from "@/hooks/useTextEditor";
-import { usePostState } from "@/store/post";
-import Editor from "lib/tiptap/Editor";
+import { useTextEditor } from "hooks/useTextEditor";
 import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { usePostState } from "store/post";
 import { Inputs } from "types/hooks";
 
 const Create = () => {
@@ -25,7 +23,7 @@ const Create = () => {
     setPost({ ...post, title: values.title, subtitle: values.subtitle, content: `${html}` });
 
     if (!values.title) {
-      return errorToast("제목을 입력해 주세요.");
+      // return errorToast("제목을 입력해 주세요.");
     }
 
     router.push("/published-post-modal");
@@ -34,7 +32,7 @@ const Create = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className={"h-screen w-full overflow-hidden py-12"}>
-        <Editor editor={editor} register={register} />
+        {/* <Editor editor={editor} register={register} /> */}
       </div>
     </form>
   );

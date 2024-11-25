@@ -1,10 +1,5 @@
 "use client";
 
-import React, { useState } from "react";
-import Title from "@/components/atoms/Title";
-import Text from "@/components/atoms/Text";
-import { Colors, Typography } from "@styles/themes/types";
-
 const ExperienceSection = () => {
   const temp = [
     {
@@ -38,7 +33,7 @@ const ExperienceSection = () => {
 
   return (
     <div className={"flex w-full flex-col gap-8"}>
-      <Title>Experience</Title>
+      {/* <Title>Experience</Title>
       <div className={"flex flex-col divide-y"}>
         {temp.map((item, index) => (
           <div key={index} className={"flex py-12"}>
@@ -51,7 +46,7 @@ const ExperienceSection = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

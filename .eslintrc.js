@@ -1,7 +1,7 @@
 module.exports = {
-  "extends": "next/core-web-vitals",
-  "plugins": ["prettier"],
-  "rules": {
-    "prettier/prettier": "error"
-  }
-}
+  extends: "next/core-web-vitals",
+  plugins: ["prettier"],
+  rules: {
+    "prettier/prettier": "error",
+  },
+};

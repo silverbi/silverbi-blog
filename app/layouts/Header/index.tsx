@@ -1,48 +1,55 @@
 "use client";
 
-import React from "react";
-import Icon from "@/components/atoms/Icon";
-import { IconName, IconSizes } from "@/components/atoms/Icon/types";
-import Text from "@/components/atoms/Text";
+import { ModeToggle } from "@/app/components/commons/ModeToggle";
+import { Button } from "@/app/components/ui/button";
+import { Icon } from "@/app/components/ui/icon";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from "@/app/components/ui/navigation-menu";
+import { Text } from "@/app/components/ui/text";
 import Link from "next/link";
-import { HEADER_MENU } from "@common/constants";
-import { usePathname } from "next/navigation";
-import Interaction from "@/components/atoms/Interaction";
-import TopNav from "app/components/organisms/TopNav";
 
 export const Header = () => {
-  const pathname = usePathname();
-
   return (
-    <div className="fixed z-50 flex h-16 w-full items-center justify-center border-b bg-background-1">
-      <div className="flex h-fit w-full max-w-xl flex-row items-center justify-between bg-background-1 px-12">
-        {/** 블로그 로고 */}
-        <Link scroll={false} href={"/"}>
-          <span className={"flex flex-row items-center gap-2"}>
-            <Icon type={IconName.SILVERBI_SYMBOL} size={IconSizes.SM} />
-            <Text>SILVERBI</Text>
-          </span>
-        </Link>
+    <header className="fixed top-0 z-50 flex h-16 w-full items-center justify-center border-b px-12 bg-background">
+      <Link scroll={false} href={"/"} className={"flex flex-row items-center gap-2 h-full"}>
+        <Icon icon={"icon-silverbi-symbol"} size={"sm"} />
+        <Text bold variant={"body-1"}>
+          SILVERBI
+        </Text>
+      </Link>
 
-        {/** 메뉴 */}
-        <span className={"flex flex-row items-center gap-6"}>
-          {HEADER_MENU.map((label, index) => (
-            <Interaction key={index}>
-              <Link scroll={false} href={`/${label === "home" ? "" : label}`}>
-                <Text bold={pathname === "/" ? label === "home" : pathname.includes(label)} className={"capitalize"}>
-                  {label}
-                </Text>
-                {(pathname === "/" ? label === "home" : pathname.includes(label)) && (
-                  <div className={"h-0.5 w-full bg-content-1"} />
-                )}
-              </Link>
-            </Interaction>
-          ))}
-        </span>
+      <NavigationMenu>
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <Link href="/tech" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>개발</NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/retrospect" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>회고</NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/project" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>프로젝트</NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
 
-        <TopNav />
+      <div className={"flex gap-2 items-center"}>
+        <Button asChild size={"sm"}>
+          <Link href="/login">로그인</Link>
+        </Button>
+        <ModeToggle />
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -1,5 +1,6 @@
-import Header from "../Header";
+import { Container } from "../Container";
 import Footer from "../Footer";
+import Header from "../Header";
 import React from "react";
 
 export interface RootLayoutProps {
@@ -8,13 +9,11 @@ export interface RootLayoutProps {
 
 export const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <div className={"flex h-full w-full flex-col justify-between"}>
+    <Container className={"mx-auto"}>
       <Header />
-      <div className={"flex h-full w-full flex-col justify-between pt-16"}>
-        <div>{children}</div>
-        <Footer />
-      </div>
-    </div>
+      <div className={"flex h-fit w-full flex-col items-center justify-center mt-16"}>{children}</div>
+      <Footer />
+    </Container>
   );
 };
 

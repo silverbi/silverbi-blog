@@ -1,21 +1,15 @@
 "use client";
 
-import React from "react";
-import RootLayout from "@layouts/RootLayout";
-import { Container } from "@/components/atoms/Container";
-import Text from "@/components/atoms/Text";
-import { Typography } from "@styles/themes/types";
-import CustomImage from "@/components/atoms/CustomImage";
-import { ImageTypes } from "@/components/atoms/CustomImage/types";
-import { LoginForm } from "@/components/organisms/LoginForm";
+import RootLayout from "@/app/layouts/RootLayout";
 
 const Login = () => {
   return (
     <RootLayout>
-      <Container className="my-32">
+      <div />
+      {/* <Container className="my-32">
         <div className={"flex w-full flex-col items-center justify-center gap-8 "}>
           <div className={"flex w-fit flex-col items-center justify-center gap-8"}>
-            <Text type={Typography.TITLE_1} bold>
+            <Text typo={"title-1"} bold>
               LOGIN
             </Text>
             <div
@@ -26,7 +20,7 @@ const Login = () => {
           </div>
           <LoginForm />
         </div>
-      </Container>
+      </Container> */}
     </RootLayout>
   );
 };

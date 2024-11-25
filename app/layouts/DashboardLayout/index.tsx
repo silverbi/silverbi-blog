@@ -1,33 +1,26 @@
 "use client";
 
-import Link from "next/link";
-import { cn } from "@utils/styles";
-import Icon from "@/components/atoms/Icon";
-import { Colors } from "@styles/themes/types";
-import Text from "@/components/atoms/Text";
-import React from "react";
 import { usePathname } from "next/navigation";
-import { IconName } from "@/components/atoms/Icon/types";
 
 export const DashboardLayout = () => {
   const pathname = usePathname();
 
-  const links = [
-    {
-      href: "/dashboard",
-      text: "dashboard",
-      icon: IconName.FOLDER,
-    },
-    {
-      href: "/dashboard/user",
-      text: "user",
-      icon: IconName.SEARCH,
-    },
-  ];
+  // const links = [
+  //   {
+  //     href: "/dashboard",
+  //     text: "dashboard",
+  //     icon: IconName.FOLDER,
+  //   },
+  //   {
+  //     href: "/dashboard/user",
+  //     text: "user",
+  //     icon: IconName.SEARCH,
+  //   },
+  // ];
 
   return (
     <div className={"flex w-full gap-6"}>
-      {links.map(({ href, text, icon }, index) => {
+      {/* {links.map(({ href, text, icon }, index) => {
         return (
           <Link
             href={href}
@@ -40,7 +33,7 @@ export const DashboardLayout = () => {
             <Text color={pathname === href ? Colors.CONTENT_PRIMARY : Colors.CONTENT_1}>/{text}</Text>
           </Link>
         );
-      })}
+      })} */}
     </div>
   );
 };

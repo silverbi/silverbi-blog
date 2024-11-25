@@ -1,15 +1,10 @@
-import React from "react";
-import RootLayout from "@layouts/RootLayout";
-import { Container } from "@/components/atoms/Container";
-import Title from "@/components/atoms/Title";
-import Link from "next/link";
-import Button from "@/components/atoms/Button";
-import BlogTable from "@/components/organisms/BlogTable";
+import RootLayout from "@/app/layouts/RootLayout";
 
 const My = () => {
   return (
     <RootLayout>
-      <Container className="my-32">
+      <div />
+      {/* <Container className="my-32">
         <div className={"flex w-full items-center justify-between"}>
           <Title>My</Title>
         </div>
@@ -32,7 +27,7 @@ const My = () => {
 
           <BlogTable />
         </div>
-      </Container>
+      </Container> */}
     </RootLayout>
   );
 };

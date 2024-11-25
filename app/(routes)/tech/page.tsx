@@ -1,51 +1,43 @@
 "use client";
 
-import React from "react";
-import { Container } from "@/components/atoms/Container";
-import RootLayout from "@layouts/RootLayout";
-import Title from "@/components/atoms/Title";
-import Text from "@/components/atoms/Text";
-import PostList from "@/components/organisms/PostList";
-import Tag from "@/components/atoms/Tag";
+import RootLayout from "@/app/layouts/RootLayout";
 import { useRouter, useSearchParams } from "next/navigation";
-import CustomImage from "app/components/atoms/CustomImage";
-import { ImageTypes } from "@/components/atoms/CustomImage/types";
 
-const tempPostItem = [
-  {
-    id: 1,
-    title: "Design is the Mix of emotions",
-    date: "2024.02.01",
-    minRead: 1,
-    like: 0,
-    short_description:
-      "Did you come here for something in particular or just general g in particular or just general Riker-bashing? And blowing into Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into",
-    tags: ["CSS", "React", "CRA", "tailwind"],
-    thumbnail: "",
-  },
-  {
-    id: 2,
-    title: "Design is the Mix of emotions",
-    date: "2024.02.01",
-    minRead: 1,
-    like: 0,
-    short_description:
-      "Did you come here for something in particular or just general Riker-bashing? g in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into",
-    tags: ["CSS", "React", "CRA", "tailwind"],
-    thumbnail: "",
-  },
-  {
-    id: 3,
-    title: "Design is the Mix of emotions",
-    date: "2024.02.01",
-    minRead: 1,
-    like: 0,
-    short_description:
-      "Did you come here for something in particular or just general Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into",
-    tags: ["CSS", "React", "CRA", "tailwind"],
-    thumbnail: "",
-  },
-];
+// const tempPostItem = [
+//   {
+//     id: 1,
+//     title: "Design is the Mix of emotions",
+//     date: "2024.02.01",
+//     minRead: 1,
+//     like: 0,
+//     short_description:
+//       "Did you come here for something in particular or just general g in particular or just general Riker-bashing? And blowing into Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into",
+//     tags: ["CSS", "React", "CRA", "tailwind"],
+//     thumbnail: "",
+//   },
+//   {
+//     id: 2,
+//     title: "Design is the Mix of emotions",
+//     date: "2024.02.01",
+//     minRead: 1,
+//     like: 0,
+//     short_description:
+//       "Did you come here for something in particular or just general Riker-bashing? g in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into",
+//     tags: ["CSS", "React", "CRA", "tailwind"],
+//     thumbnail: "",
+//   },
+//   {
+//     id: 3,
+//     title: "Design is the Mix of emotions",
+//     date: "2024.02.01",
+//     minRead: 1,
+//     like: 0,
+//     short_description:
+//       "Did you come here for something in particular or just general Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into",
+//     tags: ["CSS", "React", "CRA", "tailwind"],
+//     thumbnail: "",
+//   },
+// ];
 
 const category = ["React", "CSS", "CRA"];
 
@@ -61,7 +53,8 @@ const Tech = () => {
 
   return (
     <RootLayout>
-      <Container className="my-32">
+      <div />
+      {/* <Container className="my-32">
         <CustomImage
           tag={ImageTypes.TECH_THUMBNAIL}
           alt={"Tech thumbnail"}
@@ -85,7 +78,7 @@ const Tech = () => {
           </div>
           <PostList posts={tempPostItem} />
         </div>
-      </Container>
+      </Container> */}
     </RootLayout>
   );
 };

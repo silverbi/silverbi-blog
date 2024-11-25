@@ -1783,10 +1783,6 @@ del {
     1px 1px 0 #000;
 }
 
-.react-loading-skeleton {
-  border-radius: 1.5rem !important;
-}
-
 .hover\:border:hover {
   border-width: 1px;
 }
