@@ -2,19 +2,24 @@ import { temp } from "./mock.data";
 import { Title } from "@/app/components/commons/Title";
 import { TechList } from "@/app/components/features/tech/TechList";
 import { Button } from "@/app/components/ui/button";
+import Link from "next/link";
 
 export interface TechListPreviewProps {
-  handleClickMore: () => void;
+  count?: number;
 }
 
-export const TechListPreview = ({ handleClickMore }: TechListPreviewProps) => {
+export const TechListPreview = ({ count = 3 }: TechListPreviewProps) => {
   return (
-    <div className={"flex w-full flex-col gap-24"}>
-      <Title>Tech</Title>
+    <div className={"flex w-full flex-col gap-20"}>
+      <div className={"flex w-full justify-between items-center"}>
+        <Title>개발</Title>
 
-      <Button onClick={handleClickMore}>더보기</Button>
+        <Button variant={"outline"}>
+          <Link href="/tech">더보기</Link>
+        </Button>
+      </div>
 
-      <TechList list={temp} />
+      <TechList list={temp} count={3} />
     </div>
   );
 };

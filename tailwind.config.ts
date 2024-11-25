@@ -25,6 +25,10 @@ module.exports = {
         DEFAULT: "hsl(var(--secondary))",
         foreground: "hsl(var(--secondary-foreground))",
       },
+      tertiary: {
+        DEFAULT: "hsl(var(--tertiary))",
+        foreground: "hsl(var(--tertiary-foreground))",
+      },
       destructive: {
         DEFAULT: "hsl(var(--destructive))",
         foreground: "hsl(var(--destructive-foreground))",
@@ -60,12 +64,12 @@ module.exports = {
     },
     borderRadius: {
       none: "0px",
-      xs: "`calc(var(--radius) - 4px)`",
-      sm: "`calc(var(--radius) - 2px)`",
-      md: "`var(--radius)`",
-      lg: "`calc(var(--radius) + 2px)`",
-      xl: "`calc(var(--radius) + 4px)`",
-      "2xl": "`calc(var(--radius) + 6px)`",
+      xs: `calc(var(--radius) - 4px)`,
+      sm: `calc(var(--radius) - 2px)`,
+      md: `var(--radius)`,
+      lg: `calc(var(--radius) + 2px)`,
+      xl: `calc(var(--radius) + 4px)`,
+      "2xl": `calc(var(--radius) + 6px)`,
       full: "9999px",
     },
     opacity: {
