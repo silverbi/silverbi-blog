@@ -10,10 +10,6 @@ import { useRouter } from "next/navigation";
 const Home = () => {
   const router = useRouter();
 
-  const handleClickMore = () => {
-    router.push("/tech");
-  };
-
   return (
     <RootLayout>
       <PageContainer className="gap-28">
@@ -29,7 +25,7 @@ const Home = () => {
         />
 
         <div className={"mb-48 flex w-full flex-col items-center gap-24"}>
-          <TechListPreview handleClickMore={handleClickMore} />
+          <TechListPreview />
           {/* <ProjectListPreviewSection title={"Projects"} handleClickMore={handleClickMore} /> */}
         </div>
       </PageContainer>

@@ -1,3 +1,4 @@
+import { Card } from "@/app/components/ui/card";
 import { Icon } from "@/app/components/ui/icon";
 import { Separator } from "@/app/components/ui/separator";
 import { TechPostTypes } from "@/types/features/tech";
@@ -11,7 +12,7 @@ export interface TechCardProps {
 
 export function TechCard({ items }: TechCardProps) {
   return (
-    <div className={"flex w-full gap-8"}>
+    <Card className={"flex w-full gap-8"}>
       <div className={"flex w-full flex-col"}>
         <Text variant={"subtitle-1"} bold>
           {items.title}
@@ -32,6 +33,6 @@ export function TechCard({ items }: TechCardProps) {
       <div className={"mt-4 h-28 w-48 rounded-xl overflow-hidden"}>
         {items?.thumbnail ? <Image src={items.thumbnail} alt={items.key} /> : <Skeleton className="h-28 w-48" />}
       </div>
-    </div>
+    </Card>
   );
 }

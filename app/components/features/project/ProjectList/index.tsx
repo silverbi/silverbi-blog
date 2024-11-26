@@ -1,15 +1,19 @@
-import { ProjectTypes } from "types/projectTypes";
+import { ProjectCard } from "../ProjectCard";
+import { ProjectTypes } from "@/types/features/project";
 
 export interface ProjectListProps {
-  projects: ProjectTypes[];
+  list: ProjectTypes[];
+  count?: number;
 }
 
-export const ProjectList = ({ projects }: ProjectListProps) => {
+export const ProjectList = ({ list, count }: ProjectListProps) => {
+  const customList = count ? list.slice(0, count) : list;
+
   return (
     <div className={"grid aspect-square w-full grid-flow-row-dense grid-cols-4 grid-rows-4 gap-4"}>
-      {/* {projects.map((project, index) => (
-        <ProjectCard key={index} project={project} />
-      ))} */}
+      {customList.map((items, index) => (
+        <ProjectCard key={index} items={items} />
+      ))}
     </div>
   );
 };
