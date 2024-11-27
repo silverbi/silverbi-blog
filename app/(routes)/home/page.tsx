@@ -1,21 +1,17 @@
 "use client";
 
+import { ProjectListPreview } from "@/app/components/features/project/ProjectListPreview";
 import { TechListPreview } from "@/app/components/features/tech/TechListPreview";
 import { Text } from "@/app/components/ui/text";
 import { PageContainer } from "@/app/layouts/PageContainer";
 import RootLayout from "@layouts/RootLayout";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 const Home = () => {
-  const router = useRouter();
-
   return (
     <RootLayout>
       <PageContainer className="gap-28">
-        <Text color={"accent"} variant={"head-2"}>
-          SILVERBI BLOG
-        </Text>
+        <Text variant={"head-2"}>SILVERBI BLOG</Text>
         <Image
           priority
           src={"/assets/images/landing-thumbnail.webp"}
@@ -24,9 +20,9 @@ const Home = () => {
           height={560}
         />
 
-        <div className={"mb-48 flex w-full flex-col items-center gap-24"}>
+        <div className={"flex w-full flex-col items-center gap-24"}>
           <TechListPreview />
-          {/* <ProjectListPreviewSection title={"Projects"} handleClickMore={handleClickMore} /> */}
+          <ProjectListPreview />
         </div>
       </PageContainer>
     </RootLayout>

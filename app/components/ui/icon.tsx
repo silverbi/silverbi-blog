@@ -16,7 +16,6 @@ const importIcon = async (iconName: string) => {
 const iconVariants = cva("inline-block", {
   variants: {
     fill: {
-      foreground: "fill-foreground",
       primary: "fill-primary",
       secondary: "fill-secondary",
       accent: "fill-accent",
@@ -37,7 +36,7 @@ const iconVariants = cva("inline-block", {
     },
   },
   defaultVariants: {
-    fill: "foreground",
+    fill: "primary",
   },
 });
 

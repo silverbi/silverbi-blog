@@ -26,20 +26,36 @@ const textVariants = cva("break-all", {
     light: {
       true: "font-light",
     },
+    color: {
+      primary: "text-primary",
+      "primary-foreground": "text-primary-foreground",
+      secondary: "text-secondary",
+      accent: "text-accent",
+      destructive: "text-destructive",
+      info: "text-info",
+      warning: "text-warning",
+      success: "text-success",
+      muted: "text-muted",
+    },
   },
   defaultVariants: {
     variant: "body-2",
+    bold: false,
+    light: false,
+    color: "primary",
   },
 });
 
-export interface TextProps extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof textVariants> {
+export interface TextProps
+  extends Omit<React.HTMLAttributes<HTMLDivElement>, "color">,
+    VariantProps<typeof textVariants> {
   asChild?: boolean;
 }
 
-function Text({ className, asChild, variant, bold, light, ...props }: TextProps) {
+function Text({ className, asChild, variant, bold, color, light, ...props }: TextProps) {
   const Comp = asChild ? Slot : "span";
 
-  return <Comp className={cn(textVariants({ variant, bold, light }), className)} {...props} />;
+  return <Comp className={cn(textVariants({ variant, color, bold, light }), className)} {...props} />;
 }
 
 export { Text, textVariants };

@@ -8,5 +8,6 @@ export interface ProjectTypes {
   role: string;
   tags: string[];
   thumbnail: string;
+  cover: string;
   key: string;
 }

@@ -8,7 +8,7 @@ export interface TechListPreviewProps {
   count?: number;
 }
 
-export const TechListPreview = ({ count = 3 }: TechListPreviewProps) => {
+export const TechListPreview = ({ count = 6 }: TechListPreviewProps) => {
   return (
     <div className={"flex w-full flex-col gap-20"}>
       <div className={"flex w-full justify-between items-center"}>
@@ -19,7 +19,7 @@ export const TechListPreview = ({ count = 3 }: TechListPreviewProps) => {
         </Button>
       </div>
 
-      <TechList list={temp} count={3} />
+      <TechList list={temp} count={count} />
     </div>
   );
 };

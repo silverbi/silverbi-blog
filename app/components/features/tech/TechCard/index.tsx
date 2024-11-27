@@ -12,12 +12,12 @@ export interface TechCardProps {
 
 export function TechCard({ items }: TechCardProps) {
   return (
-    <Card className={"flex w-full gap-8"}>
+    <Card className={"group flex w-full gap-8 border-none px-4 py-2 rounded-2xl cursor-pointer shadow-none"}>
       <div className={"flex w-full flex-col"}>
-        <Text variant={"subtitle-1"} bold>
+        <Text className={"group-hover:text-highlight"} variant={"subtitle-1"} bold>
           {items.title}
         </Text>
-        <div className={"flex gap-2 items-center mt-2 mb-3"}>
+        <div className={"flex gap-2 items-center mt-1.5 mb-2"}>
           <Icon icon={"icon-calendar-check"} size={"sm"} />
           <Text variant={"body-3"}>{items.createdAt}</Text>
           <Separator orientation="vertical" className={"mx-2"} />

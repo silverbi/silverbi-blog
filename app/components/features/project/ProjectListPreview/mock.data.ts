@@ -9,6 +9,7 @@ export const temp = [
     subtitle: "반려동물 안심 입양 플랫폼",
     tags: ["WEB", "Next.js"],
     thumbnail: "",
+    cover: "",
     key: "meetpet",
   },
   {
@@ -21,6 +22,7 @@ export const temp = [
     subtitle: "함께하는 탐조 생활",
     tags: ["APP", "React Native"],
     thumbnail: "",
+    cover: "",
     key: "sae-folder",
   },
   {
@@ -33,6 +35,7 @@ export const temp = [
     subtitle: "",
     tags: ["WEB", "Next.js", "NestJS"],
     thumbnail: "",
+    cover: "",
     key: "silverbi-blog",
   },
   {
@@ -44,6 +47,7 @@ export const temp = [
     role: "Frontend Developer",
     subtitle: "나만의 맛있는 평양냉면 찾기",
     tags: ["WEB", "React"],
+    cover: "",
     thumbnail: "",
     key: "michelin-noodle",
   },
@@ -57,6 +61,7 @@ export const temp = [
     subtitle: "세상에 하나 뿐인 코로 만든 강아지 ID",
     tags: ["APP", "React Native"],
     thumbnail: "",
+    cover: "",
     key: "idco",
   },
   {
@@ -69,6 +74,7 @@ export const temp = [
     subtitle: "",
     tags: ["WEB", "Next.js"],
     thumbnail: "",
+    cover: "",
     key: "mydream",
   },
 ];

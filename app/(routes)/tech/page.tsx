@@ -3,42 +3,6 @@
 import RootLayout from "@/app/layouts/RootLayout";
 import { useRouter, useSearchParams } from "next/navigation";
 
-// const tempPostItem = [
-//   {
-//     id: 1,
-//     title: "Design is the Mix of emotions",
-//     date: "2024.02.01",
-//     minRead: 1,
-//     like: 0,
-//     short_description:
-//       "Did you come here for something in particular or just general g in particular or just general Riker-bashing? And blowing into Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into",
-//     tags: ["CSS", "React", "CRA", "tailwind"],
-//     thumbnail: "",
-//   },
-//   {
-//     id: 2,
-//     title: "Design is the Mix of emotions",
-//     date: "2024.02.01",
-//     minRead: 1,
-//     like: 0,
-//     short_description:
-//       "Did you come here for something in particular or just general Riker-bashing? g in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into",
-//     tags: ["CSS", "React", "CRA", "tailwind"],
-//     thumbnail: "",
-//   },
-//   {
-//     id: 3,
-//     title: "Design is the Mix of emotions",
-//     date: "2024.02.01",
-//     minRead: 1,
-//     like: 0,
-//     short_description:
-//       "Did you come here for something in particular or just general Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into",
-//     tags: ["CSS", "React", "CRA", "tailwind"],
-//     thumbnail: "",
-//   },
-// ];
-
 const category = ["React", "CSS", "CRA"];
 
 const Tech = () => {
