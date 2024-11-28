@@ -11,12 +11,18 @@ import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import ListItem from "@tiptap/extension-list-item";
 import { Color } from "@tiptap/extension-color";
 import HorizontalRule from "@tiptap/extension-horizontal-rule";
+import ImageResize from "tiptap-extension-resize-image";
+import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
+import Document from "@tiptap/extension-document";
+import Youtube from "@tiptap/extension-youtube";
+import CharacterCount from "@tiptap/extension-character-count";
 
-import { useState } from "react";
 import { common, createLowlight } from "lowlight";
+import { useEditorState } from "@/store/editors";
 
 export const useTextEditor = () => {
-  const [editorContent, setEditorContent] = useState("");
+  const setEditorContent = useEditorState(state => state.setEditorContent);
+  const setEditor = useEditorState(state => state.setEditor);
   const lowlight = createLowlight(common);
   const editor = useEditor({
     extensions: [
@@ -38,6 +44,10 @@ export const useTextEditor = () => {
         heading: {
           levels: [1, 2, 3],
         },
+        document: false,
+      }),
+      Document.extend({
+        content: "block+ footnotes?",
       }),
       HorizontalRule.configure({
         HTMLAttributes: {
@@ -60,7 +70,7 @@ export const useTextEditor = () => {
         },
       }),
       Placeholder.configure({
-        placeholder: "Write something …",
+        placeholder: "내용을 입력하세요",
       }),
       Link.configure({
         protocols: [
@@ -77,8 +87,30 @@ export const useTextEditor = () => {
           target: null,
         },
       }),
+      Footnotes.configure({
+        HTMLAttributes: {
+          class: "tiptap-footnotes",
+        },
+      }),
+      Footnote.configure({
+        HTMLAttributes: {
+          class: "tiptap-footnote",
+        },
+      }),
+      FootnoteReference.configure({
+        HTMLAttributes: {
+          class: "tiptap-footnote-reference",
+        },
+      }),
+      ImageResize,
+      Youtube.configure({
+        controls: false,
+        nocookie: true,
+      }),
+      CharacterCount,
     ],
     onUpdate({ editor }) {
+      setEditor(editor);
       setEditorContent(editor.getHTML());
     },
   });

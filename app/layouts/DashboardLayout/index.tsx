@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import { cn } from "@utils/styles";
-import Icon from "@components/atoms/Icon";
+import Icon from "@/components/atoms/Icon";
 import { Colors } from "@styles/themes/types";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import React from "react";
 import { usePathname } from "next/navigation";
-import { IconName } from "@components/atoms/Icon/types";
+import { IconName } from "@/components/atoms/Icon/types";
 
 export const DashboardLayout = () => {
   const pathname = usePathname();
@@ -16,12 +16,12 @@ export const DashboardLayout = () => {
     {
       href: "/dashboard",
       text: "dashboard",
-      icon: IconName.GRAPH,
+      icon: IconName.FOLDER,
     },
     {
       href: "/dashboard/user",
       text: "user",
-      icon: IconName.PROFILE_CIRCLE,
+      icon: IconName.SEARCH,
     },
   ];
 

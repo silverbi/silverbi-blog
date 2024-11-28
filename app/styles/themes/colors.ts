@@ -32,8 +32,8 @@ export const colors = {
   SEMANTIC: {
     SUCCESS: "#27c265",
     WARNING: "#F0CF59",
-    ERROR: "#D14242",
-    INFO: "#5A80E1",
+    ERROR: "#e64237",
+    INFO: "#1363FF",
   },
   LINK: "#8367D5",
   BLACK: "#000000",
@@ -62,6 +62,9 @@ export const colors = {
     LIGHT: "rgba(22, 22, 22, 0.1)",
     DARK: "rgba(22, 22, 22, 0.16)",
     INVERSE: "rgba(255, 255, 255, 0.1)",
+  },
+  MODAL: {
+    OVERLAY: "rgba(0, 0, 0, 0.5)",
   },
 };
 

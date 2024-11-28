@@ -1,10 +1,10 @@
 import React from "react";
-import Icon from "@components/atoms/Icon";
+import Icon from "@/components/atoms/Icon";
 import { Colors } from "@styles/themes/types";
-import { IconSizes } from "@components/atoms/Icon/types";
-import Text from "@components/atoms/Text";
+import { IconSizes } from "@/components/atoms/Icon/types";
+import Text from "@/components/atoms/Text";
 import { usePathname } from "next/navigation";
-import { OptionsTypes } from "@components/organisms/TopNav";
+import { OptionsTypes } from "@/components/organisms/TopNav";
 import { logout } from "@utils/auth";
 import { useUser } from "@/store/user";
 import "./styles.css";
@@ -14,7 +14,7 @@ interface TopNavItemProps {
   onClose: () => void;
 }
 
-export const TopNavItem: React.FC<TopNavItemProps> = ({ item, onClose }) => {
+export const TopNavItem = ({ item, onClose }: TopNavItemProps) => {
   const pathname = usePathname();
   const isSelectedItem = pathname === `/${item.value}`;
   const user = useUser(state => state.user);

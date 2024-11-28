@@ -3,8 +3,8 @@ import { ProjectTypes } from "types/projectTypes";
 import Skeleton from "react-loading-skeleton";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { changeProjectToStyles } from "@components/molecules/ProjectCard/utils";
-import Text from "@components/atoms/Text";
+import { changeProjectToStyles } from "@/components/molecules/ProjectCard/utils";
+import Text from "@/components/atoms/Text";
 
 export interface ProjectCardProps {
   project: ProjectTypes;
@@ -19,7 +19,7 @@ export const EmptyProjectCard = ({ title }: { title: string }) => {
   );
 };
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ className, project }) => {
+export const ProjectCard = ({ className, project }: ProjectCardProps) => {
   const router = useRouter();
   const { id, title, tags, start_date, end_date, thumbnail, role } = project;
   let empty = true;

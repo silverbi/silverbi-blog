@@ -1,8 +1,8 @@
 import React from "react";
-import Title from "@components/atoms/Title";
-import Chip from "@components/atoms/Chip";
+import Title from "@/components/atoms/Title";
+import Chip from "@/components/atoms/Chip";
 import ProjectList from "app/components/organisms/ProjectList";
-import { ImageTypes } from "@components/atoms/CustomImage/types";
+import { ImageTypes } from "@/components/atoms/CustomImage/types";
 
 const tempProjectsItem = [
   {
@@ -78,7 +78,7 @@ export interface ProjectListPreviewSectionProps {
   handleClickMore: () => void;
 }
 
-export const ProjectListPreviewSection: React.FC<ProjectListPreviewSectionProps> = ({ title, handleClickMore }) => {
+export const ProjectListPreviewSection = ({ title, handleClickMore }: ProjectListPreviewSectionProps) => {
   return (
     <div className={"flex w-full flex-col gap-24 py-20"}>
       <div className={"flex flex-row items-center justify-between"}>

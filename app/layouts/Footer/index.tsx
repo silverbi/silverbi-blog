@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import Icon from "@components/atoms/Icon";
-import { IconName, IconSizes } from "@components/atoms/Icon/types";
-import Text from "@components/atoms/Text";
+import Icon from "@/components/atoms/Icon";
+import { IconName, IconSizes } from "@/components/atoms/Icon/types";
+import Text from "@/components/atoms/Text";
 import { Colors, Typography } from "@styles/themes/types";
 import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@common/constants";
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
   return (
     <div className="relative flex w-full items-center justify-center border-t border-t-border-1 bg-background-1 px-12">
       <div className="flex h-full w-full max-w-[1280px] flex-col items-center justify-between gap-8 py-10">

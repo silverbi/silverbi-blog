@@ -1,11 +1,11 @@
 import React from "react";
-import Title from "@components/atoms/Title";
-import Text from "@components/atoms/Text";
+import Title from "@/components/atoms/Title";
+import Text from "@/components/atoms/Text";
 import { Colors, Typography } from "@styles/themes/types";
-import Icon from "@components/atoms/Icon";
-import { IconName } from "@components/atoms/Icon/types";
+import Icon from "@/components/atoms/Icon";
+import { IconName } from "@/components/atoms/Icon/types";
 
-const CareersSection: React.FC = () => {
+const CareersSection = () => {
   const temp = [
     {
       corporation: "earlypay",

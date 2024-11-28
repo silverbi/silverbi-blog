@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { changeImageTagToPath } from "@components/atoms/CustomImage/utils";
+import { changeImageTagToPath } from "@/components/atoms/CustomImage/utils";
 
 interface CustomImageProps {
   tag: string;
@@ -15,7 +15,7 @@ interface CustomImageProps {
   fill?: boolean;
 }
 
-const CustomImage: React.FC<CustomImageProps> = ({
+const CustomImage = ({
   tag,
   className,
   alt = "silverbi-blog-image",
@@ -23,7 +23,7 @@ const CustomImage: React.FC<CustomImageProps> = ({
   height,
   fill = false,
   priority = false,
-}) => {
+}: CustomImageProps) => {
   return (
     <Image
       className={[

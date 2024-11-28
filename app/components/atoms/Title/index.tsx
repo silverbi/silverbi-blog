@@ -1,4 +1,4 @@
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import React from "react";
 import { Typography } from "@styles/themes/types";
 
@@ -7,7 +7,7 @@ export interface TitleProps {
   className?: string;
 }
 
-export const Title: React.FC<TitleProps> = ({ children, className }) => {
+export const Title = ({ children, className }: TitleProps) => {
   return (
     <div className={`border-l-[6px] border-l-border-1 px-3 ${className}`}>
       <Text bold type={Typography.TITLE_3} className={"leading-none"}>

@@ -2,10 +2,10 @@
 
 import React from "react";
 import RootLayout from "@layouts/RootLayout";
-import { Container } from "@components/atoms/Container";
+import { Container } from "@/components/atoms/Container";
 import { usePathname } from "next/navigation";
 import { DashboardLayout } from "@layouts/DashboardLayout";
-import Title from "@components/atoms/Title";
+import Title from "@/components/atoms/Title";
 
 const Dashboard = () => {
   const pathname = usePathname();

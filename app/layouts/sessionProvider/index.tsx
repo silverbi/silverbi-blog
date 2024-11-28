@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react";
 import { useUser } from "@/store/user";
-import { createClient } from "@lib/supabase/client";
+import { createClient } from "lib/supabase/client";
 
 export const SessionProvider = ({ children }: { children: React.ReactNode }) => {
   const setUser = useUser(state => state.setUser);

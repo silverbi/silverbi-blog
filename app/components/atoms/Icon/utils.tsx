@@ -1,5 +1,5 @@
-import { IconName } from "@components/atoms/Icon/types";
-import { Sizes } from "@components/atoms/IconButton/types";
+import { IconName } from "@/components/atoms/Icon/types";
+import { Sizes } from "@/components/atoms/IconButton/types";
 import { ObjectValues } from "@utils/typeHelpers/objectValues";
 import { Colors } from "@styles/themes/types";
 
@@ -73,6 +73,8 @@ import QuoteIcon from "@assets/icons/icon-quote.svg";
 import VideoIcon from "@assets/icons/icon-video.svg";
 import EmailIcon from "@assets/icons/icon-email.svg";
 import DottedLineIcon from "@assets/icons/icon-dotted-line.svg";
+import FootnoteIcon from "@assets/icons/icon-footnote.svg";
+import NumberedList from "@assets/icons/icon-numbered-list.svg";
 
 export const changeTypeToIconComponent = (type: IconName) => {
   switch (type) {
@@ -92,6 +94,8 @@ export const changeTypeToIconComponent = (type: IconName) => {
       return MarkerPinIcon;
     case IconName.HEART_ROUNDED:
       return HeartRoundedIcon;
+    case IconName.NUMBERED_LIST:
+      return NumberedList;
     case IconName.HEART_ROUNDED_FILL:
       return HeartRoundedFillIcon;
     case IconName.ALARM_CLOCK:
@@ -216,6 +220,8 @@ export const changeTypeToIconComponent = (type: IconName) => {
       return EmailIcon;
     case IconName.DOTTED_LINE:
       return DottedLineIcon;
+    case IconName.FOOTNOTE:
+      return FootnoteIcon;
     default:
       return null;
   }

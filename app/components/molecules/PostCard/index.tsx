@@ -1,12 +1,12 @@
 import React from "react";
 import { PostTypes } from "types/postTypes";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import Skeleton from "react-loading-skeleton";
 
-import Tag from "@components/atoms/Tag";
-import Icon from "@components/atoms/Icon";
-import { IconName, IconSizes } from "@components/atoms/Icon/types";
+import Tag from "@/components/atoms/Tag";
+import Icon from "@/components/atoms/Icon";
+import { IconName, IconSizes } from "@/components/atoms/Icon/types";
 import { useRouter } from "next/navigation";
 
 export interface PostCardProps {
@@ -14,7 +14,7 @@ export interface PostCardProps {
   className?: string | Array<string>;
 }
 
-export const EmptyPostCard: React.FC = () => {
+export const EmptyPostCard = () => {
   return (
     <div
       className={
@@ -34,7 +34,7 @@ export const EmptyPostCard: React.FC = () => {
   );
 };
 
-export const PostCard: React.FC<PostCardProps> = ({ post, className }) => {
+export const PostCard = ({ post, className }: PostCardProps) => {
   const router = useRouter();
   const { id, title, tags, short_description, date, thumbnail, like, minRead } = post;
   let empty = true;

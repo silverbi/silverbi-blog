@@ -1,6 +1,6 @@
 import React from "react";
 import { changeSizeToClassName, changeSizeToTypography, changeTypeToClassName } from "./utils";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import { Colors } from "@styles/themes/types";
 
 export interface TagProps {
@@ -10,7 +10,7 @@ export interface TagProps {
   className?: string | Array<string>;
 }
 
-export const Tag: React.FC<TagProps> = ({ className, type = "PRIMARY", size = "MD", children = "label" }) => {
+export const Tag = ({ className, type = "PRIMARY", size = "MD", children = "label" }: TagProps) => {
   return (
     <div
       className={[

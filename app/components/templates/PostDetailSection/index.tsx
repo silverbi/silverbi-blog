@@ -2,19 +2,19 @@
 
 import React, { useState } from "react";
 import { PostDetailTypes } from "types/postTypes";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import { Colors, Typography } from "@styles/themes/types";
-import Tag from "@components/atoms/Tag";
-import Icon from "@components/atoms/Icon";
+import Tag from "@/components/atoms/Tag";
+import Icon from "@/components/atoms/Icon";
 import Markdown from "app/components/organisms/Markdown";
-import { IconName, IconSizes } from "@components/atoms/Icon/types";
-import IconButton from "@components/atoms/IconButton";
+import { IconName, IconSizes } from "@/components/atoms/Icon/types";
+import IconButton from "@/components/atoms/IconButton";
 
 export interface PostDetailSectionProps {
   post: PostDetailTypes;
 }
 
-const PostDetailSection: React.FC<PostDetailSectionProps> = ({ post }) => {
+const PostDetailSection = ({ post }: PostDetailSectionProps) => {
   const { title, subtitle, short_description, body, tags, date, minRead, like, comments, series, linked_posts } = post;
   const [selectedShareButton, setSelectedShareButton] = useState(false);
   const [selectedLikeButton, setSelectedLikeButton] = useState(false);

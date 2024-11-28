@@ -1,7 +1,7 @@
 "use client";
 
 import React, { FocusEvent, MouseEvent, useState } from "react";
-import Interaction from "@components/atoms/Interaction";
+import Interaction from "@/components/atoms/Interaction";
 
 export interface IconButtonProps {
   className?: string | Array<string>;
@@ -13,7 +13,7 @@ export interface IconButtonProps {
   interactionClasses?: string | Array<string>;
 }
 
-export const IconButton: React.FC<IconButtonProps> = ({
+export const IconButton = ({
   className = "",
   interactionClasses = "",
   children,
@@ -21,7 +21,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
   type = "button",
   onBlur,
   onClick,
-}) => {
+}: IconButtonProps) => {
   const [isPressed, setIsPressed] = useState(false);
 
   return (

@@ -2,14 +2,14 @@ import React from "react";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import remarkGfm from "remark-gfm";
-import { codeThemes } from "@components/molecules/CodeBlock/codeThemes";
-import CodeBlock from "@components/molecules/CodeBlock";
+import { codeThemes } from "@/components/molecules/CodeBlock/codeThemes";
+import CodeBlock from "@/components/molecules/CodeBlock";
 
 interface MarkdownProps {
   children: string;
 }
 
-const Markdown: React.FC<MarkdownProps> = ({ children }) => {
+const Markdown = ({ children }: MarkdownProps) => {
   return (
     <div className={"flex w-full flex-col gap-4"}>
       <ReactMarkdown

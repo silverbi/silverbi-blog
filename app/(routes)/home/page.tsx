@@ -2,16 +2,17 @@
 
 import React from "react";
 import RootLayout from "@layouts/RootLayout";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import { Typography } from "@styles/themes/types";
-import { Container } from "@components/atoms/Container";
+import { Container } from "@/components/atoms/Container";
 import PostListPreviewSection from "app/components/templates/PostListPreviewSection";
 import { useRouter } from "next/navigation";
 import ProjectListPreviewSection from "app/components/templates/ProjectListPreviewSection";
 import CustomImage from "app/components/atoms/CustomImage";
-import { ImageTypes } from "@components/atoms/CustomImage/types";
+import { ImageTypes } from "@/components/atoms/CustomImage/types";
+import Link from "next/link";
 
-const Home: React.FC = () => {
+const Home = () => {
   const router = useRouter();
 
   const handleClickMore = () => {

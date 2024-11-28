@@ -5,7 +5,7 @@ interface ToggleProps {
   className?: string;
 }
 
-const Toggle: React.FC<ToggleProps> = ({ checked = false, className }) => {
+const Toggle = ({ checked = false, className }: ToggleProps) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   const handleChangeToggle = () => {
@@ -18,10 +18,10 @@ const Toggle: React.FC<ToggleProps> = ({ checked = false, className }) => {
   return (
     <div onClick={handleChangeToggle} className={`cursor-pointer ${className}`}>
       <div
-        className={`relative flex h-7 w-14 rounded-full outline outline-1 transition-all duration-200 ease-in-out ${isChecked ? checkedWrapper : "bg-transparent"}`}
+        className={`relative flex h-5 w-10 rounded-full outline outline-1 transition-all duration-200 ease-in-out ${isChecked ? checkedWrapper : "bg-transparent"}`}
       >
         <div
-          className={`absolute m-1 h-5 w-5 rounded-full outline outline-1 transition-all duration-200 ease-in-out ${isChecked ? checkedCircle : "left-0"}`}
+          className={`absolute m-1 h-3 w-3 rounded-full outline outline-1 transition-all duration-200 ease-in-out ${isChecked ? checkedCircle : "left-0"}`}
         />
       </div>
     </div>

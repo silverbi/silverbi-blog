@@ -1,5 +1,5 @@
 import React from "react";
-import { changeTypeToSizeComponent } from "@components/atoms/Icon/utils";
+import { changeTypeToSizeComponent } from "@/components/atoms/Icon/utils";
 import { MAX_CONTENT_WIDTH } from "@common/constants";
 
 export interface ContainerProps {
@@ -7,7 +7,7 @@ export interface ContainerProps {
   className?: string | string[];
 }
 
-export const Container: React.FC<ContainerProps> = ({ children, className }) => {
+export const Container = ({ children, className }: ContainerProps) => {
   return (
     <div className="align-center flex h-full w-full justify-center px-12">
       <div

@@ -1,7 +1,7 @@
 import React from "react";
-import Title from "@components/atoms/Title";
-import Chip from "@components/atoms/Chip";
-import PostList from "@components/organisms/PostList";
+import Title from "@/components/atoms/Title";
+import Chip from "@/components/atoms/Chip";
+import PostList from "@/components/organisms/PostList";
 
 const tempPostItem = [
   {
@@ -44,7 +44,7 @@ export interface PostListPreviewSectionProps {
   handleClickMore: () => void;
 }
 
-export const PostListPreviewSection: React.FC<PostListPreviewSectionProps> = ({ title, handleClickMore }) => {
+export const PostListPreviewSection = ({ title, handleClickMore }: PostListPreviewSectionProps) => {
   return (
     <div className={"flex w-full flex-col gap-24 py-20"}>
       <div className={"flex w-full flex-row items-center justify-between"}>

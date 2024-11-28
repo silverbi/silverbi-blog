@@ -1,6 +1,6 @@
 import RootLayout from "@layouts/RootLayout";
-import { Container } from "@components/atoms/Container";
-import PostDetailSection from "@components/templates/PostDetailSection";
+import { Container } from "@/components/atoms/Container";
+import PostDetailSection from "@/components/templates/PostDetailSection";
 
 const TechDetail = () => {
   const tempItem = {

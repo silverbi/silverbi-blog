@@ -68,6 +68,10 @@ body {
   .silverbi-project-img {
     @apply object-cover;
   }
+
+  .silverbi-input {
+    @apply w-full rounded-lg border px-2 py-1 focus:outline-none active:outline-none;
+  }
 }
 
 @layer base {

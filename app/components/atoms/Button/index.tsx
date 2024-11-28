@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import {
   changeInteractionSizeToClassname,
   changeSizeToClassname,
@@ -7,9 +9,9 @@ import {
   changeTypeToInteraction,
   changeTypeToTextColors,
   changeTypeToTextSize,
-} from "@components/atoms/Button/utils";
-import { IconSizes, IconName } from "@components/atoms/Icon/types";
-import Icon from "@components/atoms/Icon";
+} from "@/components/atoms/Button/utils";
+import { IconSizes, IconName } from "@/components/atoms/Icon/types";
+import Icon from "@/components/atoms/Icon";
 
 export interface ButtonProps {
   className?: string | Array<string>;
@@ -19,12 +21,13 @@ export interface ButtonProps {
   formAction?: (formData: FormData) => void;
   icon?: IconName;
   size?: ButtonSize;
+  type?: "submit" | "reset" | "button" | undefined;
 }
 
-export type ButtonStyles = "PRIMARY" | "SECONDARY" | "GHOST" | "DISABLED" | "NEGATIVE" | "INFO";
-export type ButtonSize = "SM" | "MD" | "LG" | "XL";
+export type ButtonStyles = "PRIMARY" | "TERTIARY" | "SECONDARY" | "GHOST" | "DISABLED" | "NEGATIVE" | "INFO";
+export type ButtonSize = "XS" | "SM" | "MD" | "LG" | "XL";
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
   className,
   children,
   tag = "PRIMARY",
@@ -32,7 +35,8 @@ const Button: React.FC<ButtonProps> = ({
   formAction,
   icon,
   size = "MD",
-}) => {
+  type = "button",
+}: ButtonProps) => {
   return (
     <button
       className={[
@@ -42,6 +46,7 @@ const Button: React.FC<ButtonProps> = ({
       ].join(" ")}
       formAction={formAction}
       onClick={onClick}
+      type={type}
     >
       <div
         className={[
@@ -61,7 +66,7 @@ const Button: React.FC<ButtonProps> = ({
         ].join(" ")}
       >
         {icon && <Icon type={icon} size={IconSizes.SM} color={changeTypeToTextColors(tag)} />}
-        <Text color={changeTypeToTextColors(tag)} type={changeTypeToTextSize(size)}>
+        <Text color={changeTypeToTextColors(tag)} bold={size !== "XS"} type={changeTypeToTextSize(size)}>
           {children}
         </Text>
       </div>

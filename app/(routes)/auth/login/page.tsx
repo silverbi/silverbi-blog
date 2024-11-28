@@ -2,14 +2,14 @@
 
 import React from "react";
 import RootLayout from "@layouts/RootLayout";
-import { Container } from "@components/atoms/Container";
-import Text from "@components/atoms/Text";
+import { Container } from "@/components/atoms/Container";
+import Text from "@/components/atoms/Text";
 import { Typography } from "@styles/themes/types";
-import CustomImage from "@components/atoms/CustomImage";
-import { ImageTypes } from "@components/atoms/CustomImage/types";
-import { LoginForm } from "@components/organisms/LoginForm";
+import CustomImage from "@/components/atoms/CustomImage";
+import { ImageTypes } from "@/components/atoms/CustomImage/types";
+import { LoginForm } from "@/components/organisms/LoginForm";
 
-const Login: React.FC = () => {
+const Login = () => {
   return (
     <RootLayout>
       <Container className="my-32">

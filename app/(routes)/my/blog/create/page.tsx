@@ -1,19 +1,42 @@
 "use client";
 
-import RootLayout from "@layouts/RootLayout";
-import { Container } from "@components/atoms/Container";
-import Title from "@components/atoms/Title";
-import Editor from "@lib/tiptap/Editor";
+import { errorToast } from "@/components/atoms/Toast";
+import { useTextEditor } from "@/hooks/useTextEditor";
+import { usePostState } from "@/store/post";
+import Editor from "lib/tiptap/Editor";
+import { useRouter } from "next/navigation";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { Inputs } from "types/hooks";
 
 const Create = () => {
-  return (
-    <RootLayout>
-      <Container className="my-32">
-        <Title className={"mb-16"}>Create</Title>
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const router = useRouter();
+  const editor = useTextEditor();
+  const { setPost, post } = usePostState();
 
-        <Editor />
-      </Container>
-    </RootLayout>
+  const onSubmit: SubmitHandler<Inputs> = (values: Inputs) => {
+    const html = editor?.getHTML();
+    setPost({ ...post, title: values.title, subtitle: values.subtitle, content: `${html}` });
+
+    if (!values.title) {
+      return errorToast("제목을 입력해 주세요.");
+    }
+
+    router.push("/published-post-modal");
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className={"h-screen w-full overflow-hidden py-12"}>
+        <Editor editor={editor} register={register} />
+      </div>
+    </form>
   );
 };
 

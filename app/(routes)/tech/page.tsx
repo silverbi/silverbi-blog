@@ -1,15 +1,15 @@
 "use client";
 
 import React from "react";
-import { Container } from "@components/atoms/Container";
+import { Container } from "@/components/atoms/Container";
 import RootLayout from "@layouts/RootLayout";
-import Title from "@components/atoms/Title";
-import Text from "@components/atoms/Text";
-import PostList from "@components/organisms/PostList";
-import Tag from "@components/atoms/Tag";
+import Title from "@/components/atoms/Title";
+import Text from "@/components/atoms/Text";
+import PostList from "@/components/organisms/PostList";
+import Tag from "@/components/atoms/Tag";
 import { useRouter, useSearchParams } from "next/navigation";
 import CustomImage from "app/components/atoms/CustomImage";
-import { ImageTypes } from "@components/atoms/CustomImage/types";
+import { ImageTypes } from "@/components/atoms/CustomImage/types";
 
 const tempPostItem = [
   {
@@ -49,7 +49,7 @@ const tempPostItem = [
 
 const category = ["React", "CSS", "CRA"];
 
-const Tech: React.FC = () => {
+const Tech = () => {
   const router = useRouter();
   const params = useSearchParams();
   const categoryParams = params.get("category");

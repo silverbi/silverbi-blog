@@ -3,7 +3,7 @@ import {
   changeColorToClassName,
   changeTypographyToClassName,
   changeWeightToClassName,
-} from "@components/atoms/Text/utils";
+} from "@/components/atoms/Text/utils";
 import { ObjectValues } from "@utils/typeHelpers/objectValues";
 import { Colors, Typography } from "@styles/themes/types";
 
@@ -18,7 +18,7 @@ export interface TextProps {
   underline?: boolean;
 }
 
-export const Text: React.FC<TextProps> = ({ className, children, type, color, bold, light, italic, underline }) => {
+export const Text = ({ className, children, type, color, bold, light, italic, underline }: TextProps) => {
   const weight = bold ? "SEMI_BOLD" : light ? "LIGHT" : "MEDIUM";
 
   return (

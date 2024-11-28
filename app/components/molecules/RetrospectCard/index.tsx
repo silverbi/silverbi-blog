@@ -1,17 +1,17 @@
 import React from "react";
 import { RetrospectTypes } from "types/postTypes";
-import Text from "@components/atoms/Text";
+import Text from "@/components/atoms/Text";
 import { Typography } from "@styles/themes/types";
 import Skeleton from "react-loading-skeleton";
 import { useRouter } from "next/navigation";
-import Chip from "@components/atoms/Chip";
+import Chip from "@/components/atoms/Chip";
 
 export interface RetrospectCardProps {
   retrospect: RetrospectTypes;
   className?: string | Array<string>;
 }
 
-export const EmptyRetrospectCard: React.FC = () => {
+export const EmptyRetrospectCard = () => {
   return (
     <div
       className={
@@ -37,7 +37,7 @@ export const EmptyRetrospectCard: React.FC = () => {
   );
 };
 
-export const RetrospectCard: React.FC<RetrospectCardProps> = ({ retrospect, className }) => {
+export const RetrospectCard = ({ retrospect, className }: RetrospectCardProps) => {
   const router = useRouter();
   const { id, title, short_description, date, thumbnail } = retrospect;
   let empty = true;

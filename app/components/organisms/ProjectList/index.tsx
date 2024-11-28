@@ -1,12 +1,12 @@
 import React from "react";
 import { ProjectTypes } from "types/projectTypes";
-import ProjectCard from "@components/molecules/ProjectCard";
+import ProjectCard from "@/components/molecules/ProjectCard";
 
 export interface ProjectListProps {
   projects: ProjectTypes[];
 }
 
-export const ProjectList: React.FC<ProjectListProps> = ({ projects }) => {
+export const ProjectList = ({ projects }: ProjectListProps) => {
   return (
     <div className={"grid aspect-square w-full grid-flow-row-dense grid-cols-4 grid-rows-4 gap-4"}>
       {projects.map((project, index) => (
