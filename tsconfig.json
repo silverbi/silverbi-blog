@@ -21,7 +21,7 @@
     "paths": {
       "@/*": ["./*"],
       "@apis/*": ["apis/*"],
-      "@components/*": ["app/components/*"],
+      "@components/*": ["./app/components/*"],
       "@common/*": ["common/*"],
       "@routes/*": ["./app/(routes)/*"],
       "@styles/*": ["styles/*"],
@@ -29,7 +29,7 @@
       "@hooks/*": ["hooks/*"],
       "@lib/*": ["lib/*"],
       "@assets/*": ["public/assets/*"],
-      "@layouts/*": ["app/layouts/*"],
+      "@layouts/*": ["./app/layouts/*"],
       "@context/*": ["context/*"],
       "types": ["./types/*", "node", "vite/client"]
     },

@@ -1,6 +1,10 @@
 "use client";
 
-import RootLayout from "@/app/layouts/RootLayout";
+import { Title } from "@/app/components/commons/Title";
+import { Text } from "@/app/components/ui/text";
+import { PageContainer } from "@layouts/PageContainer";
+import RootLayout from "@layouts/RootLayout";
+import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const category = ["React", "CSS", "CRA"];
@@ -17,32 +21,17 @@ const Tech = () => {
 
   return (
     <RootLayout>
-      <div />
-      {/* <Container className="my-32">
-        <CustomImage
-          tag={ImageTypes.TECH_THUMBNAIL}
+      <PageContainer />
+        <Image
+          src={"/assets/images/tech-thumbnail.webp"}
           alt={"Tech thumbnail"}
           width={980}
           height={560}
           className={"rounded-xl"}
         />
-
-        <div className="mt-28 flex w-full flex-col gap-12">
-          <Title>Tech</Title>
-          <Text>진합태산(塵合泰山). 공부하고 경험했던 것들을 기록합니다.</Text>
-
-          <div className={"flex gap-4 border-y py-4"}>
-            {category.map((label, index) => (
-              <div key={index} onClick={() => handleClickTag(label)}>
-                <Tag className={"cursor-pointer"} type={label === selectedFilter ? "PRIMARY" : "SECONDARY"}>
-                  {label}
-                </Tag>
-              </div>
-            ))}
-          </div>
-          <PostList posts={tempPostItem} />
-        </div>
-      </Container> */}
+        <Title>개발</Title>
+        <Text>진합태산(塵合泰山). 공부하고 경험했던 것들을 기록합니다.</Text>
+      </PageContainer>
     </RootLayout>
   );
 };

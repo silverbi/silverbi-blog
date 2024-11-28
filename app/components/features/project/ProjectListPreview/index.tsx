@@ -11,7 +11,7 @@ export function ProjectListPreview() {
         <Title>프로젝트</Title>
 
         <Button variant={"outline"}>
-          <Link href="/tech">더보기</Link>
+          <Link href="/project">더보기</Link>
         </Button>
       </div>
 
