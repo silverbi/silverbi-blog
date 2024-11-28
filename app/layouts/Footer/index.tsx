@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="relative flex w-full items-center justify-center border-t bg-background px-12 py-6">
+    <footer className="fixed bottom-0 flex w-full items-center justify-center border-t bg-background px-12 py-6">
       <div className="flex h-full w-full flex-col items-center justify-between gap-6">
         <div className="flex w-full items-center justify-between">
           {/** 블로그 로고 */}

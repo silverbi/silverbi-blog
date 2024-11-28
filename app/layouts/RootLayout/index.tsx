@@ -11,7 +11,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <Container className={"mx-auto"}>
       <Header />
-      <div className={"flex h-fit w-full flex-col items-center justify-center mt-16"}>{children}</div>
+      <div className={"flex h-fit w-full flex-col items-center justify-center mt-16 mb-40"}>{children}</div>
       <Footer />
     </Container>
   );

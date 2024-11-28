@@ -17,7 +17,7 @@ export function TechCard({ items }: TechCardProps) {
         <div className={"flex w-full flex-col"}>
           <div className={"h-stack gap-2 mb-3"}>
             {items.tags.map((tag, index) => (
-              <Badge key={index} variant={"outline"}>
+              <Badge key={index} size={"sm"} variant={"secondary"}>
                 {tag}
               </Badge>
             ))}

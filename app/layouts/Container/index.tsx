@@ -4,7 +4,7 @@ import { cn } from "@lib/shadcn/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 
-const containerVariants = cva("overflow-y-auto flex flex-col items-center justify-center", {
+const containerVariants = cva("overflow-y-auto flex flex-col items-center justify-center box-border", {
   variants: {
     variant: {
       default: "bg-transparent",
@@ -14,12 +14,10 @@ const containerVariants = cva("overflow-y-auto flex flex-col items-center justif
       foreground: "bg-foreground",
     },
     size: {
-      default: "w-full",
-      small: "w-full",
-      mobile: "w-full",
-      tablet: "w-full",
-      desktop: "w-full",
-      large: "w-full",
+      default: "w-full max-w-lg",
+      mobile: "w-full max-w-xs",
+      tablet: "w-full max-w-md",
+      desktop: "w-full max-w-xl",
     },
   },
   defaultVariants: {
