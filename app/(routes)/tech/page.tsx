@@ -1,7 +1,17 @@
 "use client";
 
 import { Title } from "@/app/components/commons/Title";
-import { Text } from "@/app/components/ui/text";
+import { TechList } from "@/app/components/features/tech/TechList";
+import { temp } from "@/app/components/features/tech/TechListPreview/mock.data";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/app/components/ui/pagination";
 import { PageContainer } from "@layouts/PageContainer";
 import RootLayout from "@layouts/RootLayout";
 import Image from "next/image";
@@ -21,16 +31,38 @@ const Tech = () => {
 
   return (
     <RootLayout>
-      <PageContainer />
-        <Image
-          src={"/assets/images/tech-thumbnail.webp"}
-          alt={"Tech thumbnail"}
-          width={980}
-          height={560}
-          className={"rounded-xl"}
-        />
-        <Title>개발</Title>
-        <Text>진합태산(塵合泰山). 공부하고 경험했던 것들을 기록합니다.</Text>
+      <PageContainer>
+        <div className={"v-stack gap-28"}>
+          <Image
+            src={"/assets/images/tech-thumbnail.webp"}
+            alt={"Tech thumbnail"}
+            width={980}
+            height={560}
+            className={"rounded-2xl"}
+          />
+          <div className={"v-stack items-start gap-20"}>
+            <Title>개발</Title>
+
+            <TechList list={temp} />
+
+            <Pagination>
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious href="#" />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="#">1</PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationEllipsis />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationNext href="#" />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
+          </div>
+        </div>
       </PageContainer>
     </RootLayout>
   );

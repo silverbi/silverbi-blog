@@ -52,10 +52,16 @@ export interface TextProps
   asChild?: boolean;
 }
 
-function Text({ className, asChild, variant, bold, color, light, ...props }: TextProps) {
+function Text({ className, asChild, variant, bold, color, light, style, ...props }: TextProps) {
   const Comp = asChild ? Slot : "span";
 
-  return <Comp className={cn(textVariants({ variant, color, bold, light }), className)} {...props} />;
+  return (
+    <Comp
+      className={cn(textVariants({ variant, color, bold, light }), className)}
+      style={{ whiteSpace: "pre-line", ...style }}
+      {...props}
+    />
+  );
 }
 
 export { Text, textVariants };
