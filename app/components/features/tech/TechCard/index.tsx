@@ -1,5 +1,5 @@
 import { TechPostTypes } from "@/types/feature/tech";
-import { Badge, Card, Skeleton, Text } from "@components/ui";
+import { Card, Skeleton, Text } from "@components/ui";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,14 +12,6 @@ export function TechCard({ items }: TechCardProps) {
     <Link href={`/tech/${items?.key}`}>
       <Card className={"group flex w-full gap-8 border-none px-4 py-2 rounded-2xl cursor-pointer shadow-none"}>
         <div className={"flex w-full flex-col"}>
-          <div className={"h-stack gap-2 mb-3"}>
-            {items.tags.map((tag, index) => (
-              <Badge key={index} size={"sm"} variant={"secondary"}>
-                {tag}
-              </Badge>
-            ))}
-          </div>
-
           <Text className={"group-hover:text-highlight mb-3"} variant={"subtitle-1"} bold>
             {items.title}
           </Text>

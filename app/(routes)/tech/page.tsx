@@ -4,6 +4,7 @@ import { TechList } from "@components/features";
 import { temp } from "@components/features/tech/TechListPreview/mock.data";
 import { PageContainer, RootLayout } from "@components/layouts";
 import {
+  Badge,
   Pagination,
   PaginationContent,
   PaginationEllipsis,
@@ -14,19 +15,16 @@ import {
   Title,
 } from "@components/ui";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
-const category = ["React", "CSS", "CRA"];
+const category = ["전체", "React", "CSS", "CRA", "Next.js", "React Native", "NestJS"];
 
 const Tech = () => {
   const router = useRouter();
   const params = useSearchParams();
   const categoryParams = params.get("category");
   const selectedFilter = categoryParams ? categoryParams : category[0];
-
-  const handleClickTag = (label: string) => {
-    router.push(`/tech?category=${label}`);
-  };
 
   return (
     <RootLayout>
@@ -37,10 +35,22 @@ const Tech = () => {
             alt={"Tech thumbnail"}
             width={980}
             height={560}
+            priority
             className={"rounded-2xl"}
           />
           <div className={"v-stack items-start gap-20"}>
             <Title>개발</Title>
+
+            {/* 태그 필터 */}
+            <div className={"h-stack gap-2 overflow-y-hidden overflow-x-scroll"}>
+              {category.map((tag, index) => (
+                <Link key={index} href={`/tech?category=${tag.toLocaleLowerCase()}`} scroll={false}>
+                  <Badge variant={selectedFilter === tag ? "primary" : "secondary"} className={"cursor-pointer"}>
+                    {tag}
+                  </Badge>
+                </Link>
+              ))}
+            </div>
 
             <TechList list={temp} />
 
