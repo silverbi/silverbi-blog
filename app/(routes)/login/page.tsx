@@ -1,8 +1,8 @@
 "use client";
 
-import { LoginForm } from "@/app/components/features/LoginForm";
-import { Text } from "@/app/components/ui/text";
-import RootLayout from "@layouts/RootLayout";
+import { LoginForm } from "@components/features";
+import { RootLayout } from "@components/layouts";
+import { Text } from "@components/ui";
 
 const Login = () => {
   return (

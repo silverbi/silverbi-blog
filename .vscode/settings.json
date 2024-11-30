@@ -2,13 +2,7 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": [
-    "pretendard",
-    "shadcn",
-    "silverbi",
-    "supabase",
-    "tiptap"
-  ],
+  "cSpell.words": ["pretendard", "shadcn", "silverbi", "supabase", "tiptap"],
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true

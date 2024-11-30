@@ -1,4 +1,4 @@
-import CodeBlock from "@/app/components/features/CodeBlock";
+import CodeBlock from "@components/features/CodeBlock";
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";

@@ -9,12 +9,15 @@ export interface RootLayoutProps {
 
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <Container className={"mx-auto"}>
-      <Header />
-      <div className={"flex h-fit w-full flex-col items-center justify-center mt-16 mb-40"}>{children}</div>
+    <>
+      <Container className={"mx-auto"}>
+        <Header />
+        <div className={"flex h-fit w-full flex-col items-center justify-center mt-16"}>{children}</div>
+      </Container>
       <Footer />
-    </Container>
+    </>
   );
 };
+RootLayout.displayName = "RootLayout";
 
-export default RootLayout;
+export { RootLayout };

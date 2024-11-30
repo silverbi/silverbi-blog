@@ -1,24 +1,23 @@
+import { useEditorState } from "@/store/editors";
+import CharacterCount from "@tiptap/extension-character-count";
+import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
+import { Color } from "@tiptap/extension-color";
+import Document from "@tiptap/extension-document";
+import Highlight from "@tiptap/extension-highlight";
+import HorizontalRule from "@tiptap/extension-horizontal-rule";
+import Image from "@tiptap/extension-image";
+import Link from "@tiptap/extension-link";
+import ListItem from "@tiptap/extension-list-item";
+import Placeholder from "@tiptap/extension-placeholder";
+import TextAlign from "@tiptap/extension-text-align";
+import TextStyle from "@tiptap/extension-text-style";
+import Underline from "@tiptap/extension-underline";
+import Youtube from "@tiptap/extension-youtube";
 import { useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import Highlight from "@tiptap/extension-highlight";
-import Image from "@tiptap/extension-image";
-import Underline from "@tiptap/extension-underline";
-import TextStyle from "@tiptap/extension-text-style";
-import Placeholder from "@tiptap/extension-placeholder";
-import Link from "@tiptap/extension-link";
-import TextAlign from "@tiptap/extension-text-align";
-import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
-import ListItem from "@tiptap/extension-list-item";
-import { Color } from "@tiptap/extension-color";
-import HorizontalRule from "@tiptap/extension-horizontal-rule";
-import ImageResize from "tiptap-extension-resize-image";
-import { Footnotes, FootnoteReference, Footnote } from "tiptap-footnotes";
-import Document from "@tiptap/extension-document";
-import Youtube from "@tiptap/extension-youtube";
-import CharacterCount from "@tiptap/extension-character-count";
-
 import { common, createLowlight } from "lowlight";
-import { useEditorState } from "store/editors";
+import ImageResize from "tiptap-extension-resize-image";
+import { Footnote, FootnoteReference, Footnotes } from "tiptap-footnotes";
 
 export const useTextEditor = () => {
   const setEditorContent = useEditorState(state => state.setEditorContent);

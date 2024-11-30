@@ -1,9 +1,9 @@
 "use client";
 
+import { usePostState } from "@/store/post";
 import { useTextEditor } from "hooks/useTextEditor";
 import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { usePostState } from "store/post";
 import { Inputs } from "types/hooks";
 
 const Create = () => {

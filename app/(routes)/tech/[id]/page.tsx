@@ -1,11 +1,7 @@
 "use client";
 
-import { Badge } from "@/app/components/ui/badge";
-import { Icon } from "@/app/components/ui/icon";
-import { Skeleton } from "@/app/components/ui/skeleton";
-import { Text } from "@/app/components/ui/text";
-import { Container } from "@/app/layouts/Container";
-import RootLayout from "@/app/layouts/RootLayout";
+import { Container, RootLayout } from "@components/layouts";
+import { Badge, Icon, Skeleton, Text } from "@components/ui";
 
 const TechDetail = () => {
   return (

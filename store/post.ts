@@ -1,5 +1,5 @@
-import { create } from "zustand";
 import { PostFormSchemaTypes } from "schema/post.schema";
+import { create } from "zustand";
 
 interface PostState {
   post: PostFormSchemaTypes;

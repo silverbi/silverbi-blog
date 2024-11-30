@@ -20,28 +20,21 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./*"],
-      "@apis/*": ["apis/*"],
-      "@components/*": ["./app/components/*"],
+      "@apis/*": ["app/apis/*"],
+      "@components/*": ["app/components/*"],
       "@common/*": ["common/*"],
-      "@routes/*": ["./app/(routes)/*"],
+      "@routes/*": ["app/(routes)/*"],
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
       "@hooks/*": ["hooks/*"],
       "@lib/*": ["lib/*"],
+      "@store/*": ["store/*"],
       "@assets/*": ["public/assets/*"],
-      "@layouts/*": ["./app/layouts/*"],
       "@context/*": ["context/*"],
       "types": ["./types/*", "node", "vite/client"]
     },
     "target": "ES2017"
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "./types/svgr.d.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "app/@modal/default.js"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "./types/svgr.d.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["public/**/*", "node_modules"]
 }

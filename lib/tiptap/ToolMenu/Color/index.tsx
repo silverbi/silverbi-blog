@@ -1,6 +1,6 @@
-import { ToolMenuEditorProps } from "types/features/editors";
-import { ChangeEvent } from "react";
 import "../styles.css";
+import { ToolMenuEditorProps } from "@/types/feature/editors";
+import { ChangeEvent } from "react";
 
 export const Color = ({ editor }: ToolMenuEditorProps) => (
   <div

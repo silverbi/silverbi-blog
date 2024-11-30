@@ -1,5 +1,5 @@
+import { login } from "@/utils/auth";
 import { useSearchParams } from "next/navigation";
-import { login } from "utils/auth";
 
 export const LoginForm = () => {
   const searchParams = useSearchParams();

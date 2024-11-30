@@ -1,8 +1,8 @@
 "use client";
 
 import { createClient } from "@/lib/supabase/client";
+import { useUser } from "@/store/user";
 import React, { useEffect } from "react";
-import { useUser } from "store/user";
 
 export const SessionProvider = ({ children }: { children: React.ReactNode }) => {
   const setUser = useUser(state => state.setUser);

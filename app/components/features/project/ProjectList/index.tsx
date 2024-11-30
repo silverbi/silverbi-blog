@@ -1,5 +1,5 @@
 import { ProjectCard } from "../ProjectCard";
-import { ProjectTypes } from "@/types/features/project";
+import { ProjectTypes } from "@/types/feature/project";
 
 export interface ProjectListProps {
   list: ProjectTypes[];

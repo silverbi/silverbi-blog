@@ -1,16 +1,16 @@
 "use client";
 
-import { ModeToggle } from "@/app/components/commons/ModeToggle";
-import { Button } from "@/app/components/ui/button";
-import { Icon } from "@/app/components/ui/icon";
 import {
+  Button,
+  Icon,
+  ModeToggle,
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from "@/app/components/ui/navigation-menu";
-import { Text } from "@/app/components/ui/text";
+  Text,
+} from "@components/ui";
 import Link from "next/link";
 
 export const Header = () => {
@@ -31,13 +31,13 @@ export const Header = () => {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/retrospect" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>회고</NavigationMenuLink>
+            <Link href="/project" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>프로젝트</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/project" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>프로젝트</NavigationMenuLink>
+            <Link href="/retrospect" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>회고</NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>

@@ -1,5 +1,5 @@
 import { cn } from "../../../../../lib/shadcn/utils";
-import { ProjectTypes } from "../../../../../types/features/project";
+import { ProjectTypes } from "../../../../../types/feature/project";
 import { Skeleton } from "../../../ui/skeleton";
 import Image from "next/image";
 import Link from "next/link";

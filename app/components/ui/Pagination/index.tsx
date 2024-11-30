@@ -1,6 +1,5 @@
-import { Text } from "./text";
 import { cn } from "@/lib/shadcn/utils";
-import { ButtonProps, buttonVariants } from "@components/ui/button";
+import { ButtonProps, buttonVariants, Text } from "@components/ui";
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react";
 import * as React from "react";
 

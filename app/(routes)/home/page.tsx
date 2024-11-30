@@ -1,10 +1,8 @@
 "use client";
 
-import { ProjectListPreview } from "@/app/components/features/project/ProjectListPreview";
-import { TechListPreview } from "@/app/components/features/tech/TechListPreview";
-import { Text } from "@/app/components/ui/text";
-import { PageContainer } from "@/app/layouts/PageContainer";
-import RootLayout from "@layouts/RootLayout";
+import { ProjectListPreview, TechListPreview } from "@components/features";
+import { PageContainer, RootLayout } from "@components/layouts";
+import { Text } from "@components/ui";
 import Image from "next/image";
 
 const Home = () => {

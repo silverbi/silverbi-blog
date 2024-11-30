@@ -1,8 +1,5 @@
-import { Badge } from "@/app/components/ui/badge";
-import { Card } from "@/app/components/ui/card";
-import { TechPostTypes } from "@/types/features/tech";
-import { Skeleton } from "@components/ui/skeleton";
-import { Text } from "@components/ui/text";
+import { TechPostTypes } from "@/types/feature/tech";
+import { Badge, Card, Skeleton, Text } from "@components/ui";
 import Image from "next/image";
 import Link from "next/link";
 

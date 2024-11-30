@@ -1,4 +1,4 @@
-import { routeData } from "@/app/components/features/TopNav/routeDataSet";
+import { routeData } from "@components/features/TopNav/routeDataSet";
 import { useState } from "react";
 
 export type OptionsTypes = {

@@ -1,4 +1,4 @@
-import { codeThemes } from "@/app/components/features/CodeBlock/codeThemes";
+import { codeThemes } from "@components/features/CodeBlock/codeThemes";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 interface CodeBlockProps {

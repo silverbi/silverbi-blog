@@ -1,5 +1,5 @@
 import { TechCard } from "../TechCard";
-import { TechPostTypes } from "@/types/features/tech";
+import { TechPostTypes } from "@/types/feature/tech";
 
 export interface TechListProps {
   list: TechPostTypes[];

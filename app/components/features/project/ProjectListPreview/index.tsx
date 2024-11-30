@@ -1,7 +1,6 @@
 import { ProjectPreviewCard } from "../ProjectPreviewCard";
 import { temp } from "./mock.data";
-import { Title } from "@/app/components/commons/Title";
-import { Button } from "@/app/components/ui/button";
+import { Button, Title } from "@components/ui";
 import Link from "next/link";
 
 export function ProjectListPreview() {

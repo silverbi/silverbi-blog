@@ -1,5 +1,5 @@
-import { Text } from "./text";
 import { cn } from "@/lib/shadcn/utils";
+import { Text } from "@components/ui";
 import { cva, type VariantProps } from "class-variance-authority";
 import * as React from "react";
 

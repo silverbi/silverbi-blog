@@ -1,8 +1,8 @@
 import "./styles.css";
 import { OptionsTypes } from "@/components/feature/TopNav";
+import { useUser } from "@/store/user";
+import { logout } from "@/utils/auth";
 import { usePathname } from "next/navigation";
-import { useUser } from "store/user";
-import { logout } from "utils/auth";
 
 interface TopNavItemProps {
   item: OptionsTypes;

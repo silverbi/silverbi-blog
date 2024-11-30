@@ -1,8 +1,8 @@
 "use client";
 
-import { Title } from "@/app/components/commons/Title";
-import { TechList } from "@/app/components/features/tech/TechList";
-import { temp } from "@/app/components/features/tech/TechListPreview/mock.data";
+import { TechList } from "@components/features";
+import { temp } from "@components/features/tech/TechListPreview/mock.data";
+import { PageContainer, RootLayout } from "@components/layouts";
 import {
   Pagination,
   PaginationContent,
@@ -11,9 +11,8 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/app/components/ui/pagination";
-import { PageContainer } from "@layouts/PageContainer";
-import RootLayout from "@layouts/RootLayout";
+  Title,
+} from "@components/ui";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 

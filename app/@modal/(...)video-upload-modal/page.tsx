@@ -1,10 +1,10 @@
 "use client";
 
-import FormModal from "@/app/components/features/CustomModal/FormModal";
+import { Inputs } from "@/types";
+import { FormModal } from "@components/features";
+import { useEditorState } from "@store/editors";
 import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { useEditorState } from "store/editors";
-import { Inputs } from "types/hooks";
 
 const VideoUploadModal = () => {
   const {

@@ -2,10 +2,9 @@
 
 import Markdown from "@/app/components/features/Markdown";
 import { useState } from "react";
-import { PostDetailTypes } from "types/postTypes";
 
 export interface PostDetailSectionProps {
-  post: PostDetailTypes;
+  post: any;
 }
 
 const PostDetailSection = ({ post }: PostDetailSectionProps) => {

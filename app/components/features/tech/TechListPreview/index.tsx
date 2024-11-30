@@ -1,7 +1,6 @@
 import { temp } from "./mock.data";
-import { Title } from "@/app/components/commons/Title";
-import { TechList } from "@/app/components/features/tech/TechList";
-import { Button } from "@/app/components/ui/button";
+import { TechList } from "@components/features";
+import { Button, Title } from "@components/ui";
 import Link from "next/link";
 
 export interface TechListPreviewProps {

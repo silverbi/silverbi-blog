@@ -1,4 +1,4 @@
-import RootLayout from "@/app/layouts/RootLayout";
+import { RootLayout } from "@components/layouts";
 
 const My = () => {
   return (

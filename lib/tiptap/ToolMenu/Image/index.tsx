@@ -1,8 +1,8 @@
+import "../styles.css";
 import Icon from "@/components/atoms/Icon";
-import { ToolMenuEditorProps } from "types/features/editors";
 import { IconName } from "@/components/atoms/Icon/types";
 import { Colors } from "@/styles/themes/types";
-import "../styles.css";
+import { ToolMenuEditorProps } from "@/types/feature/editors";
 import Link from "next/link";
 
 export const Image = ({ editor }: ToolMenuEditorProps) => {

@@ -1,6 +1,6 @@
 "use client";
 
-import RootLayout from "@/app/layouts/RootLayout";
+import { RootLayout } from "@components/layouts";
 
 // const tempProjectsItem = [
 //   {

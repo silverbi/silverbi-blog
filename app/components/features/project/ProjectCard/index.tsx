@@ -1,6 +1,5 @@
-import { Card } from "@/app/components/ui/card";
-import { Skeleton } from "@/app/components/ui/skeleton";
-import { ProjectTypes } from "@/types/features/project";
+import { ProjectTypes } from "@/types";
+import { Card, Skeleton } from "@components/ui";
 
 interface ProjectCardProps {
   items: ProjectTypes;

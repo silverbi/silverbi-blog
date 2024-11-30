@@ -1,11 +1,10 @@
-import { Icon } from "@/app/components/ui/icon";
-import { Text } from "@/app/components/ui/text";
 import { GITHUB_URL, INSTAGRAM_URL, LINKEDIN_URL } from "@/common/constants";
+import { Icon, Text } from "@components/ui";
 import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="fixed bottom-0 flex w-full items-center justify-center border-t bg-background px-12 py-6">
+    <footer className="bottom-0 flex w-full items-center justify-center border-t bg-background px-12 py-6">
       <div className="flex h-full w-full flex-col items-center justify-between gap-6">
         <div className="flex w-full items-center justify-between">
           {/** 블로그 로고 */}

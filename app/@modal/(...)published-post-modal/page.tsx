@@ -1,13 +1,13 @@
 "use client";
 
 import "./index.css";
-import { FormModal } from "@/app/components/features/CustomModal/FormModal";
+import { Inputs } from "@/types";
+import { FormModal } from "@components/features";
+import { usePostState } from "@store/post";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { PostFormSchemaTypes } from "schema/post.schema";
-import { usePostState } from "store/post";
-import { Inputs } from "types/hooks";
 
 export interface FilePreviewProps {
   file: File;
