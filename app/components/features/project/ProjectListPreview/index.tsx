@@ -1,3 +1,4 @@
+import ProjectList from "../ProjectList";
 import { ProjectPreviewCard } from "../ProjectPreviewCard";
 import { temp } from "./mock.data";
 import { Button, Title } from "@components/ui";
@@ -14,16 +15,7 @@ export function ProjectListPreview() {
         </Button>
       </div>
 
-      <div className={"grid grid-cols-4 grid-rows-3 gap-4 w-full h-[60vw] max-h-[690px]"}>
-        <ProjectPreviewCard className={"col-span-1 row-span-1"} items={temp[0]} />
-        <ProjectPreviewCard className="col-span-3 row-span-1" items={temp[1]} />
-
-        <ProjectPreviewCard className="col-span-2 row-span-2" items={temp[2]} />
-
-        <ProjectPreviewCard className="col-span-1 row-span-1" items={temp[3]} />
-        <ProjectPreviewCard className="col-span-1 row-span-2" items={temp[4]} />
-        <ProjectPreviewCard className="col-span-1 row-span-1" items={temp[6]} />
-      </div>
+      <ProjectList list={temp} />
     </div>
   );
 }

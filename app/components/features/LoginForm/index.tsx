@@ -1,4 +1,5 @@
 import { login } from "@/utils/auth";
+import { Button } from "@components/ui";
 import { useSearchParams } from "next/navigation";
 
 export const LoginForm = () => {
@@ -12,9 +13,9 @@ export const LoginForm = () => {
 
   return (
     <form>
-      {/* <Button onClick={handleLogin} icon={IconName.GITHUB_LOGO} className={"!w-[260px]"}>
-        {"깃허브로 시작하기"}
-      </Button> */}
+      <Button onClick={handleLogin} className={"!w-[260px]"} size={"lg"}>
+        깃허브로 시작하기
+      </Button>
     </form>
   );
 };

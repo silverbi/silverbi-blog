@@ -30,14 +30,16 @@ const Tech = () => {
     <RootLayout>
       <PageContainer>
         <div className={"v-stack gap-28"}>
-          <Image
-            src={"/assets/images/tech-thumbnail.webp"}
-            alt={"Tech thumbnail"}
-            width={980}
-            height={560}
-            priority
-            className={"rounded-2xl"}
-          />
+          <div className={"w-full h-[50vw] max-h-[560px] relative"}>
+            <Image
+              src={"/assets/images/holographic-background-1.jpg"}
+              alt={"Tech thumbnail"}
+              priority
+              fill
+              className={"rounded-2xl"}
+              objectFit="cover"
+            />
+          </div>
           <div className={"v-stack items-start gap-20"}>
             <Title>개발</Title>
 

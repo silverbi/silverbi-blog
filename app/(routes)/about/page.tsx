@@ -1,3 +1,5 @@
+"use client";
+
 import { RootLayout } from "@components/layouts";
 
 const About = () => {
