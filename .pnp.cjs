@@ -67,6 +67,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-next", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:15.0.3"],\
           ["eslint-config-prettier", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:9.1.0"],\
           ["framer-motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.11.17"],\
+          ["lenis", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.1.17"],\
           ["lowlight", "npm:3.1.0"],\
           ["lucide-react", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:0.460.0"],\
           ["next", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:15.0.3"],\
@@ -9100,6 +9101,32 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lenis", [\
+      ["npm:1.1.17", {\
+        "packageLocation": "../../../../.yarn/berry/cache/lenis-npm-1.1.17-2205b9c2b1-10c0.zip/node_modules/lenis/",\
+        "packageDependencies": [\
+          ["lenis", "npm:1.1.17"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.1.17", {\
+        "packageLocation": "./.yarn/__virtual__/lenis-virtual-e69c75d16b/5/.yarn/berry/cache/lenis-npm-1.1.17-2205b9c2b1-10c0.zip/node_modules/lenis/",\
+        "packageDependencies": [\
+          ["lenis", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.1.17"],\
+          ["@types/react", "npm:18.3.12"],\
+          ["@types/vue", null],\
+          ["react", "npm:19.0.0-rc.1"],\
+          ["vue", null]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "@types/vue",\
+          "react",\
+          "vue"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["levn", [\
       ["npm:0.4.1", {\
         "packageLocation": "../../../../.yarn/berry/cache/levn-npm-0.4.1-d183b2d7bb-10c0.zip/node_modules/levn/",\
@@ -12039,6 +12066,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-next", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:15.0.3"],\
           ["eslint-config-prettier", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:9.1.0"],\
           ["framer-motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.11.17"],\
+          ["lenis", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.1.17"],\
           ["lowlight", "npm:3.1.0"],\
           ["lucide-react", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:0.460.0"],\
           ["next", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:15.0.3"],\
