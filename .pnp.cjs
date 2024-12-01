@@ -70,6 +70,7 @@ const RAW_RUNTIME_STATE =
           ["lenis", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.1.17"],\
           ["lowlight", "npm:3.1.0"],\
           ["lucide-react", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:0.460.0"],\
+          ["motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.12.0"],\
           ["next", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:15.0.3"],\
           ["next-themes", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:0.4.3"],\
           ["postcss", "npm:8.4.47"],\
@@ -10124,6 +10125,38 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["motion", [\
+      ["npm:11.12.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/motion-npm-11.12.0-8c8e5acab8-10c0.zip/node_modules/motion/",\
+        "packageDependencies": [\
+          ["motion", "npm:11.12.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.12.0", {\
+        "packageLocation": "./.yarn/__virtual__/motion-virtual-67663619df/5/.yarn/berry/cache/motion-npm-11.12.0-8c8e5acab8-10c0.zip/node_modules/motion/",\
+        "packageDependencies": [\
+          ["motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.12.0"],\
+          ["@emotion/is-prop-valid", null],\
+          ["@types/emotion__is-prop-valid", null],\
+          ["@types/react", "npm:18.3.12"],\
+          ["@types/react-dom", "npm:18.3.1"],\
+          ["framer-motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.12.0"],\
+          ["react", "npm:19.0.0-rc.1"],\
+          ["react-dom", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:19.0.0-rc.1"],\
+          ["tslib", "npm:2.8.0"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/is-prop-valid",\
+          "@types/emotion__is-prop-valid",\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["ms", [\
       ["npm:2.1.3", {\
         "packageLocation": "../../../../.yarn/berry/cache/ms-npm-2.1.3-81ff3cfac1-10c0.zip/node_modules/ms/",\
@@ -12069,6 +12102,7 @@ const RAW_RUNTIME_STATE =
           ["lenis", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.1.17"],\
           ["lowlight", "npm:3.1.0"],\
           ["lucide-react", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:0.460.0"],\
+          ["motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.12.0"],\
           ["next", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:15.0.3"],\
           ["next-themes", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:0.4.3"],\
           ["postcss", "npm:8.4.47"],\
