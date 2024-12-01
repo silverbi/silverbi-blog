@@ -66,7 +66,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.57.1"],\
           ["eslint-config-next", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:15.0.3"],\
           ["eslint-config-prettier", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:9.1.0"],\
-          ["framer-motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.11.17"],\
+          ["framer-motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.12.0"],\
           ["lenis", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.1.17"],\
           ["lowlight", "npm:3.1.0"],\
           ["lucide-react", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:0.460.0"],\
@@ -7912,17 +7912,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["framer-motion", [\
-      ["npm:11.11.17", {\
-        "packageLocation": "../../../../.yarn/berry/cache/framer-motion-npm-11.11.17-76b5773744-10c0.zip/node_modules/framer-motion/",\
+      ["npm:11.12.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/framer-motion-npm-11.12.0-65d89e35cd-10c0.zip/node_modules/framer-motion/",\
         "packageDependencies": [\
-          ["framer-motion", "npm:11.11.17"]\
+          ["framer-motion", "npm:11.12.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.11.17", {\
-        "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-b0b588b37c/5/.yarn/berry/cache/framer-motion-npm-11.11.17-76b5773744-10c0.zip/node_modules/framer-motion/",\
+      ["virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.12.0", {\
+        "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-c3ce58a71c/5/.yarn/berry/cache/framer-motion-npm-11.12.0-65d89e35cd-10c0.zip/node_modules/framer-motion/",\
         "packageDependencies": [\
-          ["framer-motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.11.17"],\
+          ["framer-motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.12.0"],\
           ["@emotion/is-prop-valid", null],\
           ["@types/emotion__is-prop-valid", null],\
           ["@types/react", "npm:18.3.12"],\
@@ -12065,7 +12065,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.57.1"],\
           ["eslint-config-next", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:15.0.3"],\
           ["eslint-config-prettier", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:9.1.0"],\
-          ["framer-motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.11.17"],\
+          ["framer-motion", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:11.12.0"],\
           ["lenis", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.1.17"],\
           ["lowlight", "npm:3.1.0"],\
           ["lucide-react", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:0.460.0"],\
