@@ -36,6 +36,7 @@ const textVariants = cva("break-all", {
       warning: "text-warning",
       success: "text-success",
       muted: "text-muted",
+      highlight: "text-highlight",
     },
   },
   defaultVariants: {

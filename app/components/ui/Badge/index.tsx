@@ -31,7 +31,6 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement>, Varian
 
 function Badge({ className, variant, size, hover = true, ...props }: BadgeProps) {
   const hoverStyles = React.useMemo(() => {
-    console.log("hover", hover);
     if (!hover) return "";
 
     switch (variant) {
