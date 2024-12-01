@@ -1,14 +1,10 @@
-import React from "react";
-import Title from "@/components/atoms/Title";
-import Text from "@/components/atoms/Text";
-
 const StackSection = () => {
   const temp = ["HTML", "CSS", "Javascript", "Typescript", "React", "React Native", "Next.js"];
 
   return (
     <div className={"flex w-full flex-col gap-36"}>
       <div className={"flex w-full flex-col gap-16"}>
-        <Title>Tech Stack</Title>
+        {/* <Title>Tech Stack</Title>
         <div className={"flex flex-wrap gap-6"}>
           {temp.map((label, index) => (
             <div
@@ -20,11 +16,11 @@ const StackSection = () => {
               <Text>{label}</Text>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       <div className={"flex w-full flex-col gap-16"}>
-        <Title>Tools</Title>
+        {/* <Title>Tools</Title>
         <div className={"flex flex-wrap gap-6"}>
           {temp.map((label, index) => (
             <div
@@ -36,7 +32,7 @@ const StackSection = () => {
               <Text>{label}</Text>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

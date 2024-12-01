@@ -1,32 +1,8 @@
 {
   "[typescript]": {
-    "editor.defaultFormatter": "denoland.vscode-deno"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": [
-    "pretendard",
-    "silverbi",
-    "supabase",
-    "tiptap"
-  ],
-  "deno.enablePaths": [
-    "supabase/functions"
-  ],
-  "deno.lint": true,
-  "deno.unstable": [
-    "bare-node-builtins",
-    "byonm",
-    "sloppy-imports",
-    "unsafe-proto",
-    "webgpu",
-    "broadcast-channel",
-    "worker-options",
-    "cron",
-    "kv",
-    "ffi",
-    "fs",
-    "http",
-    "net"
-  ],
+  "cSpell.words": ["pretendard", "shadcn", "silverbi", "supabase", "tiptap"],
   "search.exclude": {
     "**/.yarn": true,
     "**/.pnp.*": true

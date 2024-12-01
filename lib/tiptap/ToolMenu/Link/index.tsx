@@ -1,9 +1,9 @@
+import "../styles.css";
 import Icon from "@/components/atoms/Icon";
-import { ToolMenuEditorProps } from "types/features/editors";
 import { IconName } from "@/components/atoms/Icon/types";
 import { Colors } from "@/styles/themes/types";
+import { ToolMenuEditorProps } from "@/types/feature/editors";
 import { useCallback } from "react";
-import "../styles.css";
 
 export const Link = ({ editor }: ToolMenuEditorProps) => {
   const handleClickLinkButton = useCallback(() => {

@@ -1,7 +1,7 @@
-import Icon from "@/components/atoms/Icon";
-import { ToolMenuEditorProps } from "types/features/editors";
-import { IconName } from "@/components/atoms/Icon/types";
 import "../styles.css";
+import Icon from "@/components/atoms/Icon";
+import { IconName } from "@/components/atoms/Icon/types";
+import { ToolMenuEditorProps } from "@/types/feature/editors";
 
 export const Underline = ({ editor }: ToolMenuEditorProps) => (
   <button

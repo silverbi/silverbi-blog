@@ -1,53 +1,24 @@
 "use client";
 
-import React from "react";
-import { Container } from "@/components/atoms/Container";
-import RootLayout from "@layouts/RootLayout";
-import Title from "@/components/atoms/Title";
-import Text from "@/components/atoms/Text";
-import PostList from "@/components/organisms/PostList";
-import Tag from "@/components/atoms/Tag";
+import { TechList } from "@components/features";
+import { temp } from "@components/features/tech/TechListPreview/mock.data";
+import { PageContainer, RootLayout } from "@components/layouts";
+import {
+  Badge,
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+  Title,
+} from "@components/ui";
+import Image from "next/image";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import CustomImage from "app/components/atoms/CustomImage";
-import { ImageTypes } from "@/components/atoms/CustomImage/types";
 
-const tempPostItem = [
-  {
-    id: 1,
-    title: "Design is the Mix of emotions",
-    date: "2024.02.01",
-    minRead: 1,
-    like: 0,
-    short_description:
-      "Did you come here for something in particular or just general g in particular or just general Riker-bashing? And blowing into Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into",
-    tags: ["CSS", "React", "CRA", "tailwind"],
-    thumbnail: "",
-  },
-  {
-    id: 2,
-    title: "Design is the Mix of emotions",
-    date: "2024.02.01",
-    minRead: 1,
-    like: 0,
-    short_description:
-      "Did you come here for something in particular or just general Riker-bashing? g in particular or just general Riker-bashing? And blowing into g in particular or just general Riker-bashing? And blowing into And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into",
-    tags: ["CSS", "React", "CRA", "tailwind"],
-    thumbnail: "",
-  },
-  {
-    id: 3,
-    title: "Design is the Mix of emotions",
-    date: "2024.02.01",
-    minRead: 1,
-    like: 0,
-    short_description:
-      "Did you come here for something in particular or just general Riker-bashing? And blowing into Did you come here for something in particular or just general Riker-bashing? And blowing into",
-    tags: ["CSS", "React", "CRA", "tailwind"],
-    thumbnail: "",
-  },
-];
-
-const category = ["React", "CSS", "CRA"];
+const category = ["전체", "React", "CSS", "CRA", "Next.js", "React Native", "NestJS"];
 
 const Tech = () => {
   const router = useRouter();
@@ -55,37 +26,55 @@ const Tech = () => {
   const categoryParams = params.get("category");
   const selectedFilter = categoryParams ? categoryParams : category[0];
 
-  const handleClickTag = (label: string) => {
-    router.push(`/tech?category=${label}`);
-  };
-
   return (
     <RootLayout>
-      <Container className="my-32">
-        <CustomImage
-          tag={ImageTypes.TECH_THUMBNAIL}
-          alt={"Tech thumbnail"}
-          width={980}
-          height={560}
-          className={"rounded-xl"}
-        />
-
-        <div className="mt-28 flex w-full flex-col gap-12">
-          <Title>Tech</Title>
-          <Text>진합태산(塵合泰山). 공부하고 경험했던 것들을 기록합니다.</Text>
-
-          <div className={"flex gap-4 border-y py-4"}>
-            {category.map((label, index) => (
-              <div key={index} onClick={() => handleClickTag(label)}>
-                <Tag className={"cursor-pointer"} type={label === selectedFilter ? "PRIMARY" : "SECONDARY"}>
-                  {label}
-                </Tag>
-              </div>
-            ))}
+      <PageContainer>
+        <div className={"v-stack gap-28"}>
+          <div className={"w-full h-[50vw] max-h-[560px] relative"}>
+            <Image
+              src={"/assets/images/holographic-background-1.jpg"}
+              alt={"Tech thumbnail"}
+              priority
+              fill
+              className={"rounded-2xl"}
+              objectFit="cover"
+            />
           </div>
-          <PostList posts={tempPostItem} />
+          <div className={"v-stack items-start gap-20"}>
+            <Title>개발</Title>
+
+            {/* 태그 필터 */}
+            <div className={"h-stack gap-2 overflow-y-hidden overflow-x-scroll"}>
+              {category.map((tag, index) => (
+                <Link key={index} href={`/tech?category=${tag.toLocaleLowerCase()}`} scroll={false}>
+                  <Badge variant={selectedFilter === tag ? "primary" : "secondary"} className={"cursor-pointer"}>
+                    {tag}
+                  </Badge>
+                </Link>
+              ))}
+            </div>
+
+            <TechList list={temp} />
+
+            <Pagination>
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious href="#" />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationLink href="#">1</PaginationLink>
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationEllipsis />
+                </PaginationItem>
+                <PaginationItem>
+                  <PaginationNext href="#" />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
+          </div>
         </div>
-      </Container>
+      </PageContainer>
     </RootLayout>
   );
 };

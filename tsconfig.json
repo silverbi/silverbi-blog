@@ -19,29 +19,22 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./app/*"],
-      "@apis/*": ["./app/apis/*"],
-      "@components/*": ["./app/components/*"],
-      "@common/*": ["./app/common/*"],
-      "@routes/*": ["./app/(routes)/*"],
-      "@styles/*": ["./app/styles/*"],
-      "@utils/*": ["./app/utils/*"],
-      "@hooks/*": ["./app/hooks/*"],
-      "@lib/*": ["./lib/*"],
-      "@assets/*": ["./assets/*"],
-      "@state/*": ["./app/state/*"],
-      "@layouts/*": ["./app/layouts/*"],
+      "@/*": ["./*"],
+      "@apis/*": ["app/apis/*"],
+      "@components/*": ["app/components/*"],
+      "@common/*": ["common/*"],
+      "@routes/*": ["app/(routes)/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"],
+      "@hooks/*": ["hooks/*"],
+      "@lib/*": ["lib/*"],
+      "@store/*": ["store/*"],
+      "@assets/*": ["public/assets/*"],
+      "@context/*": ["context/*"],
       "types": ["./types/*", "node", "vite/client"]
     },
     "target": "ES2017"
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "./types/svgr.d.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "app/@modal/default.js"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "./types/svgr.d.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["public/**/*", "node_modules"]
 }

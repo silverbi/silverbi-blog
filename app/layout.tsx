@@ -1,8 +1,7 @@
-import { SkeletonTheme } from "react-loading-skeleton";
-import SessionProvider from "@layouts/sessionProvider";
-import themes from "@styles/themes";
+import "@styles/globals.css";
+import { ThemeProvider } from "context/ThemeProvider";
+import SessionProvider from "context/sessionProvider";
 import localFont from "next/font/local";
-import ToastProvider from "@components/atoms/Toast/ToastProvider";
 
 export const metadata = {
   title: "Next.js",
@@ -10,7 +9,7 @@ export const metadata = {
 };
 
 const pretendard = localFont({
-  src: "../assets/fonts/PretendardVariable.woff2",
+  src: "../public/assets/fonts/PretendardVariable.woff2",
   display: "swap",
   weight: "45 920",
   variable: "--font-pretendard",
@@ -18,17 +17,13 @@ const pretendard = localFont({
 
 export default function RootLayout({ children, modal }: { modal: React.ReactNode; children: React.ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <body suppressHydrationWarning={true} className={`${pretendard.variable} font-pretendard`}>
         <SessionProvider>
-          <ToastProvider />
-          <SkeletonTheme
-            baseColor={themes.colors.light["layer-3"]}
-            highlightColor={themes.colors.light["layer-disabled"]}
-          >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {modal}
             <main>{children}</main>
-          </SkeletonTheme>
+          </ThemeProvider>
         </SessionProvider>
       </body>
     </html>
