@@ -65,6 +65,7 @@
     "react-toastify": "^10.0.6",
     "react-transition-group": "^4.4.5",
     "remark-gfm": "^4.0.0",
+    "sass": "^1.81.0",
     "sharp": "^0.33.4",
     "supabase": ">=1.8.1",
     "tailwindcss-animate": "^1.0.7",
