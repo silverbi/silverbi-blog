@@ -1,9 +1,8 @@
-import { cn } from "../../../../../lib/shadcn/utils";
-import { ProjectTypes } from "../../../../../types/feature/project";
-import { Skeleton } from "../../../ui/skeleton";
+import { Skeleton } from "@/app/components/ui";
+import { ProjectTypes } from "@/types/feature/project";
+import { cn } from "@lib/shadcn/utils";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export interface ProjectPreviewCardProps {
   className?: string;

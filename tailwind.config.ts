@@ -78,11 +78,11 @@ module.exports = {
     },
     opacity: {
       "0": "0",
-      "20": "`calc(var(--opacity) - 0.8)`",
-      "40": "`calc(var(--opacity) - 0.6)`",
-      "60": "`calc(var(--opacity) - 0.4)`",
-      "80": "`calc(var(--opacity) - 0.2)`",
-      "100": "`var(--opacity)`",
+      "20": `calc(var(--opacity) - 0.8)`,
+      "40": `calc(var(--opacity) - 0.6)`,
+      "60": `calc(var(--opacity) - 0.4)`,
+      "80": `calc(var(--opacity) - 0.2)`,
+      "100": `var(--opacity)`,
     },
     maxWidth: {
       xs: "var(--screen-xs)",
@@ -141,6 +141,14 @@ module.exports = {
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        "always-black": {
+          DEFAULT: "hsl(var(--always-black))",
+          foreground: "hsl(var(--always-black))",
+        },
+        "always-white": {
+          DEFAULT: "hsl(var(--always-white))",
+          foreground: "hsl(var(--always-white))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",

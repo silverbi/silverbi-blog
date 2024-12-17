@@ -1,9 +1,9 @@
 "use client";
 
-import "./styles.css";
 import { useTextEditor } from "@hooks/useTextEditor";
 import ToolBar from "@lib/tiptap/Toolbar";
 import { EditorContent } from "@tiptap/react";
+import "./styles.css";
 
 const Editor = () => {
   const editor = useTextEditor();
@@ -21,7 +21,6 @@ const Editor = () => {
       <div className={"mb-4 w-full rounded-lg border"}>
         <ToolBar editor={editor} />
         <div className={"w-full"}>
-          <BubbleEditorMenu editor={editor} duration={100} />
           <EditorContent
             className={"editor-content cursor-text"}
             id="tiptap"
