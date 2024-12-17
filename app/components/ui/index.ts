@@ -3,6 +3,7 @@ export * from "./Button";
 export * from "./Card";
 export * from "./DropdownMenu";
 export * from "./Icon";
+export * from "./LucideIcon";
 export * from "./ModeToggle";
 export * from "./NavigationMenu";
 export * from "./Pagination";

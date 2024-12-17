@@ -25,6 +25,26 @@ const iconVariants = cva("inline-block", {
       success: "fill-success",
       muted: "fill-muted",
     },
+    colors: {
+      primary: "color-primary",
+      secondary: "color-secondary",
+      accent: "color-accent",
+      destructive: "color-destructive",
+      info: "color-info",
+      warning: "color-warning",
+      success: "color-success",
+      muted: "color-muted",
+    },
+    stroke: {
+      primary: "stroke-primary",
+      secondary: "stroke-secondary",
+      accent: "stroke-accent",
+      destructive: "stroke-destructive",
+      info: "stroke-info",
+      warning: "stroke-warning",
+      success: "stroke-success",
+      muted: "stroke-muted",
+    },
     size: {
       "2xs": "w-2 h-2",
       xs: "w-3 h-3",
@@ -37,6 +57,7 @@ const iconVariants = cva("inline-block", {
   },
   defaultVariants: {
     fill: "primary",
+    size: "default",
   },
 });
 
@@ -44,7 +65,7 @@ export interface IconProps extends React.HTMLAttributes<HTMLSpanElement>, Varian
   icon: string;
 }
 
-function Icon({ icon, className, fill, size, ...props }: IconProps) {
+function Icon({ icon, className, fill, colors, stroke, size, ...props }: IconProps) {
   const [IconComponent, setIconComponent] = React.useState<React.FC<React.SVGProps<SVGSVGElement>> | null>(null);
 
   React.useEffect(() => {
@@ -56,12 +77,12 @@ function Icon({ icon, className, fill, size, ...props }: IconProps) {
   }, [icon]);
 
   if (!IconComponent) {
-    return <span className={cn(iconVariants({ fill, size }), className)} {...props} />;
+    return <span className={cn(className)} {...props} />;
   }
 
   return (
-    <span className={cn(iconVariants({ fill, size }), className)} {...props}>
-      <IconComponent className="w-full h-full" />
+    <span className={cn(className)} {...props}>
+      <IconComponent className={cn(iconVariants({ fill, colors, stroke, size }), className)} />
     </span>
   );
 }

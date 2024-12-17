@@ -27,6 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@emailjs/browser", "npm:4.4.1"],\
           ["@radix-ui/react-dropdown-menu", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:2.1.2"],\
           ["@radix-ui/react-navigation-menu", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.2.1"],\
           ["@radix-ui/react-separator", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.1.0"],\
@@ -2409,6 +2410,15 @@ const RAW_RUNTIME_STATE =
           ["@babel/types", "npm:7.26.0"],\
           ["@babel/helper-string-parser", "npm:7.25.9"],\
           ["@babel/helper-validator-identifier", "npm:7.25.9"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@emailjs/browser", [\
+      ["npm:4.4.1", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@emailjs-browser-npm-4.4.1-64a2cb04f8-10c0.zip/node_modules/@emailjs/browser/",\
+        "packageDependencies": [\
+          ["@emailjs/browser", "npm:4.4.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12258,6 +12268,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["silverbi-blog", "workspace:."],\
+          ["@emailjs/browser", "npm:4.4.1"],\
           ["@radix-ui/react-dropdown-menu", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:2.1.2"],\
           ["@radix-ui/react-navigation-menu", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.2.1"],\
           ["@radix-ui/react-separator", "virtual:0221b8a2ec0bfa94740cf896bb5ac968419ac7fbbaaff9ff2a91cd45c223efde9c5b11c12cb696ae5640ca4fdceb0bcabb1a30f115941912c8b9975ae7a1c293#npm:1.1.0"],\

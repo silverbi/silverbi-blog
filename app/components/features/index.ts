@@ -14,10 +14,10 @@ export { TechList } from "./tech/TechList";
 export { TechListPreview } from "./tech/TechListPreview";
 
 export { AboutSection } from "./about/AboutSection";
-export { ActiveSection } from "./about/ActiveSection";
+export { ActivitySection } from "./about/ActivitySection";
+export { CareerSection } from "./about/CareerSection";
 export { ContactSection } from "./about/ContactSection";
-export { DetailSection } from "./about/DetailSection";
 export { IntroSection } from "./about/IntroSection";
-export { ServiceSection } from "./about/ServiceSection";
+export { ProjectSection } from "./about/ProjectSection";
 export { TechSection } from "./about/TechSection";
 export { WorkSection } from "./about/WorkSection";

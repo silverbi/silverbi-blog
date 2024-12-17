@@ -2,15 +2,14 @@
 
 import {
   AboutSection,
-  ActiveSection,
+  ActivitySection,
+  CareerSection,
   ContactSection,
-  DetailSection,
   IntroSection,
-  ServiceSection,
+  ProjectSection,
   TechSection,
   WorkSection,
 } from "@components/features";
-import { ModeToggle } from "@components/ui";
 import { useScroll } from "framer-motion";
 import Lenis from "lenis";
 import { useEffect, useRef } from "react";
@@ -34,15 +33,14 @@ const About = () => {
   }, []);
 
   return (
-    <main ref={container} className={"relative h-[800vh] cursor-default"}>
-      <ModeToggle className={"fixed top-4 right-4 z-30"} />
+    <main ref={container} className={"relative h-[300vh] cursor-default"}>
       <IntroSection scrollYProgress={scrollYProgress} />
       <AboutSection scrollYProgress={scrollYProgress} />
-      <WorkSection scrollYProgress={scrollYProgress} />
-      <ServiceSection scrollYProgress={scrollYProgress} />
+      <CareerSection scrollYProgress={scrollYProgress} />
       <TechSection scrollYProgress={scrollYProgress} />
-      <DetailSection scrollYProgress={scrollYProgress} />
-      <ActiveSection scrollYProgress={scrollYProgress} />
+      <ActivitySection scrollYProgress={scrollYProgress} />
+      <ProjectSection scrollYProgress={scrollYProgress} />
+      <WorkSection scrollYProgress={scrollYProgress} />
       <ContactSection scrollYProgress={scrollYProgress} />
     </main>
   );
