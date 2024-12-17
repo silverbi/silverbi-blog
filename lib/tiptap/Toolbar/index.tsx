@@ -1,29 +1,28 @@
-import React from "react";
-import { Editor } from "@tiptap/react";
-import TextTypeMenu from "lib/tiptap/TextTypeMenu";
 import {
+  AlignCenter,
+  AlignJustify,
+  AlignLeft,
+  AlignRight,
+  Blockquote,
   Bold,
-  Italic,
-  Redo,
-  Undo,
-  Underline,
-  Strike,
-  Color,
+  BulletList,
   Code,
   CodeBlock,
-  Blockquote,
+  Color,
   FootNote,
-  BulletList,
-  OrderedList,
-  AlignLeft,
-  AlignCenter,
-  AlignRight,
-  AlignJustify,
   HorizontalRule,
-  Link,
-  Video,
   Image,
+  Italic,
+  Link,
+  OrderedList,
+  Redo,
+  Strike,
+  Underline,
+  Undo,
+  Video,
 } from "../ToolMenu";
+import { Editor } from "@tiptap/react";
+import TextTypeMenu from "lib/tiptap/TextTypeMenu";
 
 interface ToolBarProps {
   editor: Editor | null;

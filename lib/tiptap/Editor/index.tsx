@@ -1,9 +1,9 @@
 "use client";
 
-import "./styles.css";
 import { useTextEditor } from "@hooks/useTextEditor";
 import ToolBar from "@lib/tiptap/Toolbar";
 import { EditorContent } from "@tiptap/react";
+import "./styles.css";
 
 const Editor = () => {
   const editor = useTextEditor();
