@@ -1,11 +1,4 @@
-import React from "react";
-import Title from "@components/atoms/Title";
-import Text from "@components/atoms/Text";
-import { Colors, Typography } from "@styles/themes/types";
-import Icon from "@components/atoms/Icon";
-import { IconName } from "@components/atoms/Icon/types";
-
-const CareersSection: React.FC = () => {
+const CareersSection = () => {
   const temp = [
     {
       corporation: "earlypay",
@@ -92,7 +85,7 @@ const CareersSection: React.FC = () => {
 
   return (
     <div className={"flex w-full flex-col gap-4"}>
-      <Title>Careers</Title>
+      {/* <Title>Careers</Title>
 
       <div className={"flex flex-col divide-y"}>
         {temp.map((items, index) => {
@@ -137,7 +130,7 @@ const CareersSection: React.FC = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };
