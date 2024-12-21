@@ -1,6 +1,8 @@
 export * from "./Badge";
 export * from "./Button";
 export * from "./Card";
+export * from "./Carousel/index";
+export * from "./Dialog";
 export * from "./DropdownMenu";
 export * from "./Icon";
 export * from "./LucideIcon";
@@ -11,4 +13,3 @@ export * from "./Separator";
 export * from "./Skeleton";
 export * from "./Text";
 export * from "./Title";
-

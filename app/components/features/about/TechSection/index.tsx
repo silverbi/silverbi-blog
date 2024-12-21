@@ -10,7 +10,7 @@ interface TechSectionProps {
 export const TechSection = ({ scrollYProgress }: TechSectionProps) => {
   return (
     <div className={"h-fit overflow-y-hidden bg-always-black flex justify-center p-8"}>
-      <div className={"v-stack max-w-xl py-48"}>
+      <div className={"v-stack w-full max-w-xl py-48"}>
         <Text color={"always-white"} variant={"title-1"} bold>
           Tech Stack
         </Text>

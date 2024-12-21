@@ -12,7 +12,7 @@ interface ProjectSectionProps {
 export const ProjectSection = ({ scrollYProgress }: ProjectSectionProps) => {
   return (
     <div className={"relative h-fit bg-always-black p-8 flex justify-center"}>
-      <div className={"v-stack max-w-xl pb-48"}>
+      <div className={"v-stack w-full max-w-xl pb-48"}>
         <Text color={"always-white"} variant={"title-1"} bold>
           Projects
         </Text>
